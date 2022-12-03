@@ -1,0 +1,119 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* **** */
+/* BODY */
+/* **** */
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+
+    /* heigh: 100vh indicates that the <body> will occupy the whole viewport.
+    Meaning that later, it will be possible to use flex: 1 for example to occupy the remainig free space. */
+}
+
+
+/* ****** */
+/* HEADER */
+/* ****** */
+header{
+    background-color: rgb(136, 118, 97);
+
+    padding: 2em 0 2em 0;
+}
+
+
+header img{
+    display: block;
+    max-width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* margin-left/right to be used with block elements */
+}
+
+/* *** */
+/* NAV */
+/* *** */
+nav{
+    background-color: bisque;
+}
+
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li{
+    /* display: inline-block; */
+    padding: 5em;
+}
+
+
+nav a{
+    text-decoration: none;
+}
+
+/* **** */
+/* MAIN */
+/* **** */
+
+main{
+    display: flex;
+    flex-direction: column;
+
+    flex: 1; 
+    background-color: rgb(136, 118, 97);
+
+    padding: 2em 0 2em 0;
+  
+}
+
+.main-promo{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main-photos{ 
+    display: flex;
+
+    justify-content: center;
+    margin: 4em;    
+}
+
+.main-photos img{
+    padding: 0 4em 0 4em;
+}
+
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+footer{
+    display: flex;
+    /* justify-content: center; */
+    justify-content: space-evenly;
+
+    background-color: bisque;
+
+    padding: 1em 0 1em 0;
+}
+
+.footer-logo img{
+    max-width: 5em;
+}
+
+.footer-copyright
+{
+    /* Same block + auto auto combo to align element in the center */
+    display: block;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
