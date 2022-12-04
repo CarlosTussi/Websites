@@ -38,9 +38,13 @@ header{
 
 header img{
     display: block;
-    max-width: 50em;
+    /* % to make the image resize accordinglly as we the viewport is changed (for responsiveness purposes) */
+    max-width: 60%;
     margin-left: auto;
     margin-right: auto;
+
+
+
 
     /* margin-left/right to be used with block elements */
 }
