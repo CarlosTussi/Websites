@@ -127,6 +127,20 @@ main{
     
 }
 
+@keyframes enlarge-image {
+    0%{
+        max-width: 15em;
+    }
+    100%{
+        max-width: 18em;
+    }
+}
+.main-photos img:hover{
+    animation: enlarge-image 1s;
+    /* animation-fill-mode will keep the animation at its final state until finished hoverig */
+    animation-fill-mode: forwards;
+}
+
 /* ****** */
 /* FOOTER */
 /* ****** */
@@ -137,7 +151,7 @@ footer{
 
     padding: 1em 0 1em 0;
 
-    background-color: var(--accent-color);  
+    background-color: var(--accent-color);    
 }
 
 .footer-logo img{
