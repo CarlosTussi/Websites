@@ -136,8 +136,24 @@ main{
 
 .main-photos article{
     text-align: center;
-    flex: 1 1 0;
+    flex: 1 1 0;    
+}
+
+.main-photos h3 {
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    border-radius: 1.5em;
+
+    max-width: 8em;
     
+
+    margin: 0 auto 2em auto;
+    padding: 0.2em;    
+}
+
+.main-photos p{
+    text-align: justify;
+    padding: 0 5em 0 0;
 }
 
 @keyframes enlarge-image {
