@@ -146,6 +146,8 @@ main{
 
     background-color: var(--secondary-color);
 
+    border-right: 0.5em dotted var(--accent-color);
+
 }
 
 .promo-name h1{
