@@ -21,6 +21,8 @@ body{
 /* ****** */
 header{
     padding: 2em 0 2em 0;
+
+    background-color: bisque;
 }
 
 
@@ -36,6 +38,9 @@ header img{
 /* *** */
 /* NAV */
 /* *** */
+nav{
+    background-color: #b3c7c1;
+}
 nav ul{
     list-style: none;
     display: flex;
@@ -44,12 +49,30 @@ nav ul{
 
 nav li{
 
-    padding: 5em;
+    padding: 2em;
+    
+    text-transform: uppercase;
 }
 
 
 nav a{
     text-decoration: none;
+    color: tomato;
+    background-color: bisque;
+    border-radius: 1.5em;
+
+    padding: 1em;
+}
+
+nav a:hover{
+    background-color: tomato;
+    color: bisque;
+
+    transition: 0.5s;
+}
+
+nav a:active{
+    color: black;
 }
 
 /* **** */
@@ -63,12 +86,18 @@ main{
     flex: 1; 
 
     padding: 2em 0 2em 0;
+
+    background-color: #ffe4c4;
   
 }
 
 .main-promo{
-    margin-left: auto;
-    margin-right: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
+    height: 20vh;
+    text-align: center;
+
+
 }
 
 .main-photos{ 
@@ -79,9 +108,14 @@ main{
 }
 
 .main-photos img{
-    padding: 0 4em 0 4em;
+    max-width: 15em;
 }
 
+.main-photos article{
+    text-align: center;
+    flex: 1 1 0;
+    
+}
 
 /* ****** */
 /* FOOTER */
@@ -92,6 +126,8 @@ footer{
     justify-content: space-evenly;
 
     padding: 1em 0 1em 0;
+
+    background-color: #b3c7c1;  
 }
 
 .footer-logo img{
