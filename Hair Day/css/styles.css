@@ -318,6 +318,7 @@ footer{
 
 
 /* MEDIA QUERY */
+/* For screensize < 1000px */
 @media (max-width: 1000px)
 {
     .main-promo{
