@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
 
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 :root{
@@ -122,10 +122,45 @@ main{
 .main-promo{
     /* margin-left: auto;
     margin-right: auto; */
-    height: 20vh;
+    display: grid;
+    grid-template-areas:    "promo-name promo-description"
+                            "promo-name promo-description"
+                            "promo-name promo-description";
+
+    grid-template-rows: 33,333% 33,333% 33,333%;
+    grid-template-columns: 40% 60%;
+
+    height: 50vh;
     text-align: center;
 
+    border: 1em solid var(--accent-color);
+}
 
+.main-promo .promo-name{
+    grid-area: promo-name;
+}
+
+.main-promo .promo-description{
+    grid-area: promo-description;
+
+
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 20% 60% 20%;
+
+
+    /* Align items along the cross axis */
+    align-items: center;
+    /* Align items along the main axis */
+    justify-items: center;
+}
+
+.promo-description button{
+    width: 15em;
+    height: 5em;
+
+    margin: 0 0 5em 0;
+  
 }
 
 .main-photos{ 
@@ -165,6 +200,9 @@ main{
 
 .main-photos p{
     text-align: justify;
+    
+    font-size: larger;
+    
     padding: 0 2em 0 2em;
 }
 
