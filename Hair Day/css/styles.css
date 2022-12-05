@@ -12,7 +12,7 @@
     --primary-color: #ffe4c4; 
     --accent-color: #b3c7c1;
     --secondary-color: #d0604e;
-    --text-color: black;
+    --text-color: #d0604e;
 }
 
 
@@ -236,12 +236,14 @@ main{
 
     justify-content: center;
     margin: 4em;    
-}
+    
+    border-radius: 2em;
+    background-color: var(--accent-color);
 
-.main-photos img{
-    max-width: 20em;
+    padding: 3em;
 
-    margin:2em 0 5em 0;
+
+
 }
 
 .main-photos article{
@@ -251,14 +253,32 @@ main{
 
     text-align: center;
     flex: 1 1 0;    
+
+    border-radius: 1em;
+    background-color: var(--primary-color);    
+
+    margin: 1.5em;
 }
 
+.main-photos img{
+    max-width: 20em;
+
+    margin:2em 0 5em 0;
+
+    border-radius: 1em;
+}
+
+
+
 .main-photos h3 {
-    color: var(--primary-color);
-    background-color: var(--secondary-color);
+    color: var(--text-color);
+    background-color: var(--primary-color);   
+
     border-radius: 1.5em;
+    border: 0.15em dotted var(--secondary-color);
 
     min-width: 6em;
+    
     
 
     margin: 0 auto 2em auto;
@@ -270,7 +290,9 @@ main{
     
     font-size: larger;
     
-    padding: 0 2em 0 2em;
+    padding: 0 2em 2em 2em;
+
+    color: var(--text-color);
 }
 
 @keyframes enlarge-image {
@@ -287,6 +309,20 @@ main{
     animation: enlarge-image 1s;
     /* animation-fill-mode will keep the animation at its final state until finished hoverig */
     animation-fill-mode: forwards;
+}
+
+.main-photos button{
+    height: 3em;
+    width: 100%;
+
+
+    border: none;
+    border-radius: 0 0 0.75em 0.75em;
+    border-top: 0.15em dotted var(--secondary-color);
+    background-color: var(--secondary-color);
+
+    color: var(--primary-color);
+    font-size: 1.4em;
 }
 
 /* ****** */
