@@ -134,4 +134,5 @@ button{
 button:hover{
     border: 0.15em solid var(--secondary-color);
     transition: 0.3s;
+    cursor: pointer;
 }
