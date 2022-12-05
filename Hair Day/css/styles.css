@@ -271,8 +271,9 @@ main{
 
 
 .main-photos h3 {
-    color: var(--text-color);
-    background-color: var(--primary-color);   
+    color: var(--secondary-color);
+    /* background-color: var(--primary-color);    */
+    background-color: var(--primary-color);
 
     border-radius: 1.5em;
     border: 0.15em dotted var(--secondary-color);
@@ -324,6 +325,18 @@ main{
     color: var(--primary-color);
     font-size: 1.4em;
 }
+
+.main-photos button:hover{
+    border: 0.15em dotted black;
+    transition: 0.5s;
+}
+
+.main-photos button:active{
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    transition: 0.25s;
+}
+
 
 /* ****** */
 /* FOOTER */
