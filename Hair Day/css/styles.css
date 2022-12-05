@@ -364,7 +364,9 @@ footer{
 
     padding: 1em 0 1em 0;
 
-    background-color: var(--accent-color);    
+    background-color: var(--accent-color);
+    
+    color: var(--secondary-color);
 }
 
 .footer-logo img{
