@@ -1,0 +1,137 @@
+/* Colors are defined in the styles.css file */
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    margin: 2em auto auto auto;
+    background-color: var(--accent-color);
+
+    border-radius: 5em;
+
+    width: 40em;
+    height: 45em;
+    
+}
+
+section .booking-title{
+    text-align: center;
+
+    color: var(--primary-color);
+    border-radius: 5em 5em 0 0;
+    border-bottom: 0.2em dotted var(--accent-color);
+    background-color: var(--secondary-color);
+
+    margin: 0 0 2em 0;
+    padding: 1em 0 2em 0;
+    /* Will match parent's size */
+    width: 100%;
+}
+
+section h1{
+    padding: 1em 0 0 0;
+}
+
+section form{
+    display: flex;
+
+    flex-direction: column;
+
+    
+    /* border: 0.1em solid black; */
+
+    margin: 3em 10em 0 10em;
+
+}
+
+form{
+    text-align: center;
+}
+
+form label{
+    margin: 1em 0 0 0;
+
+    color: var(--secondary-color);
+}
+
+form input{
+    border: none;
+    border-radius: 2em;
+
+    margin: 0.8em 0 0 0;
+
+    background-color: var(--secondary-color);
+
+    /* %  width will change according to its parent when adjusting viewport */
+    /* em because Height will be the same  */
+    width: 25em;
+    height: 2.6em;
+
+
+}
+
+form input::placeholder{
+    text-align: left;
+    padding-left: 1em;
+    color: var(--primary-color);
+}
+
+form input[id="services"]::placeholder{
+    text-align: center;
+}
+
+form input[type="date"]{
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Leave the semantic HTML only for accessibility purposes */
+form label[for="first-name"],
+     label[for="last-name"],
+     label[for="phone-number"],
+     label[for="email"]
+{
+    display: none;
+}
+
+form .booking-services{
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+
+form .booking-date{
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+}
+
+button{
+    border: none;
+
+    border-radius: 1.5em;
+    width: 15em;
+    height: 3em;
+
+    margin: 5em 0 0 0;
+
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    font-size: 1em;
+}
+
+button:hover{
+    border: 0.15em solid var(--secondary-color);
+    transition: 0.3s;
+}
