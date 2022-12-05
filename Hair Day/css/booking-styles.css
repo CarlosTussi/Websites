@@ -1,11 +1,3 @@
-/* Colors are defined in the styles.css file */
-
-*{
-    margin: 0;
-    padding: 0;
-
-}
-
 section{
     display: flex;
     flex-direction: column;
