@@ -1,3 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+
+}
+
+:root{
+  /* Defining global colors to make it easier to change later */
+
+  /* COLORS */
+  --primary-color: #ffe4c4; 
+  --accent-color: #b3c7c1;
+  --secondary-color: #d0604e;
+  --text-color: #d0604e;
+}
+
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +28,346 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-color: var(--primary-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* ****** */
+/* HEADER */
+/* ****** */
+header{
+  padding: 2em 0 2em 0;
+
+  background-color: var(--primary-color);
+}
+
+
+header img{
+  display: block;
+  /* % to make the image resize accordinglly as we the viewport is changed (for responsiveness purposes) */
+  max-width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+
+
+
+
+  /* margin-left/right to be used with block elements */
+}
+
+/* *** */
+/* NAV */
+/* *** */
+nav{
+  background-color: var(--accent-color);
+}
+nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+nav li{
+
+  padding: 2em;
+  
+  text-transform: uppercase;
+}
+
+
+nav a{
+  text-decoration: none;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border-radius: 1.5em;
+
+  padding: 1em;
+}
+
+nav a:hover{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+
+  transition: 0.5s;
+}
+
+nav a:active{
+  color: var(--text-color);
+}
+
+/* **** */
+/* MAIN */
+/* **** */
+
+main{
+  background-color: var(--primary-color);
+
+}
+
+.main-promo{
+  display: grid;
+  grid-template-areas:    "promo-name promo-description"
+                          "promo-name promo-description"
+                          "promo-name promo-description";
+
+  grid-template-rows: 33,333% 33,333% 33,333%;
+  grid-template-columns: 20% 80%;
+
+  border: 0.5em solid var(--secondary-color);
+
+  background-color: var(--primary-color);
+}
+
+.main-promo .promo-name{
+  /* TRY: Find another to put that h1 tag in the middle without having to use flexbox */
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: space-evenly;
+
+  grid-area: promo-name;
+
+  background-color: var(--secondary-color);
+
+  border-right: 0.5em dotted var(--accent-color);
+
+}
+
+.promo-name h1{
+  color: var(--primary-color);
+  /* border: 0.1em var(--accent-color) dashed; */
+  padding: 1em;
+}
+
+
+.main-promo .promo-description{
+  grid-area: promo-description;
+
+
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 60% 20%;
+
+
+  /* Align items along the cross axis */
+  /* align-items: center; */
+  /* Align items along the main axis */
+  /* justify-items: center; */
+
+  color: var(--secondary-color);
+
+  margin: 1.2em 0 2em 0;
+
+}
+
+.promo-description h2{
+  text-transform: uppercase;
+
+  justify-self: center;
+
+  font-size: 3em;
+
+}
+
+.promo-description button{
+  width: 10em;
+  height: 3em;
+
+  /* CHANGE IN DESIGN */
+  transform: scale(1.2);
+
+  justify-self: center;
+
+  border-radius: 10em;
+ 
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 0.15em dotted var(--primary-color);
+
+  font-size: 1.2em;
+
+  margin: 0.5em 0 0 0;
+
+
+}
+
+.promo-description button:hover{
+  transform: scale(1.4);
+  border: 0.15em dotted var(--secondary-color);
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.promo-description button:active{
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 0.15em dotted var(--primary-color);
+  transition: 0.5s;
+}
+
+.promo-description-text{
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.promo-description-text .promo-text-left{
+  font-size: 10em;
+
+  padding: 0 0 0 1em;
+}
+
+.promo-description-text .promo-text-right{
+  font-size: 3em;
+  text-align: center;
+
+  padding: 0.5em 1.5em 0 0;
+}
+
+.main-photos{ 
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: center;
+  margin: 4em;    
+  
+  border-radius: 2em;
+  background-color: var(--accent-color);
+
+  padding: 3em;
+
+
+
+}
+
+.main-photos article{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  flex: 1 1 0;    
+
+  border-radius: 1em;
+  background-color: var(--primary-color);    
+
+  margin: 1.5em;
+}
+
+.main-photos img{
+  max-width: 20em;
+
+  margin:2em 0 5em 0;
+
+  border-radius: 1em;
+}
+
+
+
+.main-photos h3 {
+  color: var(--secondary-color);
+  /* background-color: var(--primary-color);    */
+  background-color: var(--primary-color);
+
+  border-radius: 1.5em;
+  border: 0.15em dotted var(--secondary-color);
+
+  min-width: 6em;
+  
+  
+
+  margin: 0 auto 2em auto;
+  padding: 0.2em;    
+}
+
+.main-photos p{
+  text-align: justify;
+  
+  font-size: larger;
+  
+  padding: 0 2em 2em 2em;
+
+  color: var(--text-color);
+}
+
+@keyframes enlarge-image {
+  0%{
+      transform: scale(1.0);
+      /* max-width: 15em; */
+  }
+  100%{
+      transform: scale(1.3);
+      /* max-width: 18em; */
+  }
+}
+.main-photos img:hover{
+  animation: enlarge-image 1s;
+  /* animation-fill-mode will keep the animation at its final state until finished hoverig */
+  animation-fill-mode: forwards;
+}
+
+.main-photos button{
+  height: 3em;
+  width: 100%;
+
+
+  border: none;
+  border-radius: 0 0 0.75em 0.75em;
+  border-top: 0.15em dotted var(--secondary-color);
+  background-color: var(--secondary-color);
+
+  color: var(--primary-color);
+  font-size: 1.4em;
+}
+
+.main-photos button:hover{
+  border: 0.15em dotted black;
+  cursor: pointer;
+  transition: 0.5s;
+  
+}
+
+.main-photos button:active{
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  transition: 0.25s;
+}
+
+
+/* ****** */
+/* FOOTER */
+/* ****** */
+
+footer{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  padding: 1em 0 1em 0;
+
+  background-color: var(--accent-color);
+  
+  color: var(--secondary-color);
+}
+
+.footer-logo img{
+  max-width: 5em;
+}
+
+.footer-copyright
+{
+  /* Same block + auto auto combo to align element in the center */
+  display: block;
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
