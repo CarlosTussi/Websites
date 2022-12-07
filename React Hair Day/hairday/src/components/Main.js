@@ -8,17 +8,17 @@ function Promo ()
 {
     return(
         <>
-            <section class="main-promo">  
-                <div class="promo-name">
+            <section className="main-promo">  
+                <div className="promo-name">
                     <h1>Treat Yourself</h1>                
                 </div>
-                <div class="promo-description">
+                <div className="promo-description">
                     <h2>Special Offer</h2>
-                    <div class="promo-description-text">
-                        <div class="promo-text-left">
+                    <div className="promo-description-text">
+                        <div className="promo-text-left">
                             <p>25%</p>
                         </div>
-                        <div class="promo-text-right">
+                        <div className="promo-text-right">
                             <p>discount on</p>
                             <p> <span style={{color: "black"}}>Treat Yourself</span> treatments!</p>
                         </div>                                     
@@ -34,7 +34,7 @@ function Services()
 {
     return(
         <>
-            <section class="main-photos" id="services">         
+            <section className="main-photos" id="services">         
                 <article>
                     <img src={src_haircut} alt="Lady having her hair cut and blown dry"></img>
                     <h3>Hair</h3>    

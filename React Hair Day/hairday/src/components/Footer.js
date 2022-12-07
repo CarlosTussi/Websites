@@ -5,10 +5,10 @@ function Footer()
     return(
         <>
             <footer>
-                <div class="footer-logo">
+                <div className="footer-logo">
                     <img src={logo}></img>
                 </div>
-                <div class="footer-copyright">
+                <div className="footer-copyright">
                   <p>CarlosTussi © - All rights reserved.</p>         
                 </div>
             </footer>            
