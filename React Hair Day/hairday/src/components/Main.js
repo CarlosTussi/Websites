@@ -2,7 +2,15 @@ import src_haircut from '../images/haircut.jpg';
 import src_makeup from '../images/makeup.jpg';
 import src_nails from '../images/manicure.jpg';
 
-
+function Main()
+{
+    return(
+        <main>
+            <Promo />
+            <Services />
+        </main>
+    );
+};
 
 function Promo ()
 {
@@ -58,4 +66,5 @@ function Services()
     );
 }
 
-export {Promo, Services};
+// export {Promo, Services};
+export default Main;

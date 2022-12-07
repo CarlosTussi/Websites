@@ -3,7 +3,8 @@ import './App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
 import Footer from './components/Footer'
-import {Promo, Services} from './components/Main';
+// import {Promo, Services} from './components/Main';
+import Main from './components/Main';
 
 
 function App() {
@@ -11,10 +12,7 @@ function App() {
     <>
      <Header />
      <Nav />
-     <main>
-      <Promo />
-      <Services />
-    </main>
+     <Main />
      <Footer />
      </>
   );
