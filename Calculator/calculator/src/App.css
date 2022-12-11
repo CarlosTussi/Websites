@@ -93,12 +93,12 @@ p{
   color: #FCF5C7;
 }
 
-.input-result-container button:hover{
-  background-color:cornflowerblue;
+.input-result-container button:hover{  
+  background-color: #54272c;
 }
 
 .input-result-container button:active{
-  background-color: lightgray;
+  background-color: #a5676d;
 }
 
 
@@ -116,11 +116,11 @@ p{
 }
 
 .keypad-container button:hover{
-  background-color: pink;
+  background-color: #b5a49c;
 }
 
 .keypad-container button:active{
-  background-color: lightgrey;
+  background-color: #bc8b75;
 }
 
 .keypad-container button:nth-last-child(1),
@@ -128,4 +128,14 @@ p{
 {
   background-color: #EF959C;
   color: #FCF5C7;
+}
+
+.keypad-container button:nth-last-child(1):hover,
+.keypad-container button:nth-last-child(2):hover{
+  background-color: #54272c;
+}
+
+.keypad-container button:nth-last-child(1):active,
+.keypad-container button:nth-last-child(2):active{
+  background-color: #a5676d;
 }
