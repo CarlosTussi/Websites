@@ -1,0 +1,131 @@
+html{
+  background-color: #8DA1B9;
+}
+
+* {
+  font-family: sans-serif;
+}
+input,
+button {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+input{
+  background-color: #95ADB6;
+}
+
+input::placeholder{
+  color: black;
+}
+
+button {
+  border: 0;
+  background: whitesmoke;
+  margin-right: 5px;
+}
+
+
+.calculator-title{
+  border-radius: 10em;
+  /* background-color: #DBC7BE; */
+  width: 100%;
+}
+
+h1{
+  text-align: center;
+  border-radius: 5em;
+  margin: 0 auto 1em auto;
+
+  
+  color: black;
+}
+
+.App{
+  display: flex;
+  flex-direction: column;
+  background-color: #CBB3BF;
+  max-width: 40%;
+  margin: auto auto auto auto;
+  padding: 3em;
+
+  border-radius: 5em;
+  border: 0.15em dotted black;
+
+  align-items: center;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5em;
+  padding: 2em;
+  border: 0.9em solid lightslategray;
+}
+label{
+  text-align: center;
+  
+  /* border: 0.1em solid black; */
+  border-radius: 1em;
+  padding: 0.1em;
+  background-color: #EF959C;
+}
+
+p{
+  text-align: center;
+  padding: 1em;
+}
+
+.input-result-container{
+  display: flex;
+}
+
+.input-result-container input{
+  margin: 0 1.5em 1.5em 0;
+
+  border:0;
+}
+
+.input-result-container button{
+  margin: 0 auto auto auto;
+  background-color: #EF959C;
+  color: #FCF5C7;
+}
+
+.input-result-container button:hover{
+  background-color:cornflowerblue;
+}
+
+.input-result-container button:active{
+  background-color: lightgray;
+}
+
+
+.keypad-container{
+  display:grid;
+
+  grid-template-columns: 48% 48%;
+  column-gap: 4%;
+
+}
+
+.keypad-container button{
+  margin: 0.4em 0 0 0;
+  background-color: #DBC7BE;
+}
+
+.keypad-container button:hover{
+  background-color: pink;
+}
+
+.keypad-container button:active{
+  background-color: lightgrey;
+}
+
+.keypad-container button:nth-last-child(1),
+.keypad-container button:nth-last-child(2)
+{
+  background-color: #EF959C;
+  color: #FCF5C7;
+}
