@@ -12,7 +12,7 @@ import About from './components/About';
 import  Booking from './components/Booking';
 
 function App() {
-  const scrollServices = useRef();
+  const refScroll = useRef();
 
   return (
     <>
@@ -23,7 +23,7 @@ function App() {
         <li><Link className='navBtn' to="/">Home</Link></li>
         <li><Link className='navBtn' onClick={(e) =>{
             e.preventDefault();
-            scrollServices.current.scrollIntoView({behavior: "smooth", block: "center"});
+            refScroll.current.scrollIntoView({behavior: "smooth", block: "center"});
         } }>Services</Link></li>
         <li><Link className='navBtn' to="/booking">Booking</Link></li>
         <li><Link className='navBtn' to="/about">About</Link></li>
@@ -31,7 +31,7 @@ function App() {
      </nav>
      
     <Routes>
-      <Route path='/' element={<div ref={scrollServices}><Main/></div>}></Route>
+      <Route path='/' element={<div ref={refScroll}><Main/></div>}></Route>
       <Route path='/about' element={<About />}></Route>
       <Route path ='/booking' element={<Booking/>}/>
     </Routes>
