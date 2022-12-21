@@ -17,9 +17,13 @@ import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import {useAlertContext} from "../context/alertContext";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
+
 const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
+
 
   const formik = useFormik({
     initialValues: {
@@ -30,7 +34,16 @@ const LandingSection = () => {
     },
 
     
-    onSubmit: (values) => {submit("https://...", {firstName: formik.firstName,})},
+    onSubmit: (values) => {
+
+        submit("https://...", values)  
+      
+        onOpen(response.type, response.message);
+
+        if(response.type == "success")
+          formik.resetForm()
+        
+    },
     
     validationSchema: Yup.object({
       firstName: Yup.string().required(),
@@ -39,12 +52,6 @@ const LandingSection = () => {
       comment: Yup.string().required(),
     }),
   });
-
-const validateInput = (inputName, value) =>{
-  //Verify if isInvalid id true and
-  return formik.validationSchema.inputName.isValid(value);
-
-}
 
 
   return (
@@ -57,10 +64,9 @@ const validateInput = (inputName, value) =>{
       <VStack w="1024px" p={32} alignItems="flex-start">
         <Heading as="h1" id="contactme-section">
           Contact me
-        </Heading>
-        {/* {formik.validationSchema.firstName.isValid(formik.valuesalues.firstName)} */}
+        </Heading>        
         <Box p={6} rounded="md" w="100%">
-          <form>
+          <form onSubmit={formik.handleSubmit}>            
             <VStack spacing={4}>
               <FormControl isInvalid={formik.touched.firstName && formik.errors.hasOwnProperty("firstName")}>          
                 <FormLabel htmlFor="firstName">Name</FormLabel>                
@@ -105,7 +111,7 @@ const validateInput = (inputName, value) =>{
                 <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
-                Submit
+                {!isLoading && <p>Submit</p>}{isLoading && <span>Submitting <FontAwesomeIcon icon={faSpinner} size="1x" /></span>}
               </Button>
             </VStack>
           </form>
