@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { useFormik } from "formik";
+import { useFormik, yupToFormErrors } from "formik";
 import {
   Box,
   Button,
@@ -22,10 +22,30 @@ const LandingSection = () => {
   const { onOpen } = useAlertContext();
 
   const formik = useFormik({
-    initialValues: {},
-    onSubmit: (values) => {},
-    validationSchema: Yup.object({}),
+    initialValues: {
+      firstName: "",
+      email: "",
+      type: "",
+      comment: "",
+    },
+
+    
+    onSubmit: (values) => {submit("https://...", {firstName: formik.firstName,})},
+    
+    validationSchema: Yup.object({
+      firstName: Yup.string().required(),
+      email: Yup.string().email().required(),
+      type: Yup.string().required(),
+      comment: Yup.string().required(),
+    }),
   });
+
+const validateInput = (inputName, value) =>{
+  //Verify if isInvalid id true and
+  return formik.validationSchema.inputName.isValid(value);
+
+}
+
 
   return (
     <FullScreenSection
@@ -38,29 +58,35 @@ const LandingSection = () => {
         <Heading as="h1" id="contactme-section">
           Contact me
         </Heading>
+        {/* {formik.validationSchema.firstName.isValid(formik.valuesalues.firstName)} */}
         <Box p={6} rounded="md" w="100%">
           <form>
             <VStack spacing={4}>
-              <FormControl isInvalid={false}>
-                <FormLabel htmlFor="firstName">Name</FormLabel>
+              <FormControl isInvalid={formik.touched.firstName && formik.errors.hasOwnProperty("firstName")}>          
+                <FormLabel htmlFor="firstName">Name</FormLabel>                
                 <Input
                   id="firstName"
                   name="firstName"
+                  {...formik.getFieldProps('firstName')}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={formik.touched.email && formik.errors.hasOwnProperty("email")}>
                 <FormLabel htmlFor="email">Email Address</FormLabel>
                 <Input
                   id="email"
                   name="email"
                   type="email"
+                  {...formik.getFieldProps('email')}                               
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type">
+                <Select 
+                      id="type" 
+                      name="type"
+                      {...formik.getFieldProps('type')}>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session
@@ -68,14 +94,15 @@ const LandingSection = () => {
                   <option value="other">Other</option>
                 </Select>
               </FormControl>
-              <FormControl isInvalid={false}>
+              <FormControl isInvalid={formik.touched.comment && formik.errors.hasOwnProperty("comment")}>
                 <FormLabel htmlFor="comment">Your message</FormLabel>
                 <Textarea
                   id="comment"
                   name="comment"
                   height={250}
+                  {...formik.getFieldProps('comment')}
                 />
-                <FormErrorMessage></FormErrorMessage>
+                <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">
                 Submit

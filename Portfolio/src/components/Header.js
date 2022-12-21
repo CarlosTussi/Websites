@@ -35,6 +35,7 @@ const socials = [
 const Header = () => {
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
+    console.log("Success-half");
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({
@@ -64,12 +65,28 @@ const Header = () => {
           alignItems="center"
         >
           <nav>
-            {/* Add social media links based on the `socials` data */}
+            <ul style={{listStyleType:"none"}}>
+              <HStack>         
+                  {socials.map((item) => {
+                    return (
+                      <a href={item.url}>
+                        <li style={{padding: "0.5em"}} key={item.url}>
+                          <FontAwesomeIcon icon={item.icon} size="2x" />
+                        </li>
+                    </a>);
+                  })}
+              </HStack>
+            </ul>
+
+
           </nav>
           <nav>
-            <HStack spacing={8}>
-              {/* Add links to Projects and Contact me section */}
-            </HStack>
+           <ul style={{listStyleType:"none"}}>
+              <HStack spacing={8}>
+                <a href="/#projects" onClick={handleClick("projects")}><li key={0}>Projects</li></a>
+                <a href="/#contact-me" onClick={handleClick("contactme")}><li key={1}>Contact Me</li></a>
+              </HStack>
+            </ul>
           </nav>
         </HStack>
       </Box>
