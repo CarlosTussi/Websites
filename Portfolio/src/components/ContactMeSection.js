@@ -24,7 +24,6 @@ const LandingSection = () => {
   const {isLoading, response, submit} = useSubmit();
   const { onOpen } = useAlertContext();
 
-
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -34,15 +33,8 @@ const LandingSection = () => {
     },
 
     
-    onSubmit: (values) => {
-
-        submit("https://...", values)  
-      
-        onOpen(response.type, response.message);
-
-        if(response.type == "success")
-          formik.resetForm()
-        
+    onSubmit: (values) => {      
+      submit("https://...", values)     
     },
     
     validationSchema: Yup.object({
@@ -52,6 +44,18 @@ const LandingSection = () => {
       comment: Yup.string().required(),
     }),
   });
+
+
+  //Listening for changes (Importante concept here!)
+  //When responde changes (when it receives content from submit function) it will execute this part
+  useEffect(() => {
+
+    onOpen(response.type, response.message);
+    if(response.type == "success")
+      formik.resetForm()
+
+  },[response])
+
 
 
   return (
@@ -110,7 +114,7 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage>Required</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button type="submit" colorScheme="purple" width="full">                
                 {!isLoading && <p>Submit</p>}{isLoading && <span>Submitting <FontAwesomeIcon icon={faSpinner} size="1x" /></span>}
               </Button>
             </VStack>
