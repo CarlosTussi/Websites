@@ -108,7 +108,9 @@ useEffect(() => {
 
           </nav>
           <nav>
-           <ul style={{listStyleType:"none"}}>
+           <ul style={{
+            listStyleType:"none"
+            }}>
               <HStack spacing={8}>
                 <a href="/#projects" onClick={handleClick("projects")}><li key={"project"}>Projects</li></a>
                 <a href="/#contact-me" onClick={handleClick("contactme")}><li key={"contactme"}>Contact Me</li></a>

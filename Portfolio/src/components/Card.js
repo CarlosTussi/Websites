@@ -10,13 +10,14 @@ const Card = ({ title, description, imageSrc }) => {
   // Feel free to import other UI components from Chakra UI if you wish to.
   return (
       <Box style={{
-        background: "white",
+        background: "#C8C8C8",
         color:"black",
         borderRadius: "2em",
 
       }}>
         <VStack>
           <Image    borderRadius="2em 2em 0 0"
+                    borderBottom="dashed 0.15em black"
                     src={imageSrc}
                     alt="my profile icon"/>
 
@@ -29,7 +30,7 @@ const Card = ({ title, description, imageSrc }) => {
 
           <Text p="0 1em 0 1em"
                 textAlign="justify"
-                color="gray">
+                color="#3E3D3D">
             {description}
           </Text>
         
