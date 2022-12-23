@@ -33,7 +33,7 @@ const LandingSection = () => {
     },
 
     
-    onSubmit: (values) => {      
+      onSubmit: (values) => {      
       submit("https://...", values)     
     },
     
@@ -46,14 +46,13 @@ const LandingSection = () => {
   });
 
 
-  //Listening for changes (Importante concept here!)
-  //When responde changes (when it receives content from submit function) it will execute this part
   useEffect(() => {
-
-    onOpen(response.type, response.message);
-    if(response.type == "success")
-      formik.resetForm()
-
+    //This will avoid first rendering with empty response
+    if(response!= null){
+      onOpen(response.type, response.message);
+      if(response.type == "success")
+        formik.resetForm()
+    }
   },[response])
 
 
