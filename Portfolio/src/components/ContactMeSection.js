@@ -41,7 +41,7 @@ const LandingSection = () => {
       firstName: Yup.string().required(),
       email: Yup.string().email().required(),
       type: Yup.string().required(),
-      comment: Yup.string().required(),
+      comment: Yup.string().min(25).required(),
     }),
   });
 
@@ -111,7 +111,7 @@ const LandingSection = () => {
                   height={250}
                   {...formik.getFieldProps('comment')}
                 />
-                <FormErrorMessage>Required</FormErrorMessage>
+                <FormErrorMessage>Minimum 25 charactes</FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">                
                 {!isLoading && <p>Submit</p>}{isLoading && <span>Submitting <FontAwesomeIcon icon={faSpinner} size="1x" /></span>}
