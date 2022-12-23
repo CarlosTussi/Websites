@@ -88,7 +88,7 @@ const LandingSection = () => {
                   type="email"
                   {...formik.getFieldProps('email')}                               
                 />
-                <FormErrorMessage>Required</FormErrorMessage>
+                <FormErrorMessage>Invalid email address</FormErrorMessage>
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
@@ -111,10 +111,14 @@ const LandingSection = () => {
                   height={250}
                   {...formik.getFieldProps('comment')}
                 />
-                <FormErrorMessage>Minimum 25 charactes</FormErrorMessage>
+                <FormErrorMessage>Must be at least 25 charactes</FormErrorMessage>
               </FormControl>
               <Button type="submit" colorScheme="purple" width="full">                
-                {!isLoading && <p>Submit</p>}{isLoading && <span>Submitting <FontAwesomeIcon icon={faSpinner} size="1x" /></span>}
+                {!isLoading && <p>Submit</p>}{isLoading && <span>Submitting <FontAwesomeIcon                                                                                 
+                                                                                icon={faSpinner} 
+                                                                                size="1x"
+                                                                                className="buttonSpinner"
+                                                                                /></span>}
               </Button>
             </VStack>
           </form>

@@ -18,7 +18,7 @@ const LandingSection = () => (
   >
     <figure style={{textAlign: "center"}}>
       <img style={{borderRadius: "5em"}} src={imgSrc}/>
-      <figcaption style={{paddingTop: "0.7em", fontWeight: "bold"}}>Hello, I'm Carlos</figcaption>
+      <figcaption style={{paddingTop: "0.7em", fontWeight: "bold"}}>Hello, I'm Pete!</figcaption>
     </figure>
 
     <div
