@@ -4,6 +4,8 @@ import {
     faGithub,
     faLinkedin,
   } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useRef, useState } from "react";
+
 
 const social = [
     {
@@ -19,8 +21,32 @@ const social = [
 
 ]
 
+
+
+
 function Header()
 {
+    const headerRef = useRef();
+    const [previousScrollPosn, setPreviousScrollPosn] = useState(0);
+    
+    const handleScroll = () => {
+        const currentScrollPosn = window.scrollY;
+    
+        currentScrollPosn > previousScrollPosn ? headerRef.current.style.transform = "translateY(-200px)" : headerRef.current.style.transform = "translateY(0)"
+    
+        setPreviousScrollPosn(currentScrollPosn);
+    }
+    
+    useEffect(() =>{
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+         
+        
+    })
+
     return(
     
     <Box
@@ -28,7 +54,12 @@ function Header()
         color="#39FF14"
         p="1em 2em 1em 1em"
         position="fixed"
-        width="100%">
+        width="100%"
+        ref={headerRef}
+        transitionProperty="transform"
+        transitionDuration="0.4s"
+        transitionTimingFunction="ease-in-out"
+        >
         <HStack justify="space-between">
             <nav>
                 <UnorderedList styleType="none">
