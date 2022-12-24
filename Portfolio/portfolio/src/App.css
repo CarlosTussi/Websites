@@ -1,20 +1,21 @@
 .swiper {
   width: 100%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  margin: 5em 5em 10em 5em;
 }
 
 .swiper-slide {
-  background-position: center;
-  background-size: cover;
-  width: 300px;
-  height: 300px;
+  /* to config */
+
 }
 
 .swiper-slide img {
-  display: block;
-  width: 80%;
-  /* border: 0.2em dashed green; */
+  /* display: block; */
+  width: 90%;
+}
+
+/* So that the pagination does't get too close to the images */
+.swiper-pagination{
+  bottom: -5px !important;
 }
 
 .swiper-pagination-bullet{
