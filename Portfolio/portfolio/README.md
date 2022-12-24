@@ -68,3 +68,32 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+Installing Chakra
+
+1. On the same file where we used create-react-app
+
+npm i @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6
+
+2. Import
+
+	import { ChakraProvider, theme } from '@chakra-ui/react'
+
+3. Use
+	
+	function App() {
+  return <ChakraProvider theme={theme}></ChakraProvider>
+}
+
+
+
+Installing Formik
+
+npm install formik --save
+
+Installing Yup
+
+npm install -S yup
