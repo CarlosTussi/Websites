@@ -6,8 +6,8 @@ function FullSection({children, ...props})
     return(
             <section>
                 <VStack
-                    bg="#1B02A3"
-                    color="#FFF205"                           
+                    bg="#0A0A0A"
+                    color="#39FF14"                           
                     justifyContent="center"     
                     textAlign="left"           
                     {...props}     
