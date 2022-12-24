@@ -5,9 +5,7 @@ function ContactSection()
 {
     return(
         <FullSection>
-            <section>
-                Contact Section
-            </section>
+                <p>Contact Section</p>
         </FullSection>
     );
 }
