@@ -5,7 +5,11 @@ import avatarImg from '../assets/me.jpeg';
 function LandingSection()
 {
     return(
-        <FullSection bg="#0A0A0A" color="#39FF14" spacing="1.5em">   
+        <FullSection 
+                bg="#0A0A0A" 
+                color="#39FF14" 
+                spacing="1.5em" 
+                padding="10em 0 10em 0">   
                 {/* <Image boxSize="150px" borderRadius="full" src={avatarImg}/> */}
                 <Heading as="h1" size="4xl">{`</>`}</Heading>
                 <Heading as="h2">Carlos Tussi</Heading>      

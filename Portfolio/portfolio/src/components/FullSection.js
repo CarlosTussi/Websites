@@ -10,7 +10,6 @@ function FullSection({children, ...props})
                     color="#FFF205"                           
                     justifyContent="center"     
                     textAlign="left"           
-                    h="25em"
                     {...props}     
                     //By default chakra stack aligns center
                     //to change: alignItems="end" (or whatever)                
