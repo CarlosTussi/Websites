@@ -3,8 +3,10 @@ import FullSection from './FullSection';
 function LandingSection()
 {
     return(
-        <FullSection>
-            Landing section
+        <FullSection bg="tomato">   
+            <section>
+                Landing section
+            </section>         
         </FullSection>
     );
 }

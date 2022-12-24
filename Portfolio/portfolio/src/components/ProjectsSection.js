@@ -4,11 +4,11 @@ import FullSection from "./FullSection";
 function ProjectsSection()
 {
     return(
-        <section>
-            <FullSection>
-            Projects
+            <FullSection bg="darkorange">
+            <p>
+                Projects
+            </p>
             </FullSection>
-        </section>
     );
 }
 

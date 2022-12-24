@@ -4,15 +4,18 @@ import { HStack, VStack, Box } from "@chakra-ui/react";
 function FullSection({children, ...props})
 {
     return(
-        <section>
-            <Box
+            <VStack
                 bg="#1B02A3"
-                color="#FFF205"
-                textAlign="center"
-                h="20em">
+                {...props}
+                color="#FFF205"                
+                justifyContent="center"     
+                textAlign="left"           
+                h="20em"
+                //By default chakra stack aligns center
+                //to change: alignItems="end" (or whatever)                
+                >
                  {children}
-            </Box>
-        </section>
+            </VStack>
     );
 }
 

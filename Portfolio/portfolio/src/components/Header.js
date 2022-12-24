@@ -26,7 +26,9 @@ function Header()
     <Box
         bg="#0A0A0A"
         color="#39FF14"
-        p="1em 2em 1em 1em">
+        p="1em 2em 1em 1em"
+        position="fixed"
+        width="100%">
         <HStack justify="space-between">
             <nav>
                 <UnorderedList styleType="none">
