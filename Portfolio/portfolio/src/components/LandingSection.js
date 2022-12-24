@@ -1,11 +1,11 @@
-
+import FullSection from './FullSection';
 
 function LandingSection()
 {
     return(
-        <section>
+        <FullSection>
             Landing section
-        </section>
+        </FullSection>
     );
 }
 

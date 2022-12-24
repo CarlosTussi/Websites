@@ -1,11 +1,14 @@
+import FullSection from "./FullSection";
 
 
 function ContactSection()
 {
     return(
-        <section>
-            Contact Section
-        </section>
+        <FullSection>
+            <section>
+                Contact Section
+            </section>
+        </FullSection>
     );
 }
 

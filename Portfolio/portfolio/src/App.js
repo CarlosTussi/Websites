@@ -10,11 +10,13 @@ import Footer from './components/Footer';
 function App() {
   return (
     <ChakraProvider>
-      <Header />
-      <LandingSection />
-      <ProjectsSection />
-      <ContactSection />
-      <Footer />
+      <main>
+        <Header />
+        <LandingSection />
+        <ProjectsSection />
+        <ContactSection />
+        <Footer />
+      </main>
     </ChakraProvider>
   );
 }
