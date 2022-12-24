@@ -97,3 +97,7 @@ npm install formik --save
 Installing Yup
 
 npm install -S yup
+
+Installing FontAwesome
+
+npm i --save @fortawesome/fontawesome-svg-core
