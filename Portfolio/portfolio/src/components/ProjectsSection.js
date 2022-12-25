@@ -1,5 +1,6 @@
-import { HStack, UnorderedList } from "@chakra-ui/react";
+import { HStack, UnorderedList, Text } from "@chakra-ui/react";
 import FullSection from "./FullSection";
+import { useState } from "react";
 
 import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -9,6 +10,7 @@ import "swiper/css/pagination"
 import ProjectCard from "./ProjectCard";
 
 import imgSrc from "../assets/me.jpeg";
+import { useProjectCardContext } from "./contexts/ProjectCardProvider";
 
 
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -45,10 +47,15 @@ const projects = [
 
 function ProjectsSection()
 {
-
-    const handleSlideClick = (e) =>
+    
+    const {currentName, isClicked,toggleClick, updateSelectedProject} = useProjectCardContext();
+    
+    const handleSlideClick = (projectName) =>
     {
-      //To do
+      //Will indicate which project was selected using Context API
+      //The update information will only render the corrected card/slide on the
+      //ProjectCard.js file
+      updateSelectedProject(projectName);
     }
     return(
       <FullSection 
@@ -69,10 +76,10 @@ function ProjectsSection()
         onSlideChange={() => console.log('slide change')}            
         pagination={true}                
       >
-        {projects.map((aProject) => {
-            return(
-              <SwiperSlide onClick={(e)=> handleSlideClick(e)}key={aProject.name}>
-                  <ProjectCard imgSrc={imgSrc} title={aProject.name}/>                  
+        {projects.map((aProject) => {            
+            return(              
+              <SwiperSlide onClick={(e)=> handleSlideClick(aProject.name)}key={aProject.name}>
+                  <ProjectCard imgSrc={imgSrc} title={aProject.name}/>                     
               </SwiperSlide>
             );
         })} 

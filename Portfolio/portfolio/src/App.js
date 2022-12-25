@@ -8,6 +8,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PopUpProvider from './components/contexts/PopUpProvided';
 import PopUp from './components/PopUp';
+import ProjectCardProvider from './components/contexts/ProjectCardProvider';
 
 function App() {
   return (
@@ -16,7 +17,11 @@ function App() {
       <main>
         <Header />
         <LandingSection />
-        <ProjectsSection />
+
+        <ProjectCardProvider>
+          <ProjectsSection />
+        </ProjectCardProvider>
+        
         <ContactSection />
         <Footer />
         <PopUp />       
