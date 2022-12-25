@@ -28,7 +28,7 @@ function ContactSection()
             name: Yup.string().required(),
             email: Yup.string().email().required(),
             topic: Yup.string().required(),
-            comment: Yup.string(),    
+            comment: Yup.string().min(10).required(),    
         }),
     })
 
@@ -82,6 +82,7 @@ function ContactSection()
                             focusBorderColor="#39FF14"
                             resize="none"
                             {...formik.getFieldProps("commnet")}/>
+                            <FormErrorMessage>Minimum 10 characters</FormErrorMessage>
                     </FormControl>
                     {/* Submit Button */}
                     <Button type="submit" 
