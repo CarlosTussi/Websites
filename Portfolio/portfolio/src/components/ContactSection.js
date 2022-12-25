@@ -1,5 +1,6 @@
 import FullSection from "./FullSection";
 import {useFormik, yupToFormErrors} from "formik";
+import AlerPopUp from "./PopUp";
 import * as Yup from "yup";
 import { FormControl, 
          FormErrorMessage, 
@@ -9,6 +10,7 @@ import { FormControl,
          Select, 
          Textarea,
          Button, } from "@chakra-ui/react";
+import { usePopUpContext } from "./contexts/PopUpProvided";
 
 function ContactSection()
 {
@@ -21,7 +23,8 @@ function ContactSection()
         },
     
         onSubmit: (data) => { 
-            //to do
+            //TO-DO
+            openPopUp("standard")            
         },
     
         validationSchema: Yup.object({
@@ -31,6 +34,8 @@ function ContactSection()
             comment: Yup.string().min(10).required(),    
         }),
     })
+
+    const {openPopUp} = usePopUpContext();
 
     return(
         <FullSection 
@@ -84,8 +89,8 @@ function ContactSection()
                             height="20em"
                             focusBorderColor="#39FF14"
                             resize="none"
-                            {...formik.getFieldProps("commnet")}/>
-                            <FormErrorMessage>Minimum 10 characters</FormErrorMessage>
+                            {...formik.getFieldProps("comment")}/>
+                            <FormErrorMessage>Must be at least 10 characters</FormErrorMessage>
                     </FormControl>
                     {/* Submit Button */}
                     <Button type="submit" 

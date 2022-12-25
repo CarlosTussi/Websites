@@ -60,7 +60,7 @@ function Header()
     return(
     
     <Box
-        bg="#0A0A0A"
+        bg="#0A0A0A"    
         color="#39FF14"
         p="1em 2em 1em 1em"
         position="fixed"
@@ -69,6 +69,7 @@ function Header()
         transitionProperty="transform"
         transitionDuration="0.4s"
         transitionTimingFunction="ease-in-out"
+        fontSize="1.5em"
         >
         <HStack justify="space-between">
             <nav>
@@ -79,7 +80,6 @@ function Header()
                     </HStack>
                 </UnorderedList>
             </nav>
-
             <nav>
                 <UnorderedList styleType="none">
                     <HStack spacing="2em">

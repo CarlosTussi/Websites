@@ -9,7 +9,9 @@ function Footer()
                 bg="#0A0A0A" 
                 color="#39FF14"
                 p="1em 2em 1em 1em"
-                justify="space-evenly">
+                justify="space-evenly"
+                fontSize="1.5em"            
+                >
                 <Text>Carlos Tussi © 2022</Text>
                 <Text>{`</>`}</Text>
             </HStack>
