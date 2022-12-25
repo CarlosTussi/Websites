@@ -9,13 +9,14 @@
 }
 
 .swiper-slide img {
-  /* display: block; */
-  width: 90%;
+  width: 80%;
 }
 
 /* So that the pagination does't get too close to the images */
 .swiper-pagination{
-  bottom: -5px !important;
+  /* bottom: -20px !important; */
+
+  
 }
 
 .swiper-pagination-bullet{

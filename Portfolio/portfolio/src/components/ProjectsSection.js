@@ -5,6 +5,10 @@ import SwiperCore, { EffectCoverflow, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
 import "swiper/swiper.min.css";
+import "swiper/css/pagination"
+import ProjectCard from "./ProjectCard";
+
+import imgSrc from "../assets/me.jpeg";
 
 
 SwiperCore.use([EffectCoverflow, Pagination]);
@@ -24,7 +28,18 @@ const projects = [
         name: "Web Application 3",
         descrription: "My THIRD web application",
         img: "../assets/me.jpeg",
-    }
+    },
+    {
+      name: "Web Application 4",
+      descrription: "My FOURTH web application",
+      img: "../assets/me.jpeg",
+    },
+    {
+      name: "Web Application 5",
+      descrription: "My FIFTH web application",
+      img: "../assets/me.jpeg",
+    },
+
 
 ];
 
@@ -32,7 +47,7 @@ function ProjectsSection()
 {
 
     return(
-            <FullSection 
+      <FullSection 
                 bg="#0A0A0A"
                 id="work">
                 <Swiper
@@ -47,40 +62,18 @@ function ProjectsSection()
           modifier: 1,
           slideShadows: false,
         }}
-        onSlideChange={() => console.log('slide change')}        
-        pagination={true}
-        className="mySwiper"
+        onSlideChange={() => console.log('slide change')}            
+        pagination={true}                
       >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-          <p>A text</p>                    
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" alt="" />
-        </SwiperSlide>
-      </Swiper>    
-            </FullSection>
+        {projects.map((aProject) => {
+            return(
+              <SwiperSlide key={aProject.name}>
+                  <ProjectCard imgSrc={imgSrc} title={aProject.name}/>
+              </SwiperSlide>
+            );
+        })} 
+        </Swiper>    
+      </FullSection>
     );
 }
 
