@@ -46,6 +46,10 @@ const projects = [
 function ProjectsSection()
 {
 
+    const handleSlideClick = (e) =>
+    {
+      //To do
+    }
     return(
       <FullSection 
                 bg="#0A0A0A"
@@ -67,8 +71,8 @@ function ProjectsSection()
       >
         {projects.map((aProject) => {
             return(
-              <SwiperSlide key={aProject.name}>
-                  <ProjectCard imgSrc={imgSrc} title={aProject.name}/>
+              <SwiperSlide onClick={(e)=> handleSlideClick(e)}key={aProject.name}>
+                  <ProjectCard imgSrc={imgSrc} title={aProject.name}/>                  
               </SwiperSlide>
             );
         })} 
