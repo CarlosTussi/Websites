@@ -22,8 +22,6 @@ const social = [
 ]
 
 
-
-
 function Header()
 {
     const headerRef = useRef();
@@ -47,6 +45,18 @@ function Header()
         
     })
 
+
+    const handleNavClick = (anchor) => {
+        const section = document.getElementById(anchor);
+    
+        section.scrollIntoView(
+            {
+                behavior: "smooth",
+                block: "start",
+            });
+    
+    }
+
     return(
     
     <Box
@@ -64,8 +74,8 @@ function Header()
             <nav>
                 <UnorderedList styleType="none">
                     <HStack spacing="4em">
-                        <a key="work" href="#work"><ListItem>Work</ListItem></a>
-                        <a key="contact" href="#contact"><ListItem >Contact</ListItem></a>
+                        <a key="work" href="/#my-work" onClick={()=> handleNavClick("work")}><ListItem>Work</ListItem></a>
+                        <a key="contact" href="/#contact-me"onClick={()=> handleNavClick("contact")} ><ListItem >Contact</ListItem></a>
                     </HStack>
                 </UnorderedList>
             </nav>

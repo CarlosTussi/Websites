@@ -33,7 +33,10 @@ function ContactSection()
     })
 
     return(
-        <FullSection padding="0 0 10em 0">
+        <FullSection 
+                padding="0 0 10em 0"
+                id="contact"
+        >
             <Heading>Reach Out</Heading>
                 <form onSubmit={formik.handleSubmit}>
                     {/* Name */}

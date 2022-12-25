@@ -32,7 +32,9 @@ function ProjectsSection()
 {
 
     return(
-            <FullSection bg="#0A0A0A">
+            <FullSection 
+                bg="#0A0A0A"
+                id="work">
                 <Swiper
         effect={"coverflow"}
         grabCursor={true}
