@@ -25,3 +25,7 @@
 .swiper-pagination-bullet-active {
   background-color: green !important;
 }
+
+a:hover{
+  color: #FF10F0
+}

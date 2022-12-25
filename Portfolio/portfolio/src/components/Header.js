@@ -64,8 +64,8 @@ function Header()
             <nav>
                 <UnorderedList styleType="none">
                     <HStack spacing="4em">
-                        <a key="work"><ListItem>Work</ListItem></a>
-                        <a key="contact"><ListItem >Contact</ListItem></a>
+                        <a key="work" href="#work"><ListItem>Work</ListItem></a>
+                        <a key="contact" href="#contact"><ListItem >Contact</ListItem></a>
                     </HStack>
                 </UnorderedList>
             </nav>

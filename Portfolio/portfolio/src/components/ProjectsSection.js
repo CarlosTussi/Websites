@@ -45,12 +45,13 @@ function ProjectsSection()
           modifier: 1,
           slideShadows: false,
         }}
+        onSlideChange={() => console.log('slide change')}        
         pagination={true}
         className="mySwiper"
       >
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-1.jpg" alt="" />
-          <p>A text</p>
+          <p>A text</p>                    
         </SwiperSlide>
         <SwiperSlide>
           <img src="https://swiperjs.com/demos/images/nature-2.jpg" alt="" />
