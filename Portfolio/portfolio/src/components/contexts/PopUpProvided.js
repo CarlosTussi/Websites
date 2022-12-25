@@ -7,15 +7,18 @@ function PopUpProvider ({children})
 {
     const [popUpInfo, setPopUpInfo] = useState({
         isOpen: false,
-        type: "standard" //Indicate what type of popup is it
+        type: "standard", //Indicate what type of popup is it
+        message: "[default message]",
     })
 
     return(
         <PopUpContext.Provider value={{
             ...popUpInfo,
-            openPopUp: (newType) => setPopUpInfo({
+            openPopUp: (newType, newMessage) => setPopUpInfo({
+                ...popUpInfo,
                 isOpen: true,
-                type: newType,
+                type: newType, 
+                message: newMessage,           
             }),
             closePopUp: () => {
                 setPopUpInfo({

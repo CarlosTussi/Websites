@@ -1,20 +1,33 @@
-import { HStack, Text } from "@chakra-ui/react";
+import { VStack, HStack, Text, Divider } from "@chakra-ui/react";
+import AnchorMenu from "./AnchorMenu";
+import SocialsMenu from "./SocialsMenu";
 
 
 function Footer()
 {
     return(
         <footer>
-            <HStack 
+            <VStack 
                 bg="#0A0A0A" 
                 color="#39FF14"
                 p="1em 2em 1em 1em"
-                justify="space-evenly"
                 fontSize="1.5em"            
-                >
-                <Text>Carlos Tussi © 2022</Text>
-                <Text>{`</>`}</Text>
-            </HStack>
+                >                    
+                <HStack  
+                    justify="space-evenly"
+                    width="full">
+                    <Text fontSize="4em">{`</>`}</Text>
+                    <AnchorMenu />
+                </HStack>
+                <Divider borderColor="#39FF14"/>
+                <VStack p="3em 0 0 0"
+                        spacing="2em"                        
+                        >
+                    <SocialsMenu />
+                    <Text>Carlos Tussi © 2023</Text>
+                </VStack>
+                
+            </VStack>
         </footer>
     );
 }

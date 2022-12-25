@@ -5,22 +5,8 @@ import {
     faLinkedin,
   } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
-
-
-const social = [
-    {
-        name: 'GitHub',
-        url: 'https://github.com/carlostussi',
-        icon: faGithub,
-    },
-    {
-        name: 'Linkedin',
-        url: 'https://www.linkedin.com/in/cetleite/',
-        icon: faLinkedin,
-    }
-
-]
-
+import SocialsMenu from "./SocialsMenu";
+import AnchorMenu from "./AnchorMenu";
 
 function Header()
 {
@@ -45,18 +31,6 @@ function Header()
         
     })
 
-
-    const handleNavClick = (anchor) => {
-        const section = document.getElementById(anchor);
-    
-        section.scrollIntoView(
-            {
-                behavior: "smooth",
-                block: "start",
-            });
-    
-    }
-
     return(
     
     <Box
@@ -71,28 +45,9 @@ function Header()
         transitionTimingFunction="ease-in-out"
         fontSize="1.5em"
         >
-        <HStack justify="space-between">
-            <nav>
-                <UnorderedList styleType="none">
-                    <HStack spacing="4em">
-                        <a key="work" href="/#my-work" onClick={()=> handleNavClick("work")}><ListItem>Work</ListItem></a>
-                        <a key="contact" href="/#contact-me"onClick={()=> handleNavClick("contact")} ><ListItem >Contact</ListItem></a>
-                    </HStack>
-                </UnorderedList>
-            </nav>
-            <nav>
-                <UnorderedList styleType="none">
-                    <HStack spacing="2em">
-                        {social.map((item) => {
-                            return(
-                                <a key={item.name} href={item.url}>
-                                    <ListItem><FontAwesomeIcon icon={item.icon} size="2x"/></ListItem>
-                                </a>
-                            );
-                        })}
-                    </HStack> 
-                </UnorderedList>
-            </nav>
+        <HStack justify="space-between">            
+            <AnchorMenu />
+            <SocialsMenu />            
         </HStack>
     </Box>
     

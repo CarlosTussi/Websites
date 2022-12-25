@@ -24,7 +24,7 @@ function ContactSection()
     
         onSubmit: (data) => { 
             //TO-DO
-            openPopUp("standard")            
+            openPopUp("standard", "Form still under construction...")            
         },
     
         validationSchema: Yup.object({

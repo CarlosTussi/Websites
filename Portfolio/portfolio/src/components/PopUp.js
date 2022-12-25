@@ -13,7 +13,7 @@ import { usePopUpContext } from './contexts/PopUpProvided';
 function PopUp()
 {
     const cancelRef = useRef();
-    const {isOpen, type, closePopUp} = usePopUpContext(); //Destructuring
+    const {isOpen, message, type, closePopUp} = usePopUpContext(); //Destructuring
 
     return(
         <AlertDialog
@@ -34,7 +34,7 @@ function PopUp()
                             <p>Thank You</p>
                         </AlertDialogHeader>
                         <AlertDialogBody>
-                            <p>This form is still under construction...</p>
+                            <p>{message}</p>
                         </AlertDialogBody>
                         <AlertDialogFooter>
                             <Button 
