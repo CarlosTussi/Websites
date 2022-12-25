@@ -20,18 +20,28 @@ function PopUp()
             isOpen={isOpen}
             leastDestructiveRef={cancelRef}
             onClose = {() => console.log("Closing dialog!")}    
-            motionPresent = "slideInBottom"
+            motionPresent = "slideInBottom"            
             >
                 <AlertDialogOverlay>
-                    <AlertDialogContent>
+                    <AlertDialogContent 
+                            textAlign="center"
+                            bg= "black"
+                            border="0.1em solid #39FF14"
+                            color="#39FF14"
+                            >
+                                
                         <AlertDialogHeader>
-                            <p>Header</p>
+                            <p>Thank You</p>
                         </AlertDialogHeader>
                         <AlertDialogBody>
-                            <p>Body</p>
+                            <p>This form is still under construction...</p>
                         </AlertDialogBody>
                         <AlertDialogFooter>
-                            <Button onClick={() => closePopUp()}>Close</Button>
+                            <Button 
+                                m="auto auto"
+                                onClick={() => closePopUp()}
+                                bg="grey"
+                                >Close</Button>
                         </AlertDialogFooter>
                     </AlertDialogContent>
                 </AlertDialogOverlay>
