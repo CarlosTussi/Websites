@@ -5,7 +5,7 @@ import * as COLOR from "../styleguide/colorscheme";
 
 import { useEffect, useState} from "react";
 import ServiceCard from "./ServiceCard";
-import { ArrowDown, PlayCircle, } from 'react-feather';
+import { ArrowDown, } from 'react-feather';
 
 function ServicePage()
 {    
@@ -71,8 +71,7 @@ function ServicePage()
                  position="fixed"
                  zIndex="20" 
                  bottom="0">
-      <ArrowDown    
-                    textAlign="center"
+      <ArrowDown                        
                     className="arrowDown"
                     color={COLOR.text.card}
                     size="8vh" 

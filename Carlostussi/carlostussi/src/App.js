@@ -1,19 +1,23 @@
 import './App.css';
-import { ChakraProvider, Box } from '@chakra-ui/react'
+import { ChakraProvider, } from '@chakra-ui/react'
 import Nav from './components/Nav';
 import LandingPage from './components/LandingPage';
 import ServicePage from './components/ServicePage';
-import FullScreen from './components/FullScreen';
 import ContactPage from './components/ContactPage';
+import PopUp from './components/PopUp';
+import PopUpProvider from './contexts/PopUpProvider';
 
 
 function App() {
   return (
     <ChakraProvider>
-      <Nav />      
-      <LandingPage />
-      <ServicePage />  
-      <ContactPage />        
+      <PopUpProvider>
+        <Nav />      
+        <LandingPage />
+        <ServicePage />  
+        <ContactPage />    
+        <PopUp />
+      </PopUpProvider>    
     </ChakraProvider>
   );
 }

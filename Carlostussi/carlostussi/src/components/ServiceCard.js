@@ -1,4 +1,4 @@
-import { VStack, Heading, Box } from "@chakra-ui/react";
+import { VStack, Box } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
 import * as COLOR from "../styleguide/colorscheme";
 
