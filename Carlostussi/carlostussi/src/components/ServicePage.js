@@ -4,22 +4,31 @@ import { Fade } from "react-awesome-reveal";
 import * as COLOR from "../styleguide/colorscheme";
 
 import { useEffect, useState} from "react";
+import ServiceCard from "./ServiceCard";
+import { ArrowDown, PlayCircle, } from 'react-feather';
 
 function ServicePage()
 {    
-    const [isSticky, setIsSticky] = useState(false);
+    const [isDisplayed, setIsDisplayed] = useState(false);
     //Scroll Listener
     useEffect(() => {
 
         const handleScroll = () =>{            
-            const planningScrollY = document.getElementById("lastSticky").offsetTop - 500;        
+            const planningScrollY = document.getElementById("cardsSection");       
 
             console.log("Current scroll: ", window.scrollY); 
-            console.log("Position Y: ", planningScrollY); 
+            // console.log("OffsetTop: ", planningScrollY.offsetTop);
+            // console.log("OffsetParent: ", planningScrollY.offsetParent);
+            console.log("OffsetHeight: ", planningScrollY.offsetHeight*1.35); 
+            // console.log("OffsetHeigth: ", planningScrollY.offsetHeight);
             
-            window.scrollY >= planningScrollY ? setIsSticky(false) : setIsSticky(true);
+            // window.scrollY >= planningScrollY ? setIsSticky(false) : setIsSticky(true);
+               window.scrollY >= planningScrollY.offsetHeight*1.40 &&
+               window.scrollY <= planningScrollY.offsetHeight*1.53 ? 
+                            setIsDisplayed(true) : 
+                            setIsDisplayed(false);
 
-        }                                          
+        }                                              
 
         window.addEventListener('scroll', handleScroll);
         return() =>{
@@ -42,98 +51,36 @@ function ServicePage()
             </VStack>
         </FullScreen>
 
-        {/* One page for each step + intro page (total 4 pages)*/}
+        {/* One page for each step + intro page*/}
         <FullScreen pages="3">
-            <VStack p="10vh 0 0 0"                    >
-                <Box
-                position= "sticky" 
-                top="6vh"
-                width="100vw"
-                textAlign="center"               
-                >
-                    <Heading id="planning"
-                             bg={COLOR.background.main}
-                             padding="5vh 0 5vh 0">
-                                Planning
+        <VStack spacing="5vh">
+            <VStack id="cardsSection" p="10vh 0 0 0" position="sticky">
+                <Box position= "sticky" top="6vh" width="100vw" textAlign="center">
+                    <Heading id="planning" bg={COLOR.background.main} padding="5vh 0 5vh 0">
+                        Planning
                     </Heading>
-                </Box>
-                {/* ESTABLISHING REQUIREMENTS */}
-                <Box 
-                    position= "sticky" 
-                    top="20vh">
-                    <Fade duration="3500">
-                        <VStack bg={COLOR.background.card}
-                            color={COLOR.text.card}
-                            height="15vh"
-                            width="60vw"
-                            borderRadius="16px"
-                            m="10vh 0 0 0"                        
-                            >
-                                <Box m="auto 0 auto 0"
-                                    textAlign="center"
-                                    fontWeight="bold">
-                                    <p>Establish</p>
-                                    <p>Requirements</p>
-                                </Box>
-                        </VStack>
-                    </Fade>
-                </Box>
-                <Box height="40vh"
-                     width="50vw"
-                     bg=""></Box>
-                {/* DEFINE USER */}
-                <Box 
-                    position= "sticky" 
-                    top="30vh">
-                    <Fade duration="2500">
-                        <VStack bg={COLOR.background.card}
-                            color={COLOR.text.card}
-                            height="15vh"
-                            width="60vw"
-                            borderRadius="16px"
-                            m="20vh 0 0 0"                        
-                            >
-                                <Box m="auto 0 auto 0"
-                                    textAlign="center"
-                                    fontWeight="bold">
-                                    <p>Define</p>
-                                    <p>User</p>
-                                </Box>                            
-                        </VStack>
-                    </Fade>
-                </Box>
-                <Box height="40vh"
-                     width="50vw"
-                     bg=""></Box>
-                     {/* DESIGN PROTOTYPE */}
-                <Box 
-                    position= "sticky" 
-                    top="40vh">
-                    <Fade duration="2500">
-                        <VStack bg={COLOR.background.card}
-                            color={COLOR.text.card}
-                            height="15vh"
-                            width="60vw"
-                            borderRadius="16px"
-                            m="30vh 0 0 0"                        
-                            >
-                                <Box m="auto 0 auto 0"
-                                    textAlign="center"
-                                    fontWeight="bold">
-                                    <p>Design</p>
-                                    <p>Prototype</p>
-                                </Box>
-                        </VStack>
-                    </Fade>
-                </Box>
-                <Box 
-                     id="lastSticky"
-                     height="20vh"
-                     width="50vw"
-                     bg=""                     
-                     position="sticky"
-                    top="60vh"></Box>
-            </VStack>            
+                </Box>       
+                {/* Dummy box to give space to the next element */}
+                <Box height="100vh" width="50vw" bg=""></Box>      
+                <ServiceCard top="20vh" margin="0vh 0 0 0" text="Requirements" spacing="40vh"/>
+                <ServiceCard top="40vh" margin="0vh 0 0 0" text="User" spacing="40vh"/>
+                <ServiceCard top="60vh" margin="0vh 0 0 0" text="Prototype"  spacing="15vh"/>                          
+            </VStack>   
+            
+            <Box display={isDisplayed ? "block" : "none"}
+                 position="fixed"
+                 zIndex="20" 
+                 bottom="0">
+      <ArrowDown    
+                    textAlign="center"
+                    className="arrowDown"
+                    color={COLOR.text.card}
+                    size="8vh" 
+                    strokeWidth="1"                                                                                     
+                    />     
+      </Box>
+            </VStack> 
+            
         </FullScreen>
         </>
     );
