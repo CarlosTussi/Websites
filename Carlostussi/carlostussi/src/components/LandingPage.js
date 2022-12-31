@@ -1,7 +1,7 @@
 import { Heading, VStack, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import UIButton from "./UIButton";
-import { Cpu } from 'react-feather';
+import { ArrowDown, } from 'react-feather';
 import * as COLOR from "../styleguide/colorscheme";
 
 
@@ -16,10 +16,10 @@ function LandingPage()
                     <Heading as="h2">Front-End Dev</Heading>                    
                 </VStack>
                 <UIButton text="Find Out More"/>
-                <Cpu 
-                    color={COLOR.text.header}
-                    size="9vh" 
-                    strokeWidth="1.2"                   
+                <ArrowDown className="arrowDown"
+                    color={COLOR.text.card}
+                    size="8vh" 
+                    strokeWidth="0.5"                   
                     />
             </VStack>
         </FullScreen>

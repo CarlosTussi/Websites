@@ -15,7 +15,6 @@ function ServicePage()
                         <Heading>What does it take?</Heading>
                     </VStack>
                 </Fade>
-                <ArrowDown />
             </VStack>
         </FullScreen>
     );
