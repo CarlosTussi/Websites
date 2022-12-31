@@ -10,6 +10,7 @@ function Nav()
             background: COLOR.background.nav,
             color: COLOR.text.header,
             position: "fixed",
+            zIndex: "10",
         }}>            
             <UnorderedList styleType="none">
                 <HStack justify="space-between">
