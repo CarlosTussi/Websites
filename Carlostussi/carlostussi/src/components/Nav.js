@@ -1,4 +1,5 @@
-import { color, HStack, ListItem, UnorderedList, } from "@chakra-ui/react";
+import { HStack, ListItem, UnorderedList, } from "@chakra-ui/react";
+import { Menu, Hexagon } from 'react-feather';
 import * as COLOR from "../styleguide/colorscheme";
 function Nav()
 {
@@ -12,8 +13,8 @@ function Nav()
         }}>            
             <UnorderedList styleType="none">
                 <HStack justify="space-between">
-                    <ListItem>Left</ListItem>
-                    <ListItem>Right</ListItem>
+                    <ListItem p="0.6vh 0 0 0"><Hexagon size="4.5vh"/></ListItem>
+                    <ListItem p="0.6vh 2vh 0 0"><Menu size="4.5vh"/></ListItem>                   
                 </HStack>
             </UnorderedList>        
         </nav>
