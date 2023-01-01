@@ -1,6 +1,6 @@
 import { VStack, Box } from "@chakra-ui/react";
 import { Fade } from "react-awesome-reveal";
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 
 function ServiceCard(props)
 {
@@ -11,8 +11,8 @@ function ServiceCard(props)
             position= "sticky" 
             top={props.top}>
                     <Fade duration="3500">
-                        <VStack bg={COLOR.background.card}
-                            color={COLOR.text.card}
+                        <VStack bg={GUIDE.color.tertiary}
+                            color={GUIDE.color.secondary}
                             height="15vh"
                             width="60vw"
                             borderRadius="16px"

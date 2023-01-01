@@ -1,14 +1,14 @@
 import { HStack, ListItem, UnorderedList, } from "@chakra-ui/react";
 import { Menu, Hexagon } from 'react-feather';
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 function Nav()
 {
     return(
         <nav style={{
             width:"100vw",
             height:"6vh",
-            background: COLOR.background.nav,
-            color: COLOR.text.header,
+            background: GUIDE.color.secondary,
+            color: GUIDE.color.text,
             position: "fixed",
             zIndex: "10",
         }}>            

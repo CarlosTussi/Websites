@@ -1,9 +1,7 @@
 import { VStack, Heading, Box } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
-import * as COLOR from "../styleguide/colorscheme";
 
 import ServiceCard from "./ServiceCard";
-import { ArrowDown, } from 'react-feather';
 
 function PlanningPage()
 {
@@ -12,7 +10,7 @@ function PlanningPage()
           <VStack spacing="5vh">    
               <VStack id="cardsSection" p="10vh 0 0 0" position="sticky">
                   <Box position= "sticky" top="6vh" width="100vw" textAlign="center">
-                      <Heading id="planning" bg={COLOR.background.main} padding="5vh 0 5vh 0">
+                      <Heading id="planning" padding="5vh 0 5vh 0">
                           Planning
                       </Heading>
                   </Box>       

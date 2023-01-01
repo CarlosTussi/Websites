@@ -1,6 +1,6 @@
 import { Heading, Box, VStack } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 import ServiceCard from "./ServiceCard";
 
 function LunchingPage()
@@ -10,7 +10,7 @@ function LunchingPage()
           <VStack spacing="5vh">    
               <VStack id="cardsSection" p="10vh 0 0 0" position="sticky">
                   <Box position= "sticky" top="6vh" width="100vw" textAlign="center">
-                      <Heading id="planning" bg={COLOR.background.main} padding="5vh 0 5vh 0">
+                      <Heading id="planning" padding="5vh 0 5vh 0">
                           Lunching
                       </Heading>
                   </Box>       
@@ -21,8 +21,8 @@ function LunchingPage()
                     <ServiceCard top="60vh"                                 
                                 margin="0 0 0 0" 
                                 text="Online"  
-                                spacing="15vh"
-                                border={`0.5em dotted ${COLOR.background.button}`}/>                          
+                                spacing="40vh"
+                                border={`0.5em dotted ${GUIDE.color.secondary}`}/>                          
               </VStack>   
             
               </VStack> 

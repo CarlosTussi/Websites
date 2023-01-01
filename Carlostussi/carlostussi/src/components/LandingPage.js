@@ -2,7 +2,7 @@ import { Heading, VStack, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import UIButton from "./UIButton";
 import { ArrowDown, } from 'react-feather';
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 
 
 function LandingPage()
@@ -15,9 +15,9 @@ function LandingPage()
                     <Heading as="h1">Carlos Tussi</Heading>
                     <Heading as="h2">Front-End Dev</Heading>                    
                 </VStack>
-                <UIButton text="Find Out More"/>
+                <UIButton>Find Out More</UIButton>
                 <ArrowDown className="arrowDown"
-                    color={COLOR.text.card}
+                    color={GUIDE.color.secondary}
                     size="8vh" 
                     strokeWidth="0.5"                   
                     />

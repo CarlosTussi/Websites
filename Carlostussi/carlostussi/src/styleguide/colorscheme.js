@@ -1,19 +1,9 @@
-const background   = {
-    main: "#0A1D3C",
-    button: "#830047",
-    card: "#8BAAAD",
-    nav: "#830047",
-    input: "#8BAAAD",
-
+const color = {
+    primary: "#0A1D3C",
+    secondary: "#830047",
+    tertiary: "#8BAAAD",
+    text: "#C9CEBD",
 }
 
-const text = {
-    button: "#C9CEBD",
-    header: "#C9CEBD",
-    subHeader: "#C9CEBD",
-    paragraph: "#C9CEBD",
-    card: "#830047",
 
-}
-
-export  {background, text};
+export  {color};

@@ -1,7 +1,8 @@
-import { Heading, Box, VStack, Text, Image, Button } from "@chakra-ui/react";
+import { Heading, VStack, Text, Image } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import reactSrc from "../images/reactlogo.png"
 import { Fade } from "react-awesome-reveal";
+import UIButton from "./UIButton";
 
 function DevelopingPage()
 {
@@ -13,7 +14,7 @@ function DevelopingPage()
                     <Image display="block" m="0 auto 0 auto" src={reactSrc} boxSize="80%"/>
                 </Fade>
                 <Text p="0 20vw 0 20vw" align="center">Development will be done using modern React user interface library.</Text>
-                <Button colorScheme="pink">What is React</Button>
+                <UIButton>What is React</UIButton>                
             </VStack>
 
         </FullScreen>

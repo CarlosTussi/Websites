@@ -9,12 +9,12 @@ import {
 } from '@chakra-ui/react'
 import { useRef } from 'react';
 import { usePopUpContext } from "../contexts/PopUpProvider";
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 
 function PopUp()
 {
     const cancelRef = useRef();
-    const {isOpen, message, type, closePopUp} = usePopUpContext(); //Destructuring
+    const {isOpen, message, closePopUp} = usePopUpContext(); //Destructuring
 
     return(
         <AlertDialog
@@ -27,8 +27,8 @@ function PopUp()
                 <AlertDialogOverlay>
                     <AlertDialogContent 
                             textAlign="center"
-                            bg= {COLOR.background.main}                            
-                            color={COLOR.text.paragraph}
+                            bg= {GUIDE.color.primary}                            
+                            color={GUIDE.color.text}
                             >
                                 
                         <AlertDialogHeader>

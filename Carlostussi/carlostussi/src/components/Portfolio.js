@@ -1,8 +1,8 @@
-import { Heading, VStack, Button } from "@chakra-ui/react";
+import { Heading, VStack, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-
+import UIButton from "./UIButton";
 import { AttentionSeeker, } from "react-awesome-reveal";
 
 function Portfolio()
@@ -15,7 +15,7 @@ function Portfolio()
                     <AttentionSeeker effect="tada" duration="2000">                    
                         <FontAwesomeIcon icon={faGithub} size="9x"/>                    
                     </AttentionSeeker>
-                    <Button colorScheme="pink"> {`<CarlosTussi />`}</Button>
+                    <UIButton> {`<CarlosTussi />`}</UIButton>
                 </VStack>
             </VStack>
         </FullScreen>

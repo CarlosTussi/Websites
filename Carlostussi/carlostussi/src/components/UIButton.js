@@ -1,14 +1,14 @@
 import { Button } from "@chakra-ui/react";
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 
-function UIButton(props){
+function UIButton({children}){
     return(
         <Button 
         borderRadius="16px"
-        bg={COLOR.background.button}
-        color={COLOR.text.button}
+        bg={GUIDE.color.secondary}
+        color={GUIDE.color.text}
         p="4vh 5vh 4vh 5vh">
-            {props.text}
+            {children}
         </Button>
     );
 }

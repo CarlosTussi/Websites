@@ -1,13 +1,13 @@
 import { Box } from "@chakra-ui/react";
-import * as COLOR from "../styleguide/colorscheme";
+import * as GUIDE from "../styleguide/colorscheme";
 
 function FullScreen(props)
 {
     return(
     <Box width="100vw" 
          height= {props.pages ? `${props.pages*100}vh`: "100vh"}
-         bg={COLOR.background.main} 
-         color={COLOR.text.header}>
+         bg={GUIDE.color.primary} 
+         color={GUIDE.color.text}>
             {console.log(props.pages)}
         {props.children}
     </Box>

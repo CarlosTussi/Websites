@@ -1,7 +1,8 @@
 import FullScreen from "./FullScreen";
 import {useFormik, yupToFormErrors} from "formik";
 import * as Yup from "yup";
-import { FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack, Heading, Button, Box, propNames } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack, Heading, Button,  } from "@chakra-ui/react";
+import * as GUIDE from "../styleguide/colorscheme";
 
 import { usePopUpContext } from "../contexts/PopUpProvider";
 
@@ -75,7 +76,8 @@ function ContactPage()
                     <p>* Required Fields</p>
                     <Button type="submit" 
                             width="full"
-                            colorScheme="pink"
+                            bg={GUIDE.color.secondary}
+                            color={GUIDE.color.text}
                             >Submit</Button>
                 </form>                
             </VStack>
