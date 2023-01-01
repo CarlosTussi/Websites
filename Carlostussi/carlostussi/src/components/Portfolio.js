@@ -1,7 +1,6 @@
 import { Heading, VStack, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { GitHub } from 'react-feather';
 import UIButton from "./UIButton";
 import { AttentionSeeker, } from "react-awesome-reveal";
 
@@ -13,9 +12,9 @@ function Portfolio()
                 <Heading>Check my GitHub!</Heading>
                 <VStack spacing="10vh">
                     <AttentionSeeker effect="tada" duration="2000">                    
-                        <FontAwesomeIcon icon={faGithub} size="9x"/>                    
+                        <GitHub strokeWidth="0.2px" size="35vh"/>                    
                     </AttentionSeeker>
-                    <UIButton> {`<CarlosTussi />`}</UIButton>
+                    <UIButton> {`< CarlosTussi />`}</UIButton>
                 </VStack>
             </VStack>
         </FullScreen>

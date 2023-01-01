@@ -1,7 +1,8 @@
 import FullScreen from "./FullScreen";
-import {useFormik, yupToFormErrors} from "formik";
+import {useFormik, } from "formik";
 import * as Yup from "yup";
-import { FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack, Heading, Button,  } from "@chakra-ui/react";
+import { FormControl, FormErrorMessage, FormLabel, Input, Textarea, VStack, Heading, } from "@chakra-ui/react";
+import UIButton from "./UIButton";
 import * as GUIDE from "../styleguide/colorscheme";
 
 import { usePopUpContext } from "../contexts/PopUpProvider";
@@ -42,10 +43,10 @@ function ContactPage()
                         <Input id="name"
                             name="name"
                             width="80vw"                            
-                            errorBorderColor= "#d5408b"                   
+                            errorBorderColor= {GUIDE.color.secondary}                  
                             {...formik.getFieldProps("name")}
                                 />
-                        <FormErrorMessage color="pink">Name Required</FormErrorMessage>
+                        <FormErrorMessage color={GUIDE.color.errorText}>Name Required</FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={formik.touched.email && formik.errors.hasOwnProperty("email")}
                                  p="2vh 0 0 0"
@@ -54,10 +55,10 @@ function ContactPage()
                         <Input id="email"
                             name="email"
                             width="80vw"       
-                            errorBorderColor= "#d5408b"                     
+                            errorBorderColor= {GUIDE.color.secondary}                     
                             {...formik.getFieldProps("email")}
                                 />
-                        <FormErrorMessage color="pink">Invalid Email Format</FormErrorMessage>
+                        <FormErrorMessage color={GUIDE.color.errorText}>Invalid Email Format</FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={formik.touched.message && formik.errors.hasOwnProperty("message")}
                                      p="2vh 0 0 0">
@@ -68,17 +69,13 @@ function ContactPage()
                                 height="35vh"
                                 width="80vw"
                                 resize= "none"    
-                                errorBorderColor= "#d5408b"                              
+                                errorBorderColor= {GUIDE.color.secondary}                              
                             {...formik.getFieldProps("message")}
                                 />
-                        <FormErrorMessage color="pink">Must be at least 10 characters</FormErrorMessage>
+                        <FormErrorMessage color={GUIDE.color.errorText}>Must be at least 10 characters</FormErrorMessage>
                     </FormControl>
                     <p>* Required Fields</p>
-                    <Button type="submit" 
-                            width="full"
-                            bg={GUIDE.color.secondary}
-                            color={GUIDE.color.text}
-                            >Submit</Button>
+                    <UIButton width="full" type="submit">Submit</UIButton>
                 </form>                
             </VStack>
         </FullScreen>

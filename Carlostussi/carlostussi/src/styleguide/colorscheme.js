@@ -3,6 +3,10 @@ const color = {
     secondary: "#830047",
     tertiary: "#8BAAAD",
     text: "#C9CEBD",
+    errorText: "#D5408B",
+    hover: "#",
+    active: "#580030",
+
 }
 
 

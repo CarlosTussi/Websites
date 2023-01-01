@@ -27,7 +27,7 @@ function ServiceCard(props)
                     </Fade>
                 </Box>
                 {/* To add spacing to give the long scrolling illusion */}
-                <Box height={props.spacing}></Box>
+                <Box height={props.gap}></Box>
     </>);
 }
 

@@ -7,6 +7,7 @@ import ContactPage from './components/ContactPage';
 import PopUp from './components/PopUp';
 import PopUpProvider from './contexts/PopUpProvider';
 import Portfolio from './components/Portfolio';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <LandingPage />
         <ServicePage />  
         <Portfolio />
-        <ContactPage />            
+        <ContactPage />  
+        <Footer />          
         <PopUp />
       </PopUpProvider>    
     </ChakraProvider>

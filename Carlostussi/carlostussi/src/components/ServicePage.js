@@ -1,4 +1,4 @@
-import { VStack, Heading, Box } from "@chakra-ui/react";
+import { VStack, Heading, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import { Fade } from "react-awesome-reveal";
 

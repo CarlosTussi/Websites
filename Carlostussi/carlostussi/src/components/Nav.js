@@ -1,4 +1,4 @@
-import { HStack, ListItem, UnorderedList, } from "@chakra-ui/react";
+import { HStack, ListItem, UnorderedList, Box} from "@chakra-ui/react";
 import { Menu, Hexagon } from 'react-feather';
 import * as GUIDE from "../styleguide/colorscheme";
 function Nav()
@@ -17,7 +17,8 @@ function Nav()
                     <ListItem p="0.6vh 0 0 0"><Hexagon size="4.5vh"/></ListItem>
                     <ListItem p="0.6vh 2vh 0 0"><Menu size="4.5vh"/></ListItem>                   
                 </HStack>
-            </UnorderedList>        
+            </UnorderedList>  
+            <Box bg="#580030" textAlign="center">Mobile Version</Box>      
         </nav>
     );
 

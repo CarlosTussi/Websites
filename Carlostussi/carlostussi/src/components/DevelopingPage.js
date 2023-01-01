@@ -23,15 +23,3 @@ function DevelopingPage()
 }
 
 export default DevelopingPage;
-
-
-/*
-<Box position="sticky" top="25vh">
-                    <Fade duration="3500">
-                        <Image boxSize="30vh" src={reactSrc} />
-                    </Fade>                 
-                </Box>                                                  
-                    <Text height="10vh"  width="100vw" position="sticky" top="50vh">Development will be done using modern React user interface library.</Text>
-                <Box height="50vh" width="50vw" bg=""></Box> 
-
-*/ 

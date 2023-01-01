@@ -3,7 +3,6 @@
   animation: bounce infinite 1s;
 }
 
-
 @keyframes bounce {
   0% {
     transform: translateY(0)
@@ -15,4 +14,9 @@
   100% {
     transform: translateY(0);
   }
+}
+
+footer .socialIcon:hover{
+  color: #0A1D3C;
+  cursor: pointer;
 }
