@@ -18,13 +18,11 @@ function LunchingPage()
                   <Box height="100vh" width="50vw" bg=""></Box>      
                   <ServiceCard top="20vh" margin="0vh 0 0 0" text="Hosting" spacing="40vh"/>
                   <ServiceCard top="40vh" margin="0vh 0 0 0" text="Deploying" spacing="40vh"/>
-                  <Box borderBottom={`1em solid ${COLOR.background.button}`}
-                       borderRadius="0">
-                    <ServiceCard top="60vh" 
-                                margin="0vh 0 0 0" 
+                    <ServiceCard top="60vh"                                 
+                                margin="0 0 0 0" 
                                 text="Online"  
-                                spacing="15vh"/>                          
-                   </Box>
+                                spacing="15vh"
+                                border={`0.5em dotted ${COLOR.background.button}`}/>                          
               </VStack>   
             
               </VStack> 

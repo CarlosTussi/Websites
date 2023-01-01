@@ -6,6 +6,8 @@ function ServiceCard(props)
 {
     return(<>
         <Box 
+            border={props.border}
+            borderRadius="16px"
             position= "sticky" 
             top={props.top}>
                     <Fade duration="3500">

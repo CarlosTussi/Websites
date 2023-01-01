@@ -6,6 +6,7 @@ import ServicePage from './components/ServicePage';
 import ContactPage from './components/ContactPage';
 import PopUp from './components/PopUp';
 import PopUpProvider from './contexts/PopUpProvider';
+import Portfolio from './components/Portfolio';
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
         <Nav />      
         <LandingPage />
         <ServicePage />  
-        <ContactPage />    
+        <Portfolio />
+        <ContactPage />            
         <PopUp />
       </PopUpProvider>    
     </ChakraProvider>

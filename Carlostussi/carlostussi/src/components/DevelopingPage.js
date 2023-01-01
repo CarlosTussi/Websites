@@ -9,7 +9,7 @@ function DevelopingPage()
         <FullScreen>
             <VStack spacing="10vh">
                 <Heading>Developing</Heading>
-                <Fade duration="2500">
+                <Fade duration="3500">
                     <Image display="block" m="0 auto 0 auto" src={reactSrc} boxSize="80%"/>
                 </Fade>
                 <Text p="0 20vw 0 20vw" align="center">Development will be done using modern React user interface library.</Text>
