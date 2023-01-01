@@ -9,7 +9,7 @@ function StickyPage(props)
 
         <FullScreen pages="3">
         <VStack spacing="5vh">    
-            <VStack p="10vh 0 0 0" position="sticky">
+            <VStack p="8vh 0 0 0" position="sticky">
                 <Box position= "sticky" top="6vh" width="100vw" textAlign="center">
                     <Heading padding="5vh 0 5vh 0">
                         {props.title}

@@ -18,7 +18,7 @@ function Nav()
                     <ListItem p="0.6vh 2vh 0 0"><Menu size="4.5vh"/></ListItem>                   
                 </HStack>
             </UnorderedList>  
-            <Box bg="#580030" textAlign="center">Mobile Version</Box>      
+            <Box bg="#580030" textAlign="center">Better view on mobile</Box>      
         </nav>
     );
 

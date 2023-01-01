@@ -8,11 +8,11 @@ function Portfolio()
 {
     return(<>
         <FullScreen>
-            <VStack spacing="20vh" p="10vh 0 0 0">
+            <VStack spacing="15vh" p="10vh 0 0 0">
                 <Heading>Check my GitHub!</Heading>
                 <VStack spacing="10vh">
                     <AttentionSeeker effect="tada" duration="2000">                    
-                        <GitHub strokeWidth="0.2px" size="35vh"/>                    
+                        <GitHub strokeWidth="0.2px" size="30vh"/>                    
                     </AttentionSeeker>
                     <UIButton> {`< CarlosTussi />`}</UIButton>
                 </VStack>
