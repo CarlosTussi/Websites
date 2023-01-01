@@ -2,6 +2,8 @@ import { VStack, Heading, } from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import { Fade } from "react-awesome-reveal";
 
+import * as GUIDE from "../styleguide/colorscheme";
+import { ArrowDown, } from 'react-feather';
 import PlanningPage from "./PlanningPage";
 import DevelopingPage from "./DevelopingPage";
 import LunchingPage from "./LunchingPage";
@@ -19,7 +21,15 @@ function ServicePage()
                         <Heading>What does it take?</Heading>
                     </VStack>
                 </Fade>
+                <Fade duration="2000">
+                    <ArrowDown className="arrowDown"
+                        color={GUIDE.color.secondary}
+                        size="8vh" 
+                        strokeWidth="0.5"                   
+                        />
+                </Fade>
             </VStack>
+            
         </FullScreen>
 
         <PlanningPage />

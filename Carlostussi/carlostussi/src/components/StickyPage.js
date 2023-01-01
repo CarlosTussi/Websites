@@ -16,7 +16,7 @@ function StickyPage(props)
                     </Heading>
                 </Box>       
                 {/* Dummy box to give space to the next element */}
-                <Box height="100vh" width="50vw" bg=""></Box>      
+                <Box height="75vh" width="50vw" bg=""></Box>      
                 <ServiceCard top="25vh" text={props.cards[0]} gap="40vh"/>
                 <ServiceCard top="50vh" text={props.cards[1]} gap="40vh"/>
                 <ServiceCard top="75vh"                                 

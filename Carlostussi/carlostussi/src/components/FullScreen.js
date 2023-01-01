@@ -8,7 +8,6 @@ function FullScreen(props)
          height= {props.pages ? `${props.pages*100}vh`: "100vh"}
          bg={GUIDE.color.primary} 
          color={GUIDE.color.text}>
-            {console.log(props.pages)}
         {props.children}
     </Box>
     );

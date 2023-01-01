@@ -1,4 +1,4 @@
-import { Heading, VStack, } from "@chakra-ui/react";
+import { Heading, VStack, Box} from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
 import UIButton from "./UIButton";
 import { ArrowDown, } from 'react-feather';
@@ -6,7 +6,7 @@ import * as GUIDE from "../styleguide/colorscheme";
 
 
 function LandingPage()
-{
+{ 
     return(
         <FullScreen>
             <VStack p="30vh 0 0 0"
