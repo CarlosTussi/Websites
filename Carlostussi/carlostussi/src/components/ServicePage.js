@@ -14,7 +14,7 @@ function ServicePage()
         <>
         <FullScreen id="services">
             <VStack p="50vh 0 0 0"
-                    spacing="30vh">
+                    spacing="20vh">
                 <Fade duration="2500">
                     <VStack>
                         <Heading as="h1">Building <span style={{color: GUIDE.color.secondary, }}>your</span> website</Heading>

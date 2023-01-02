@@ -20,7 +20,7 @@ function App() {
         <Portfolio />
         <ContactPage />  
         <Footer />          
-        <PopUp />
+        <PopUp />    
       </PopUpProvider>    
     </ChakraProvider>
   );

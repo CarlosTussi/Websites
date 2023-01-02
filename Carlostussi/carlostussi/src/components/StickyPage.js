@@ -24,7 +24,7 @@ function StickyPage(props)
                 <ServiceCard top="75vh"                                 
                               text={props.cards[2]}  
                               gap="40vh"
-                              border={props.final ? `0.5em dotted ${GUIDE.color.secondary}`:""}/>                          
+                              border={props.final ? `0.3em dotted ${GUIDE.color.secondary}`:""}/>                          
             </VStack>   
           
             </VStack> 

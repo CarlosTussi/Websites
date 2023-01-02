@@ -3,12 +3,11 @@ import FullScreen from "./FullScreen";
 import { ArrowDown, Hexagon} from 'react-feather';
 import * as GUIDE from "../styleguide/colorscheme";
 
-
 function LandingPage()
 { 
     return(
         <FullScreen id="home">
-            <VStack p="30vh 0 0 0"
+            <VStack p="20vh 0 0 0"
                     spacing="15vh">                
                 <VStack>
                     <Heading as="h1">Carlos Tussi</Heading>
@@ -21,7 +20,7 @@ function LandingPage()
                     size="8vh" 
                     strokeWidth="0.5"                   
                     />
-            </VStack>
+            </VStack>            
         </FullScreen>
     );
 }

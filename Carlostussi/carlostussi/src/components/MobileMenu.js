@@ -46,12 +46,23 @@ function MobileMenu()
             position: "fixed",
             zIndex: "200",
             
-            transitionDuration: "0.4s",
+            transitionDuration: "0.3s",
             transitionTimingFunction: "ease-in-out",
         }}>                             
             <UnorderedList styleType="none">
                 <HStack justify="space-between">
-                    <ListItem p="0.6vh 0 0 0"><Hexagon size="4.5vh"/></ListItem>
+                    <ListItem onClick={() => {
+                         const target = document.getElementById("home");
+                         if(target)
+                         {
+                             target.scrollIntoView({
+                                 behavior: "smooth",
+                                 block: "start"
+                             });
+                             closeMenu();
+                             
+                         }
+                    }} p="0.6vh 0 0 0"><Hexagon size="4.5vh"/></ListItem>
                     { 
                         isOpen ? <ListItem onClick={()=> closeMenu()} p="0.6vh 2vh 0 0"><X size="4.5vh"/></ListItem> :
                                  <ListItem onClick={()=> openMenu()} p="0.6vh 2vh 0 0"><Menu size="4.5vh"/></ListItem>                                  

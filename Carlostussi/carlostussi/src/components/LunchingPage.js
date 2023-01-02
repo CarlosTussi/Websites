@@ -2,7 +2,6 @@ import StickyPage from "./StickyPage";
 import { Box, } from "@chakra-ui/react";
 import { useState, useEffect,} from "react";
 import * as GUIDE from "../styleguide/colorscheme";
-import { Fade } from "react-awesome-reveal";
 
 const card = ["Hosting",
               "Deploying",
