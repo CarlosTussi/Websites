@@ -37,3 +37,29 @@ footer .socialIcon:hover{
     opacity: 1;
   }
 }
+
+
+@keyframes slideDown {
+  0%{
+    transform: translateY(-50vh);    
+  }
+  100%{
+    transform: translateY(0vh);    
+  }
+}
+@keyframes slideUp {
+  0%{
+    transform: translateY(0vh);    
+  }
+  100%{
+    transform: translateY(-50vh);    
+  }
+}
+
+
+
+
+.sideMenu{
+  animation: slideDown 0.5s ease-in-out;
+  transform: translateZ(-10px);
+}

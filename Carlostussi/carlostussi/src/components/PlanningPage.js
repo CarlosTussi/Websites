@@ -21,6 +21,7 @@ function PlanningPage()
             const start = elementScroll;
             const limit = (elementHeight/2 + start);
 
+            //Changing the value for division will alter the time the progress bar will remain after it finishes
             currentScroll >= start &&
             currentScroll < (elementHeight/1.8 + start) ? setIsDisplayed(true) : setIsDisplayed(false);
             

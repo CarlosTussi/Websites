@@ -22,6 +22,7 @@ function LunchingPage()
             const start = elementScroll;
             const limit = (elementHeight/2 + start);
 
+            //Changing the value for division will alter the time the progress bar will remain after it finishes
             if(currentScroll >= start &&
                 currentScroll < (elementHeight/1.8 + start))
             {
