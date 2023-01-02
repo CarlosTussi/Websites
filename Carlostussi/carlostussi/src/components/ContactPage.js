@@ -31,7 +31,7 @@ function ContactPage()
     const {openPopUp} = usePopUpContext();
 
     return(<>
-        <FullScreen>
+        <FullScreen id="contactme">
             <VStack m="0 5vh 0 5vh"
                     spacing="5vh">
                 <Heading>Reach Out</Heading>            

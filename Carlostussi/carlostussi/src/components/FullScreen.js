@@ -7,8 +7,11 @@ function FullScreen(props)
     <Box width="100vw" 
          height= {props.pages ? `${props.pages*100}vh`: "100vh"}
          bg={GUIDE.color.primary} 
-         color={GUIDE.color.text}>
+         color={GUIDE.color.text}
+         id= {props.id}
+         >
         {props.children}
+       
     </Box>
     );
 

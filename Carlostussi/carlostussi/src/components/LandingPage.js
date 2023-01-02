@@ -8,7 +8,7 @@ import * as GUIDE from "../styleguide/colorscheme";
 function LandingPage()
 { 
     return(
-        <FullScreen>
+        <FullScreen id="home">
             <VStack p="30vh 0 0 0"
                     spacing="15vh">                
                 <VStack>

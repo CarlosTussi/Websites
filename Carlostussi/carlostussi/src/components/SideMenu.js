@@ -4,6 +4,34 @@ import { useMobileMenuContext } from "../contexts/MobileMenuProvider";
 import * as GUIDE from "../styleguide/colorscheme";
 
 
+
+function SideListItem(props)
+{
+    const { closeMenu } = useMobileMenuContext();
+    return(
+            <a><ListItem 
+                style={{cursor:"pointer"}}
+                m="0 0 5vh 0"
+                onClick={() => {                    
+                    const target = document.getElementById(props.anchor);
+                    if(target)
+                    {
+                        target.scrollIntoView({
+                            behavior: "smooth",
+                            block: "start"
+                        });
+                        closeMenu();
+                        
+                    }
+                    // console.log(target);
+                }}
+                >
+                {props.children}
+            </ListItem>
+        </a>
+    );
+}
+
 function SideMenu()
 {
     const {isOpen} = useMobileMenuContext();
@@ -36,8 +64,7 @@ function SideMenu()
                 className="sideMenu"
                 position="fixed"
                 top={isOpen? "0" : "-50vh"}
-                zIndex="150"
-                height="50vh"
+                zIndex="150"                
                 width="100vw"
                 bg={GUIDE.color.active}
                 color={GUIDE.color.text}
@@ -53,11 +80,12 @@ function SideMenu()
                             styleType="none"
                             fontSize="2xl"
                             width="full"
-                            textAlign="center">
-                    <ListItem>About</ListItem>
-                    <ListItem>Contact</ListItem>
-                    <ListItem>Services</ListItem>
-                    <ListItem>Work</ListItem>                    
+                            textAlign="center"
+                            m="0">
+                    <SideListItem anchor="home" >Home</SideListItem>                    
+                    <SideListItem anchor="services">Services</SideListItem>
+                    <SideListItem anchor="portfolio">Work</SideListItem>      
+                    <SideListItem anchor="contactme">Contact</SideListItem>              
                 </UnorderedList>
             </VStack>
         </div>

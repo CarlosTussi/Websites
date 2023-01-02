@@ -12,7 +12,7 @@ function ServicePage()
 {    
     return(
         <>
-        <FullScreen>
+        <FullScreen id="services">
             <VStack p="50vh 0 0 0"
                     spacing="30vh">
                 <Fade duration="2500">

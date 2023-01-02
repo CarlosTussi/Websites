@@ -7,7 +7,7 @@ import { AttentionSeeker, } from "react-awesome-reveal";
 function Portfolio()
 {
     return(<>
-        <FullScreen>
+        <FullScreen id="portfolio">
             <VStack spacing="15vh" p="10vh 0 0 0">
                 <Heading>Check my GitHub!</Heading>
                 <VStack spacing="10vh">
