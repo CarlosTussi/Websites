@@ -31,19 +31,19 @@ function SideMenu()
                 opacity="0.7"
                 >            
             </Box>
+            
             {/* Side menu itself */}
             <VStack
-                // display={isOpen ? "block" : "none"}
                 className="sideMenu"
                 position="fixed"
-                top="5vh"
+                top="0"
                 zIndex="150"
                 height="50vh"
                 width="100vw"
                 bg={GUIDE.color.active}
                 color={GUIDE.color.text}
                 borderRadius="0 0 5vh 5vh"
-                p="5vh 0 0 0"
+                p="10vh 0 0 0"
 
                 ref={menuRef}                
                 transitionDuration=".3s"

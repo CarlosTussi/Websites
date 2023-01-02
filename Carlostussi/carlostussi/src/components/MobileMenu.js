@@ -1,23 +1,53 @@
 import { HStack, ListItem, UnorderedList,} from "@chakra-ui/react";
 import { Menu, Hexagon, X } from 'react-feather';
 import * as GUIDE from "../styleguide/colorscheme";
-import SideMenu from "./SideMenu";
 
-import MobileMenuProvider, { useMobileMenuContext } from "../contexts/MobileMenuProvider";
-import { useContext } from "react";
+import { useMobileMenuContext } from "../contexts/MobileMenuProvider";
+import { useEffect, useRef, useState } from "react";
 
 function MobileMenu()
 {
     const {isOpen, openMenu, closeMenu} = useMobileMenuContext();
+    const menuBarRef = useRef();
+    const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
+
+    useEffect(() => {
+
+
+        const handleScroll =  () => {
+            const currentScrollPosition = window.scrollY;
+
+            if(!isOpen){
+                currentScrollPosition > previousScrollPosition ? menuBarRef.current.style.transform = "translateY(-40vh)" : menuBarRef.current.style.transform = "translateY(0)"                            
+
+                setPreviousScrollPosition(currentScrollPosition);
+        }
+    }
+
+
+        window.addEventListener('scroll', handleScroll);
+
+        return ()=> {
+            window.removeEventListener('scroll', handleScroll);
+        }
+    },[previousScrollPosition, isOpen])
+
+
 
     return(
-        <nav style={{
+        <nav
+            ref={menuBarRef}
+
+            style={{
             width:"100vw",
             height:"6vh",
             background: GUIDE.color.secondary,
             color: GUIDE.color.text,
             position: "fixed",
             zIndex: "200",
+            
+            transitionDuration: "0.4s",
+            transitionTimingFunction: "ease-in-out",
         }}>                             
             <UnorderedList styleType="none">
                 <HStack justify="space-between">

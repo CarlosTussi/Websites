@@ -15,8 +15,7 @@ function Nav()
         <MobileMenuProvider>
             <MobileMenu />
             <SideMenu />    
-        </MobileMenuProvider>
-         {/* <Box bg="#580030" textAlign="center">Better view on mobile</Box>                   */}
+        </MobileMenuProvider>         
         </>
     );
 
