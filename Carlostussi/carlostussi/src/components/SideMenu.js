@@ -1,14 +1,28 @@
 import { Box, ListItem, UnorderedList, VStack} from "@chakra-ui/react";
+import { useEffect, useRef } from "react";
+import { useMobileMenuContext } from "../contexts/MobileMenuProvider";
 import * as GUIDE from "../styleguide/colorscheme";
+
 
 function SideMenu()
 {
+    const {isOpen} = useMobileMenuContext();
+    const menuRef = useRef();
+
+    useEffect(()=>{
+
+        isOpen? menuRef.current.style.transform = "translateY(0vh)" : menuRef.current.style.transform ="translateY(-50vh)"
+
+    },[isOpen])
+
+
     return(
 
-             <>
+             <div>
             {/* For the reduced opacity of the background */}
-            <Box 
-                position= "fixed"
+            <Box       
+                display = {isOpen ? "block" : "none"}                          
+                position= "fixed"                
                 zIndex = "100" 
                 top = "6vh"
                 height="100vh"
@@ -19,6 +33,7 @@ function SideMenu()
             </Box>
             {/* Side menu itself */}
             <VStack
+                // display={isOpen ? "block" : "none"}
                 className="sideMenu"
                 position="fixed"
                 top="5vh"
@@ -29,6 +44,10 @@ function SideMenu()
                 color={GUIDE.color.text}
                 borderRadius="0 0 5vh 5vh"
                 p="5vh 0 0 0"
+
+                ref={menuRef}                
+                transitionDuration=".3s"
+                transitionTimingFunction="ease-in-out"
                 >
                 <UnorderedList 
                             spacing="5vh" 
@@ -42,7 +61,7 @@ function SideMenu()
                     <ListItem>Work</ListItem>                    
                 </UnorderedList>
             </VStack>
-        </>
+        </div>
     );
 }
 
