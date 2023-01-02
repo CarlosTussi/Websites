@@ -1,6 +1,5 @@
-import { Heading, VStack, Box} from "@chakra-ui/react";
+import { Heading, VStack,} from "@chakra-ui/react";
 import FullScreen from "./FullScreen";
-import UIButton from "./UIButton";
 import { ArrowDown, Hexagon} from 'react-feather';
 import * as GUIDE from "../styleguide/colorscheme";
 

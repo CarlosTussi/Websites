@@ -9,7 +9,7 @@ function SideListItem(props)
 {
     const { closeMenu } = useMobileMenuContext();
     return(
-            <a><ListItem 
+            <ListItem 
                 style={{cursor:"pointer"}}
                 m="0 0 5vh 0"
                 onClick={() => {                    
@@ -28,7 +28,7 @@ function SideListItem(props)
                 >
                 {props.children}
             </ListItem>
-        </a>
+        
     );
 }
 
