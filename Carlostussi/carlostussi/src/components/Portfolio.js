@@ -14,7 +14,7 @@ function Portfolio()
                     <AttentionSeeker effect="tada" duration="2000">                    
                         <GitHub strokeWidth="0.2px" size="30vh"/>                    
                     </AttentionSeeker>
-                    <UIButton> {`< CarlosTussi />`}</UIButton>
+                    <UIButton href="https://github.com/CarlosTussi/"> {`< CarlosTussi />`}</UIButton>
                 </VStack>
             </VStack>
         </FullScreen>

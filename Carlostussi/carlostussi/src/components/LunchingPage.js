@@ -48,7 +48,7 @@ function LunchingPage()
     <>      
         <Box display={isDisplayed ? "block" : "none"}
                  position="fixed"                         
-                 width="5vw" 
+                 width="3vw" 
                  height="65vh"                  
                  top="25vh"
                  left="5vw"
@@ -61,7 +61,7 @@ function LunchingPage()
             <Box 
                 display={isDisplayed ? "block" : "none"}
                 position="fixed"
-                width="5vw"
+                width="3vw"
                 height={`${progressBar*65}vh`}
                 top="25vh"
                 left="5vw"
@@ -72,7 +72,7 @@ function LunchingPage()
                 />
 
             <div id="beforeId2">
-            <StickyPage title="Lunching" cards={card} final={true}/>
+            <StickyPage title="Step 3" subtitle="Lunching" cards={card} final={true}/>
          </div>
          </>
     );

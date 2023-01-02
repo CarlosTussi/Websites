@@ -17,8 +17,8 @@ function ServicePage()
                     spacing="30vh">
                 <Fade duration="2500">
                     <VStack>
-                        <Heading>The Work</Heading>
-                        <Heading>What does it take?</Heading>
+                        <Heading as="h1">Building <span style={{color: GUIDE.color.secondary, }}>your</span> website</Heading>
+                        <Heading as="h2" size="md">What are the steps?</Heading>
                     </VStack>
                 </Fade>
                 <Fade duration="2000">

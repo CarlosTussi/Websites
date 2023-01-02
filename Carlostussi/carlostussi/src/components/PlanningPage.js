@@ -41,7 +41,7 @@ function PlanningPage()
         <>        
         <Box display={isDisplayed ? "block" : "none"}
                  position="fixed"                         
-                 width="5vw" 
+                 width="3vw" 
                  height="65vh"                  
                  top="25vh"
                  left="5vw"
@@ -54,7 +54,7 @@ function PlanningPage()
             <Box 
                 display={isDisplayed ? "block" : "none"}
                 position="fixed"
-                width="5vw"
+                width="3vw"
                 height={`${progressBar*65}vh`}
                 top="25vh"
                 left="5vw"
@@ -65,7 +65,7 @@ function PlanningPage()
                 />
 
             <div id="beforeId">
-            <StickyPage id="idme" title="Planning" cards={card}/>   
+            <StickyPage title="Step 1" subtitle="Planning" cards={card}/>   
             </div>                 
         </>
     );
