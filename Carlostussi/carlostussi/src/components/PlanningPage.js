@@ -4,8 +4,8 @@ import * as GUIDE from "../styleguide/colorscheme";
 import { useState, useEffect, } from "react";
 
 const card = ["Requirements",
-              "Users",
-              "Prototype"]
+                "Users",
+            "Prototype",]
 
 function PlanningPage()
 {
@@ -46,7 +46,7 @@ function PlanningPage()
                  top="25vh"
                  left="5vw"
                  borderRadius="16px"
-                 bg={GUIDE.color.secondary} 
+                 bg={GUIDE.color.tertiary} 
                  zIndex="1"
                  id="baseProgressBar" 
                  />
@@ -59,7 +59,7 @@ function PlanningPage()
                 top="25vh"
                 left="5vw"
                 borderRadius="16px"
-                bg={GUIDE.color.tertiary} 
+                bg={GUIDE.color.secondary} 
                 zIndex="2"
                 id="progressBar" 
                 />

@@ -3,19 +3,6 @@
   animation: bounce infinite 1s;
 }
 
-@keyframes bounce {
-  0% {
-    transform: translateY(0)
-  }
-  50% {
-    transform: translateY(1.5vh);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 footer .socialIcon:hover{
   color: #0A1D3C;
   cursor: pointer;
@@ -27,6 +14,20 @@ footer .socialIcon:hover{
 
 #progressBar{
   animation: fadeIn 3s;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0)
+  }
+  50% {
+    transform: translateY(1.5vh);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
@@ -58,8 +59,3 @@ footer .socialIcon:hover{
 
 
 
-
-.sideMenu{
-  animation: slideDown 0.5s ease-in-out;
-  transform: translateZ(-10px);
-}

@@ -10,7 +10,6 @@ function SideMenu()
     const menuRef = useRef();
 
     useEffect(()=>{
-
         isOpen? menuRef.current.style.transform = "translateY(0vh)" : menuRef.current.style.transform ="translateY(-50vh)"
 
     },[isOpen])
@@ -36,7 +35,7 @@ function SideMenu()
             <VStack
                 className="sideMenu"
                 position="fixed"
-                top="0"
+                top={isOpen? "0" : "-50vh"}
                 zIndex="150"
                 height="50vh"
                 width="100vw"
