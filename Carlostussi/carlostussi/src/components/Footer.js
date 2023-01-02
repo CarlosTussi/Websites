@@ -8,7 +8,7 @@ function Footer()
         <footer style={{
             background: GUIDE.color.primary,
             color: GUIDE.color.text,
-            padding: "5vh 0 0 0"
+            padding: "5vh 0 0 0",            
         }}>
             <VStack bg={GUIDE.color.secondary}
                     p="3vh 0 3vh 0">

@@ -31,9 +31,10 @@ function ContactPage()
     const {openPopUp} = usePopUpContext();
 
     return(<>
-        <FullScreen id="contactme">
+        <FullScreen id="contactme" overflow="auto">            
             <VStack m="0 5vh 0 5vh"
-                    spacing="5vh">
+                    spacing="5vh"                                     
+                    >
                 <Heading>Reach Out</Heading>            
                 <form onSubmit={formik.handleSubmit}>
                     <FormControl isInvalid={formik.touched.name && formik.errors.hasOwnProperty("name")}
@@ -42,7 +43,7 @@ function ContactPage()
                         <FormLabel htmlFor="name">Name*</FormLabel>                        
                         <Input id="name"
                             name="name"
-                            width="80vw"                            
+                            width="80vw"                                                                                 
                             errorBorderColor= {GUIDE.color.secondary}                  
                             {...formik.getFieldProps("name")}
                                 />
@@ -54,7 +55,7 @@ function ContactPage()
                         <FormLabel htmlFor="email">Email*</FormLabel>
                         <Input id="email"
                             name="email"
-                            width="80vw"       
+                            width="80vw"                                   
                             errorBorderColor= {GUIDE.color.secondary}                     
                             {...formik.getFieldProps("email")}
                                 />
@@ -67,7 +68,7 @@ function ContactPage()
                                 id="message"
                                 name="message"
                                 height="35vh"
-                                width="80vw"
+                                width="80vw"                                
                                 resize= "none"    
                                 errorBorderColor= {GUIDE.color.secondary}                              
                             {...formik.getFieldProps("message")}

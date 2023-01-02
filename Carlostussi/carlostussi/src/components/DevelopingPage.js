@@ -17,11 +17,12 @@ function DevelopingPage()
                 </Box>
                 <Fade duration="3500">
                     <Rotate duration="4000">
-                        <Image display="block" 
+                        <Image display="block"   
                             m="0 auto 0 auto" 
                             src={reactSrc} 
                             boxSize="80%" 
                             maxWidth="450px"
+                            maxHeight="40vh"
                                                     
                             />
                            </Rotate>

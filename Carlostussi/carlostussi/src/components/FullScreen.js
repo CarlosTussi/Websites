@@ -5,10 +5,11 @@ function FullScreen(props)
 {
     return(
     <Box width="100vw" 
-         height= {props.pages ? `${props.pages*100}vh`: "100vh"}
+         height= {props.pages ? `${props.pages*100}vh`: "100vh"}         
          bg={GUIDE.color.primary} 
          color={GUIDE.color.text}
          id= {props.id}
+         overflow={props.overflow}
          >
         {props.children}
        
