@@ -1,7 +1,8 @@
 import StickyPage from "./StickyPage";
 import { Box, } from "@chakra-ui/react";
-import { useState, useEffect, } from "react";
+import { useState, useEffect,} from "react";
 import * as GUIDE from "../styleguide/colorscheme";
+import { Fade } from "react-awesome-reveal";
 
 const card = ["Hosting",
               "Deploying",
@@ -21,16 +22,19 @@ function LunchingPage()
             const start = elementScroll;
             const limit = (elementHeight/2 + start);
 
-            currentScroll >= start &&
-            currentScroll < (elementHeight/2 + start) ? setIsDisplayed(true) : setIsDisplayed(false);
+            if(currentScroll >= start &&
+                currentScroll < (elementHeight/1.8 + start))
+            {
+                setIsDisplayed(true);                
+            }
+            else
+            {                    
+                setIsDisplayed(false);                                
+                
+            }
 
-            console.log("current", currentScroll);
-            console.log("top", elementScroll);
-            console.log("height", elementHeight);
-
-            console.log("current - top / height: ", (currentScroll-start)/elementHeight);
-
-            setProgress((currentScroll-start) / (limit - start));
+            if((currentScroll-start) / (limit - start) < 1)
+                setProgress((currentScroll-start) / (limit - start));
         }
 
         window.addEventListener('scroll', handleScroll);         
@@ -40,7 +44,7 @@ function LunchingPage()
     },[])
 
     return(
-    <>        
+    <>      
         <Box display={isDisplayed ? "block" : "none"}
                  position="fixed"                         
                  width="5vw" 
@@ -50,6 +54,7 @@ function LunchingPage()
                  borderRadius="16px"
                  bg={GUIDE.color.secondary} 
                  zIndex="1"
+                 id="baseProgressBar"                 
                  />
             
             <Box 
@@ -62,6 +67,7 @@ function LunchingPage()
                 borderRadius="16px"
                 bg={GUIDE.color.tertiary} 
                 zIndex="2"
+                id="progressBar"                
                 />
 
             <div id="beforeId2">

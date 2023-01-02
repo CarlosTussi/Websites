@@ -20,3 +20,20 @@ footer .socialIcon:hover{
   color: #0A1D3C;
   cursor: pointer;
 }
+
+#baseProgressBar{
+  animation: fadeIn 2s;
+}
+
+#progressBar{
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;    
+  }
+  100% {
+    opacity: 1;
+  }
+}

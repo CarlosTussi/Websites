@@ -19,12 +19,13 @@ function PlanningPage()
             const currentScroll = window.scrollY;
         
             const start = elementScroll;
-            const limit = ((elementHeight + start)*70)/100;
+            const limit = (elementHeight/2 + start);
 
             currentScroll >= start &&
-            currentScroll < ((elementHeight + start)*70)/100 ? setIsDisplayed(true) : setIsDisplayed(false);
+            currentScroll < (elementHeight/1.8 + start) ? setIsDisplayed(true) : setIsDisplayed(false);
             
-            setProgress((currentScroll-start) / (limit - start));
+            if((currentScroll-start) / (limit - start) < 1)
+                setProgress((currentScroll-start) / (limit - start));
         }
 
         window.addEventListener('scroll', handleScroll);         
@@ -46,6 +47,7 @@ function PlanningPage()
                  borderRadius="16px"
                  bg={GUIDE.color.secondary} 
                  zIndex="1"
+                 id="baseProgressBar" 
                  />
             
             <Box 
@@ -58,6 +60,7 @@ function PlanningPage()
                 borderRadius="16px"
                 bg={GUIDE.color.tertiary} 
                 zIndex="2"
+                id="progressBar" 
                 />
 
             <div id="beforeId">
