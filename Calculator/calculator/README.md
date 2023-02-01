@@ -18,4 +18,4 @@ npm start
 
 
 
-![alt text] (https://github.com/CarlosTussi/images/blob/main/calculator.png)
+![alt text](https://github.com/CarlosTussi/images/blob/main/calculator.png)
