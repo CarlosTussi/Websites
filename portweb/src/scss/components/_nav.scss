@@ -1,0 +1,23 @@
+ul{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    left: 0;    
+    height: 90vh;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+}
+
+
+li:nth-child(2){
+    margin-bottom: auto;
+}
+
+li:nth-child(5)
+{
+    margin-top: auto;
+}

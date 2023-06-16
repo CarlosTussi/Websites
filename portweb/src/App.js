@@ -1,8 +1,10 @@
 import './styles.css';
 
 import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
-import Header from './components/Header';
+import HeaderMobile from './components/HeaderMobile';
 import Home from './pages/Home';
+import Header from './components/Header';
+import Nav from './components/Nav';
 
 function App() {
   return (
@@ -11,10 +13,13 @@ function App() {
       
         <HamburgerMenuProvider> 
         <div className='mobile'>
-            <Header/>
+            <HeaderMobile/>
         </div>
+            
+            <Nav />  
+            <Header />          
             <Home />
-          
+
         </HamburgerMenuProvider>
     
 

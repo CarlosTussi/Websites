@@ -396,8 +396,29 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  text-align: right;
+}
+
+ul {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  height: 90vh;
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+}
+
+li:nth-child(2) {
+  margin-bottom: auto;
+}
+
+li:nth-child(5) {
+  margin-top: auto;
 }
 
 .mobile-menu-button {
@@ -408,13 +429,17 @@ header {
 
 .home-page {
   text-align: center;
-  margin-top: 50%;
+  margin-top: 20%;
 }
 
 @media (min-width: 43.75rem) {
   .mobile {
     display: none;
   }
+}
+
+.page {
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */
