@@ -1,10 +1,23 @@
 import './styles.css';
 
+import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
+import Header from './components/Header';
+import Home from './pages/Home';
+
 function App() {
   return (
     <>
     <main>
-      <h1>Hello World!</h1>
+      
+        <HamburgerMenuProvider> 
+        <div className='mobile'>
+            <Header/>
+        </div>
+            <Home />
+          
+        </HamburgerMenuProvider>
+    
+
     </main>
     </>
   );

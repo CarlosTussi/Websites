@@ -312,6 +312,7 @@ template {
  */
 html {
   box-sizing: border-box;
+  background-color: rgb(0, 0, 0);
 }
 
 /**
@@ -338,7 +339,7 @@ a {
  * Basic typography style for copy text
  */
 body {
-  color: rgb(34, 34, 34);
+  color: rgb(54, 184, 22);
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -392,6 +393,28 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.mobile-menu-button {
+  border: none;
+  background: none;
+  color: green;
+}
+
+.home-page {
+  text-align: center;
+  margin-top: 50%;
+}
+
+@media (min-width: 43.75rem) {
+  .mobile {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

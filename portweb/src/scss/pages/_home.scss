@@ -1,3 +1,15 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.home-page{
+    text-align: center;
+    margin-top: 50%;
+    
+    
+}
+
+.mobile {
+    @include breakpoint-up('medium'){        
+        display:none;
+    }
+}
