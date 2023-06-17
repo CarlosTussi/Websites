@@ -4,7 +4,7 @@ function Work()
 {
     return (
         <div className="work-page">
-            <p>|- Work section</p>
+            <h3>|- Work section</h3>
             <WorkCard />
             <WorkCard />
             <WorkCard />

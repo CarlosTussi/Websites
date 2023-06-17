@@ -335,6 +335,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  padding: 1em;
+}
+
 /**
  * Basic typography style for copy text
  */
@@ -400,6 +404,33 @@ header {
   grid-template-columns: 1fr 1fr;
 }
 
+footer {
+  display: grid;
+  grid-template-areas: "icon1 icon2" "copyright copyright";
+}
+
+footer:nth-child(1) {
+  grid-area: icon1;
+}
+
+footer:nth-child(2) {
+  grid-area: icon2;
+}
+
+footer p {
+  grid-area: copyright;
+  text-align: center;
+}
+
+.footer-social-git {
+  padding: 0 1em 0 0;
+  justify-self: end;
+}
+
+.footer-social-linkedin {
+  padding: 0 0 0 1em;
+}
+
 ul {
   position: fixed;
   display: flex;
@@ -442,10 +473,6 @@ li:nth-child(5) {
 .home-page {
   text-align: center;
   margin-top: 20%;
-}
-
-.work-page {
-  padding: 2em;
 }
 
 /*# sourceMappingURL=styles.css.map */
