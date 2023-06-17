@@ -7,9 +7,3 @@
     
     
 }
-
-.mobile {
-    @include breakpoint-up('medium'){        
-        display:none;
-    }
-}

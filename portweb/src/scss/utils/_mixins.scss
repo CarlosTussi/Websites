@@ -19,7 +19,7 @@
 //"medium"
 //"large"
 @mixin breakpoint-down($screenSize){
-    @media($max-width: map-get($breakpoints-down, $screenSize)){
+    @media(max-width: map-get($breakpoints-down, $screenSize)){
         @content;
     }
 }

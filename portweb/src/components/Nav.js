@@ -1,16 +1,17 @@
-import { GitHub, Linkedin, ArrowDown } from 'react-feather';
+import HamburgerMenu from "./HamburgerMenu";
 
 function Nav()
 {
     return(
         <nav>
-            <ul>
-                <li><GitHub size="4.5vh"/></li>
-                <li><Linkedin size="4.5vh"/></li>
-                <li>Work</li>
-                <li>About</li>
-                <li><ArrowDown size="4.5vh"/></li>
-            </ul>
+            <HamburgerMenu>
+                <ul style={{fontSize: "1.5rem"}}>
+                    <li>Github</li>
+                    <li>Linkedin</li>
+                    <li>Work</li>
+                    <li>About</li>
+                </ul>
+            </HamburgerMenu>
         </nav>
     )
 

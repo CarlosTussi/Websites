@@ -1,0 +1,13 @@
+.work-card-container{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+
+    text-align: left;
+}
+
+.work-card-container :nth-child(3){
+    margin-top: 0;
+    color: antiquewhite;
+}
+

@@ -2,5 +2,7 @@
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
 header{
-    text-align: right;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
 }

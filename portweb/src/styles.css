@@ -396,7 +396,8 @@ body {
 }
 
 header {
-  text-align: right;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 ul {
@@ -427,19 +428,26 @@ li:nth-child(5) {
   color: green;
 }
 
+.work-card-container {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  text-align: left;
+}
+
+.work-card-container :nth-child(3) {
+  margin-top: 0;
+  color: antiquewhite;
+}
+
 .home-page {
   text-align: center;
   margin-top: 20%;
 }
 
-@media (min-width: 43.75rem) {
-  .mobile {
-    display: none;
-  }
-}
-
 .page {
   height: 100vh;
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,10 +1,11 @@
 import './styles.css';
 
 import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
-import HeaderMobile from './components/HeaderMobile';
 import Home from './pages/Home';
-import Header from './components/Header';
+import Logo from './components/Logo';
 import Nav from './components/Nav';
+import Work from './pages/Work';
+import About from './pages/About';
 
 function App() {
   return (
@@ -12,13 +13,16 @@ function App() {
     <main>
       
         <HamburgerMenuProvider> 
-        <div className='mobile'>
-            <HeaderMobile/>
-        </div>
             
-            <Nav />  
-            <Header />          
+          <header>
+              <Logo />          
+              <Nav />        
+          </header>    
+          <main>
             <Home />
+            <Work />
+            <About />
+          </main>
 
         </HamburgerMenuProvider>
     
