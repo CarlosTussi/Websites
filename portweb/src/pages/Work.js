@@ -3,8 +3,8 @@ import WorkCard from "../components/WorkCard";
 function Work()
 {
     return (
-        <div>
-            <p>Work section</p>
+        <div className="work-page">
+            <p>|- Work section</p>
             <WorkCard />
             <WorkCard />
             <WorkCard />
