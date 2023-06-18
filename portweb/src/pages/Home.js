@@ -6,7 +6,7 @@ function Home()
         <div className='home-page page'>
             <Typewriter
                 options={{
-                strings: ['<code>[LOADING]<br>Mood</code>'],
+                strings: ['<code>[LOADING]...Mood</code>'],
                 autoStart: true,
                 loop: true,
             }}

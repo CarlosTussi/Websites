@@ -4,23 +4,18 @@ import { GitHub, Linkedin } from 'react-feather';
 
 import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
 import Home from './pages/Home';
-import Logo from './components/Logo';
 import Work from './pages/Work';
 import About from './pages/About';
-import Nav from './components/Nav';
+import Header from './components/Header';
 
 
 function App() {
   return (
     <>
-    <main>
       
         <HamburgerMenuProvider> 
             
-          <header>
-              <Logo />          
-              <Nav />        
-          </header>    
+          <Header />
           <main>
             <Home />
             <Work />
@@ -37,9 +32,7 @@ function App() {
           </footer>
 
         </HamburgerMenuProvider>
-    
 
-    </main>
     </>
   );
 }

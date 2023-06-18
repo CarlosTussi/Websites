@@ -4,13 +4,7 @@ function Nav()
 {
     return(
         <nav>
-           <HamburgerMenu>
-            <ul>
-                <li>Work</li>
-                <li>About</li>
-                <li>Contact</li>
-            </ul>
-           </HamburgerMenu>
+           <HamburgerMenu />
         </nav>
     )
 
