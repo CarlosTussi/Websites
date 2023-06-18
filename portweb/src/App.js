@@ -5,9 +5,9 @@ import { GitHub, Linkedin } from 'react-feather';
 import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
 import Home from './pages/Home';
 import Logo from './components/Logo';
-import Nav from './components/Nav';
 import Work from './pages/Work';
 import About from './pages/About';
+import HamburgerMenu from './components/HamburgerMenu';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             
           <header>
               <Logo />          
-              <Nav />        
+              <HamburgerMenu />        
           </header>    
           <main>
             <Home />
