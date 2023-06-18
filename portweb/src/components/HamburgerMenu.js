@@ -10,6 +10,18 @@ function HamburgerMenu(props)
       setIsOpen(!isOpen);
     };
 
+    const scroll = (anchor) =>{
+        const target = document.getElementById(anchor);
+        if(target)
+        {
+            target.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });                        
+                    
+            toggleMenu();
+        }
+    };
 
     useEffect(()=>{
         if(sideMenuRef.current) //Avoid first render
@@ -30,7 +42,11 @@ function HamburgerMenu(props)
                  ref={sideMenuRef}
                  className={`collapsible-hamburger-menu hamburger-content ${isOpen ? 'open' : ''}`}
                  >
-                {props.children}       
+                <ul>
+                    <li onClick ={() => scroll("work")}>Work</li>
+                    <li onClick ={() => scroll("about")}>About</li>
+                    <li onClick ={() => scroll("contact")}>Contact</li>
+                </ul>
 
             </div>                            
                 

@@ -473,7 +473,7 @@ footer p {
 }
 
 .hamburger-icon {
-  position: absolute;
+  position: fixed;
   top: 1em;
   right: 1em;
   z-index: 30;
