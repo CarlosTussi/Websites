@@ -7,7 +7,7 @@ import Home from './pages/Home';
 import Logo from './components/Logo';
 import Work from './pages/Work';
 import About from './pages/About';
-import HamburgerMenu from './components/HamburgerMenu';
+import Nav from './components/Nav';
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
             
           <header>
               <Logo />          
-              <HamburgerMenu />        
+              <Nav />        
           </header>    
           <main>
             <Home />

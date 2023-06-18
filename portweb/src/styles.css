@@ -510,6 +510,18 @@ footer p {
   z-index: 1;
 }
 
+.hamburger-content ul {
+  position: relative;
+  top: 20vh;
+  text-align: center;
+  list-style: none;
+  color: green;
+}
+
+.hamburger-content li {
+  padding: 2em 0;
+}
+
 .home-page {
   text-align: center;
   margin-top: 20%;

@@ -28,7 +28,7 @@ function HamburgerMenu(props)
             {isOpen? <div className='transparent-background' onClick={()=> setIsOpen(false)} aria-hidden="true"/>: ""}
             <div
                  ref={sideMenuRef}
-                 className={`collapsible-hamburger-menu ${isOpen ? 'open' : ''}`}
+                 className={`collapsible-hamburger-menu hamburger-content ${isOpen ? 'open' : ''}`}
                  >
                 {props.children}       
 
