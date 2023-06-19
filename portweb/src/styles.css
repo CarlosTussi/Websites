@@ -348,7 +348,7 @@ main {
  * Basic typography style for copy text
  */
 body {
-  color: rgb(54, 184, 22);
+  color: rgb(229, 229, 229);
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
 }
 
@@ -482,12 +482,22 @@ footer p {
   list-style: none;
 }
 
+.large-screen-nav li:hover {
+  text-decoration: underline;
+}
+
 .large-screen-nav li:nth-child(2) {
   margin-bottom: auto;
 }
 
-.large-screen-nav li:nth-child(5) {
+.large-screen-nav li:nth-child(6) {
   margin-top: auto;
+}
+
+.large-screen-nav li:nth-child(3),
+.large-screen-nav li:nth-child(4),
+.large-screen-nav li:nth-child(5) {
+  padding: 1em 0;
 }
 
 .mobile-menu-button {

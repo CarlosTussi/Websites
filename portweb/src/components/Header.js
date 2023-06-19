@@ -12,12 +12,10 @@ function Header()
     const menuBarRef = useRef();
     const [previousScrollPosition, setPreviousScrollPosition] = useState(0);
 
-    useEffect(() => {
-
-
-        const handleScroll =  () => {
-            const currentScrollPosition = window.scrollY;
-            console.log("current: " + currentScrollPosition);
+    //Handles hidding and revealing MobileMenu
+    useEffect(() => {                
+            const handleScroll =  () => {
+            const currentScrollPosition = window.scrollY;            
 
             if(!isOpen){
                 currentScrollPosition > previousScrollPosition ? menuBarRef.current.style.transform = "translateY(-40vh)" : menuBarRef.current.style.transform = "translateY(0)"                            
@@ -34,7 +32,6 @@ function Header()
             window.removeEventListener('scroll', handleScroll);
         }
     },[previousScrollPosition, isOpen])
-
 
     return(
         <>
