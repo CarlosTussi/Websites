@@ -33,17 +33,20 @@
     text-decoration: underline;
 }
 
-.large-screen-nav li:nth-child(2){
+.large-screen-nav li:nth-child(1){
     margin-bottom: auto;
+    color: green;
 }
 
-.large-screen-nav  li:nth-child(6)
+.large-screen-nav  li:nth-child(5)
 {
     margin-top: auto;
+     
 }
 
+.large-screen-nav li:nth-child(2),
 .large-screen-nav li:nth-child(3),
-.large-screen-nav li:nth-child(4),
-.large-screen-nav li:nth-child(5){
+.large-screen-nav li:nth-child(4){
     padding: 1em 0;
+    
 }

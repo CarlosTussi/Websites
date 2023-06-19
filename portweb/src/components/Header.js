@@ -1,7 +1,6 @@
 import MobileNav from './MobileNav';
 import MobileLogo from './MobileLogo';
 import Nav from './Nav';
-import Logo from './Logo';
 import { useHamburgerMenuContext } from '../providers/HamburgerMenuProvider';
 import { useRef, useState, useEffect } from 'react';
 
@@ -40,7 +39,7 @@ function Header()
                 <MobileNav />
             </header>
             <header className='header-not-mobile'>
-                <Logo />
+                <p>Carlos Tussi</p>
                 <Nav />
             </header>
         </>

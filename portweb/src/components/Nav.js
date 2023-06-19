@@ -86,13 +86,14 @@ const scroll = (anchor) => {
     return (
         <>
         <nav >
-            <ul className="large-screen-nav">
-                <li><GitHub size="4.5vh"/></li>
-                <li><Linkedin size="4.5vh"/></li>
+            <ul className="large-screen-nav">     
+                <li>CT</li>           
                 <li ref={homeRef} onClick={() => scroll("home")}>Home</li>
                 <li ref={workRef} onClick={() => scroll("work")}>Work</li>
-                <li ref={aboutRef} onClick={()=> scroll("about")}>About</li>
-                <li><ArrowDown size="4.5vh"/></li>
+                <li ref={aboutRef} onClick={()=> scroll("about")}>About</li> 
+                <li><GitHub color='green' size="4.5vh"/></li>
+                <li><Linkedin color='green' size="4.5vh"/></li>        
+              
             </ul>
         </nav>
         </>

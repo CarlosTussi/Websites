@@ -429,6 +429,7 @@ body {
     display: block;
     text-align: right;
     margin: 1em 1em 0 0;
+    color: green;
   }
 }
 
@@ -486,17 +487,18 @@ footer p {
   text-decoration: underline;
 }
 
-.large-screen-nav li:nth-child(2) {
+.large-screen-nav li:nth-child(1) {
   margin-bottom: auto;
+  color: green;
 }
 
-.large-screen-nav li:nth-child(6) {
+.large-screen-nav li:nth-child(5) {
   margin-top: auto;
 }
 
+.large-screen-nav li:nth-child(2),
 .large-screen-nav li:nth-child(3),
-.large-screen-nav li:nth-child(4),
-.large-screen-nav li:nth-child(5) {
+.large-screen-nav li:nth-child(4) {
   padding: 1em 0;
 }
 
@@ -618,8 +620,13 @@ footer p {
 
 .home-page {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 70%;
   height: 100vh;
+}
+@media (min-width: 43.75rem) {
+  .home-page {
+    margin-top: 10%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

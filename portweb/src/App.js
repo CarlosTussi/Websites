@@ -22,12 +22,12 @@ function App() {
             <About />
           </main>
           <footer>
-            <div className='footer-social-git'>
+            {/* <div className='footer-social-git'>
               <GitHub size="4.5vh"/>
             </div>
             <div className='footer-social-linkedin'>
               <Linkedin size="4.5vh"/>
-            </div>            
+            </div>             */}
             <p>&copy; 2023 Carlos Tussi.</p>
           </footer>
 

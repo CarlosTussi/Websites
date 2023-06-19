@@ -3,8 +3,12 @@
 // -----------------------------------------------------------------------------
 .home-page{
     text-align: center;
-    margin-top: 20%;
+    margin-top: 70%;
     
     height: 100vh;
+
+    @include breakpoint-up("medium"){
+        margin-top: 10%;
+    }
     
 }
