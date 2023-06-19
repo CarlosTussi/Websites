@@ -338,6 +338,11 @@ a {
 main {
   padding: 1em;
 }
+@media (min-width: 43.75rem) {
+  main {
+    padding: 7em;
+  }
+}
 
 /**
  * Basic typography style for copy text
@@ -399,7 +404,7 @@ body {
   width: 1px;
 }
 
-header {
+.header-mobile {
   display: grid;
   grid-template-columns: 1fr 1fr;
   width: 100vw;
@@ -409,6 +414,22 @@ header {
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
   padding: 0.2em;
+}
+@media (min-width: 43.75rem) {
+  .header-mobile {
+    display: none;
+  }
+}
+
+.header-not-mobile p {
+  display: none;
+}
+@media (min-width: 43.75rem) {
+  .header-not-mobile p {
+    display: block;
+    text-align: right;
+    margin: 1em 1em 0 0;
+  }
 }
 
 footer {
@@ -438,6 +459,37 @@ footer p {
   padding: 0 0 0 1em;
 }
 
+.large-screen-nav {
+  display: none;
+}
+@media (min-width: 43.75rem) {
+  .large-screen-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: 5vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+    margin: 0;
+    padding: 1em 0 1em 0.3em;
+  }
+}
+
+.large-screen-nav li {
+  list-style: none;
+}
+
+.large-screen-nav li:nth-child(2) {
+  margin-bottom: auto;
+}
+
+.large-screen-nav li:nth-child(5) {
+  margin-top: auto;
+}
+
 .mobile-menu-button {
   border: none;
   background: none;
@@ -449,10 +501,34 @@ footer p {
   flex-direction: column;
   text-align: left;
 }
+@media (min-width: 43.75rem) {
+  .work-card-container {
+    display: grid;
+    grid-template-areas: "img title" "img description";
+  }
+}
 
-.work-card-container :nth-child(3) {
+@media (min-width: 43.75rem) {
+  .work-card-container img {
+    grid-area: img;
+    margin: 0.5em;
+  }
+}
+
+@media (min-width: 43.75rem) {
+  .work-card-container h3 {
+    grid-area: title;
+  }
+}
+
+.work-card-container p {
   margin-top: 0;
   color: antiquewhite;
+}
+@media (min-width: 43.75rem) {
+  .work-card-container p {
+    grid-area: description;
+  }
 }
 
 .hamburger-container {
@@ -533,6 +609,7 @@ footer p {
 .home-page {
   text-align: center;
   margin-top: 20%;
+  height: 100vh;
 }
 
 /*# sourceMappingURL=styles.css.map */

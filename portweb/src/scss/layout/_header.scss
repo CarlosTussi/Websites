@@ -1,7 +1,7 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-header{
+.header-mobile{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -15,4 +15,20 @@ header{
 
     padding: 0.2em;
 
+
+    @include breakpoint-up("medium"){
+        display: none;
+      }
+
+}
+
+.header-not-mobile p{
+    display: none;
+
+    @include breakpoint-up("medium"){
+      display: block;
+      text-align: right;
+
+      margin: 1em 1em 0 0;
+    }
 }

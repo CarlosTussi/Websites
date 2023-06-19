@@ -35,7 +35,7 @@ function HamburgerMenu(props)
     },[isOpen])
 
     return(
-        <nav className='hamburger-container'>            
+        <div className='hamburger-container'>            
 
             {isOpen? <div className='transparent-background' onClick={()=> setIsOpen(false)} aria-hidden="true"/>: ""}
             <div
@@ -57,7 +57,7 @@ function HamburgerMenu(props)
             </div> 
 
     
-    </nav>
+    </div>
     );
 }
 

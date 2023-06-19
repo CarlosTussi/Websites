@@ -1,12 +1,10 @@
-import { Bluetooth } from 'react-feather';
-function Header()
+function Logo()
 {
     return(
         <>
-            <Bluetooth size="4.5vh"/>
+        <p>Carlos Tussi</p>   
         </>
     )
-
 }
 
-export default Header;
+export default Logo;

@@ -4,10 +4,36 @@
     // padding: 2em;
 
     text-align: left;
+
+    @include breakpoint-up("medium"){
+        display: grid;
+        grid-template-areas: "img title"
+                              "img description";        
+    }   
 }
 
-.work-card-container :nth-child(3){
+.work-card-container img {
+
+    @include breakpoint-up("medium"){
+       grid-area: img;
+        margin: 0.5em;        
+    } 
+}
+
+.work-card-container h3{
+    @include breakpoint-up("medium"){
+        grid-area: title;     
+     } 
+}
+
+
+.work-card-container p{
     margin-top: 0;
     color: antiquewhite;
+
+    @include breakpoint-up("medium"){
+        grid-area: description;     
+     } 
 }
+
 

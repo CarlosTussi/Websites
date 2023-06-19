@@ -1,7 +1,10 @@
+import MobileNav from './MobileNav';
+import MobileLogo from './MobileLogo';
 import Nav from './Nav';
 import Logo from './Logo';
 import { useHamburgerMenuContext } from '../providers/HamburgerMenuProvider';
 import { useRef, useState, useEffect } from 'react';
+
 
 function Header()
 {
@@ -34,10 +37,16 @@ function Header()
 
 
     return(
-        <header ref={menuBarRef}>
-            <Logo />
-            <Nav />
-        </header>
+        <>
+            <header className='header-mobile' ref={menuBarRef}>
+                <MobileLogo />
+                <MobileNav />
+            </header>
+            <header className='header-not-mobile'>
+                <Logo />
+                <Nav />
+            </header>
+        </>
     )
 }
 

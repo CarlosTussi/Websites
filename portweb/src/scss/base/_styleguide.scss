@@ -32,4 +32,9 @@ a {
 
 main {
   padding: 1em;
+
+  @include breakpoint-up("medium")
+  {
+    padding: 7em;
+  }
 }
