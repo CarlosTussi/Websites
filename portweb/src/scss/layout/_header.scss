@@ -1,6 +1,34 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-header{
-    text-align: right;
+.header-mobile{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    width: 100vw;
+    height: 6vh;
+    position: fixed;
+    background-color: gray;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    padding: 0.2em;
+
+
+    @include breakpoint-up("medium"){
+        display: none;
+      }
+
+}
+
+.header-not-mobile p{
+    display: none;
+
+    @include breakpoint-up("medium"){
+      display: block;
+      text-align: right;
+
+      margin: 1em 1em 0 0;
+    }
 }

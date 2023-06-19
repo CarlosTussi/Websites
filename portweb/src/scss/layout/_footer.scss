@@ -1,3 +1,31 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+footer{
+    display: grid;
+    grid-template-areas: 
+        "icon1 icon2"
+        "copyright copyright";        
+}
+
+footer:nth-child(1){
+    grid-area: icon1;       
+}
+footer:nth-child(2){
+    grid-area: icon2;        
+}
+
+footer p{
+    grid-area: copyright;    
+    text-align: center;
+}
+
+
+.footer-social-git{
+    padding: 0 1em 0 0;
+    justify-self: end;
+}
+
+.footer-social-linkedin{
+    padding: 0 0 0 1em;
+}

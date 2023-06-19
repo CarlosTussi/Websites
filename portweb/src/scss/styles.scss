@@ -26,13 +26,13 @@
 // 5. Components
 @import  
   'components/nav',
-  'components/button';
+  'components/button',
+  'components/workcard',
+  'components/hamburgermenu';
 
 // 6. Page-specific styles
 @import
+  'pages/pages',
   'pages/home',
-  'pages/page';
+  'pages/work';
 
-// 7. Themes
-@import
-  'themes/default';

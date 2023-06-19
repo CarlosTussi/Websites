@@ -1,29 +1,38 @@
 import './styles.css';
 
+import { GitHub, Linkedin } from 'react-feather';
+
 import HamburgerMenuProvider from "./providers/HamburgerMenuProvider";
-import HeaderMobile from './components/HeaderMobile';
 import Home from './pages/Home';
+import Work from './pages/Work';
+import About from './pages/About';
 import Header from './components/Header';
-import Nav from './components/Nav';
+
 
 function App() {
   return (
     <>
-    <main>
       
         <HamburgerMenuProvider> 
-        <div className='mobile'>
-            <HeaderMobile/>
-        </div>
             
-            <Nav />  
-            <Header />          
+          <Header />
+          <main>
             <Home />
+            <Work />
+            <About />
+          </main>
+          <footer>
+            <div className='footer-social-git'>
+              <GitHub size="4.5vh"/>
+            </div>
+            <div className='footer-social-linkedin'>
+              <Linkedin size="4.5vh"/>
+            </div>            
+            <p>&copy; 2023 Carlos Tussi.</p>
+          </footer>
 
         </HamburgerMenuProvider>
-    
 
-    </main>
     </>
   );
 }

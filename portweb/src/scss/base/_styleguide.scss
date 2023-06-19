@@ -29,3 +29,12 @@ a {
   color: $brand-color;
   text-decoration: none;
 }
+
+main {
+  padding: 1em;
+
+  @include breakpoint-up("medium")
+  {
+    padding: 7em;
+  }
+}
