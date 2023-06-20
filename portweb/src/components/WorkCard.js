@@ -8,11 +8,7 @@ function WorkCard()
             <h3>Title of the project</h3>
             <p>Lorem ipsum dolor sit amet consectetur 
                 adipisicing elit. Aliquam dolorem accusamus 
-                quas libero, obcaecati ratione beatae sequi, 
-                voluptates laboriosam iusto dolore pariatur 
-                nisi error cupiditate debitis quae non dolorum 
-                perspiciatis repellendus minus dolor fugiat 
-                \asperiores. </p>
+                quas libero, obcaecati ratione beatae sequi.. </p>
         </div>
     )
 }

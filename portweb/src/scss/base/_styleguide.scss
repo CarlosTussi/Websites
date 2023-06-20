@@ -31,10 +31,11 @@ a {
 }
 
 main {
-  padding: 1em;
+  padding: 3em;
 
-  @include breakpoint-up("medium")
+  @include breakpoint-up("large")
   {
-    padding: 7em;
+    padding: 8em;
   }
+
 }

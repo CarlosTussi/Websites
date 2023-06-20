@@ -16,13 +16,17 @@
 
     @include breakpoint-up("medium"){
        grid-area: img;
-        margin: 0.5em;        
+       margin: 1em 1em 1em 0;
+    
+        
+            // max-width: 200px;
+            // max-height: 200px;
     } 
 }
 
 .work-card-container h3{
     @include breakpoint-up("medium"){
-        grid-area: title;     
+        grid-area: title;          
      } 
 }
 
@@ -31,8 +35,10 @@
     margin-top: 0;
     color: antiquewhite;
 
+
     @include breakpoint-up("medium"){
         grid-area: description;     
+        
      } 
 }
 

@@ -16,7 +16,7 @@
     padding: 0.2em;
 
 
-    @include breakpoint-up("medium"){
+    @include breakpoint-up("large"){
         display: none;
       }
 
@@ -25,7 +25,7 @@
 .header-not-mobile p{
     display: none;
 
-    @include breakpoint-up("medium"){
+    @include breakpoint-up("large"){
       display: block;
       text-align: right;
 
