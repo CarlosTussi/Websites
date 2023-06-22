@@ -1,0 +1,99 @@
+html{
+    background-color: black;
+    color: white;
+}
+
+.crud-container{
+    display: flex;
+    flex-direction: column;
+
+
+    background-color: gray;
+
+    max-width: 50vw;
+
+    margin: 0 auto;
+
+}
+
+.tab-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    
+
+    padding: 0;
+    margin: 0;
+    
+
+    border: 0.11em solid red;   
+    width: 100%;
+
+}
+
+.tab-container li{
+    list-style: none;
+    padding: 1em;
+
+ 
+    text-align: center;
+ 
+    height: 100%;
+    width: 100%;
+    border: 0.11em solid red;   
+}
+
+.panel-container{
+    border: 1px solid white;
+    
+    display: flex;
+
+    
+    
+    
+}
+
+.panel-operations {
+    height: 90vh;
+    background-color: tomato;
+    
+    width: 100%;
+
+    display:flex;   
+    /* justify-content: center;
+    align-items: center; */
+
+}
+
+
+/* 
+READ OPERATION
+*/
+.read-container{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+.read-container form{
+    position: relative;
+    justify-self: flex-end;
+}
+
+.results {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+
+/* 
+UPDATE OPERATIONS
+*/
+
+.update-form{
+    /* display: flex;
+    flex-direction: column; */
+
+    padding: 2em 0 0 0;
+}
