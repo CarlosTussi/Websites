@@ -397,6 +397,11 @@ header {
   display: flex;
   flex-direction: row;
   color: #C7A252;
+  margin-left: 0.5em;
+}
+
+header p {
+  margin: 0;
 }
 
 .hamburger-container {
@@ -432,6 +437,7 @@ header {
   justify-content: space-between;
   width: 30px;
   height: 20px;
+  margin-right: 0.5em;
 }
 
 .line {
