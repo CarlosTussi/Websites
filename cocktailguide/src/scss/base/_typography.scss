@@ -1,0 +1,14 @@
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: $accent-color;
+  font: normal 125% / 1.4 $text-font-stack;
+
+  font-family: 'Maven Pro', sans-serif;
+}
+
+h1{
+  font-family: 'Lovers Quarrel', cursive;
+  font-size: 3em;
+}

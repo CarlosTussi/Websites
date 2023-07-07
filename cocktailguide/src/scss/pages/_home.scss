@@ -1,0 +1,12 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+.home{
+    display: grid;
+    grid-template-columns: repeat(3, fr);    
+}
+
+.home > :nth-child(2),
+.home > :nth-child(3){
+    justify-self: center;
+}
