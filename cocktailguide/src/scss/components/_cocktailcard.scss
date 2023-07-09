@@ -1,0 +1,27 @@
+.cocktail-card{
+    display: flex;
+    flex-direction: column;
+
+    background-color: $secondary-color;    
+    margin: 2em;
+
+    border-radius: 2em;
+}
+
+.cocktail-card h2{
+    text-align: center;
+    margin: 0;
+}
+
+.cocktail-card h3{
+    background-color: $primary-color;
+    text-align: center;
+    box-shadow: 40px 20px 40px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.cocktail-card p,
+.cocktail-card li{
+    color: black;
+    margin:0;
+}
