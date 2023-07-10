@@ -1,3 +1,20 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+.home{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 100vh;
+}
+
+.home button{   
+
+    margin: auto 0 7em 0;
+}
+
+.home h1{
+    margin-top: auto;
+}
+

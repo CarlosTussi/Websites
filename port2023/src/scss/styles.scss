@@ -25,11 +25,14 @@
 
 // 5. Components
 @import
-  'components/button';
+  'components/button',
+  'components/workcard',
+  'components/websites';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/work';
 
 // 7. Themes
 @import

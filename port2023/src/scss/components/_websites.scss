@@ -1,0 +1,23 @@
+.websites ul{
+    padding: 0;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    
+
+    @include breakpoint-up("large"){
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        gap: 0.5em;
+
+        place-items: center;
+        
+    }
+}
+
+.websites li{
+    list-style: none;
+}

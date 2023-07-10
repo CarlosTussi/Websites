@@ -6,7 +6,7 @@
  * Set up a decent box model on the root element
  */
 html {
-  box-sizing: border-box;
+  box-sizing: border-box;  
 }
 
 /**
@@ -21,10 +21,14 @@ html {
   box-sizing: inherit;
 }
 
-/**
- * Basic styles for links
- */
-a {
-  color: $brand-color;
-  text-decoration: none;
+body{
+  background-color: $primary-color;
+}
+
+h1,h3{
+  color: $accent-color;
+}
+
+h2{
+  color: $secondary-color
 }
