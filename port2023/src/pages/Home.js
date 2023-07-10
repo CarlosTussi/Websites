@@ -1,9 +1,12 @@
 function Home(){
     return(
         <div className="home">
-            <h1>Carlos Tussi</h1>
-            <h2>Work</h2>
-            <button>Find Out More</button>
+            <div className="main-title">
+                <h1>Carlos Tussi</h1> 
+                <p>Web Designer</p>           
+            </div>
+            
+            <button>My Work</button>
         </div>
     )
 }

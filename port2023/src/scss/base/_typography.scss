@@ -7,8 +7,14 @@ body {
 }
 
 h1{
-  font-size: 4em;
+  font-size: min(8vw, 7rem);
   margin-bottom: 0;
+  line-height: 1;
+  
+}
+
+p{
+  font-size: min(3vw, 7rem);
 }
 
 h2{
