@@ -1,10 +1,16 @@
-import { GitHub } from 'react-feather';
+import { GitHub, Linkedin } from 'react-feather';
+import src_logo_light from '../assets/logo-light.svg';
 
 function Footer()
 {
     return (
         <footer>
-            <GitHub color="#40E0D0" strokeWidth="1px" size="4em"/>
+            <img src={src_logo_light} alt="Carlos Tussi logo" />
+            <div>
+            <GitHub className='footer-icon'  strokeWidth="1px" size="2em"/>
+            <Linkedin className='footer-icon' strokeWidth="1px" size="2em"/>
+            </div>
+            
             <small>2023 - All Rights Reserved</small>
         </footer>
     )

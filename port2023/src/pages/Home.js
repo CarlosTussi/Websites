@@ -1,4 +1,13 @@
+import Ellipses from "../components/Ellipses";
+
 function Home(){
+
+    const handleClick = () =>{
+        const workSection = document.getElementById("my-work");
+        if(workSection)
+            workSection.scrollIntoView({behavior: "smooth"});
+    }
+
     return(
         <div className="home">
             <div className="main-title">
@@ -6,7 +15,8 @@ function Home(){
                 <p>Web Designer</p>           
             </div>
             
-            <button>My Work</button>
+            <button 
+                    onClick={handleClick}>My Work</button>
         </div>
     )
 }

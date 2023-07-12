@@ -2,12 +2,14 @@
     display: flex;
     flex-direction: column;
 
+    margin-bottom: 5em;
+
 }
 
 .card-placeholder{
-    height: 450px;
-    width: 450px;
-    background-color: #C0C0C0;
+    height: 350px;
+    width: 350px;
+    background-color: pink;
 
     border-radius: 2em;
 }

@@ -1,0 +1,96 @@
+//Hamburger Menu Container
+.hamburger-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: end;
+    
+    @include breakpoint-up("medium"){
+      display:none;
+    }
+}
+
+//Collapsible Hamburger Menu
+.collapsible-hamburger-menu{
+    position: fixed;
+    top: 0;   
+    z-index: 2;
+    color:white;
+    background-color: $primary-color;    
+    // border-radius: 1em 0 0 1em;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    height: 100%;
+    width: 100%;
+
+    right: 0;
+    
+}
+
+.open .collapsible-hamburger-menu{
+    right: 100vw;
+}
+
+
+
+//Hamburger Icon
+.hamburger-icon {
+    position: fixed;
+    top: 0.4em;
+    right: 0;
+    z-index: 30;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 20px;
+
+    margin-right: 0.5em;
+  }
+
+
+
+  
+  .line {
+    width: 100%;
+    height: 2px;
+    background-color: $primary-color;
+    transition: transform 0.7s ease;
+  }
+  
+  .open .line:first-child {
+    transform: translateY(8px) rotate(45deg);
+    background-color: $accent-color;
+  }
+  
+  .open .line:last-child {
+    transform: translateY(-8px) rotate(-45deg);
+    background-color: $accent-color;
+  }
+
+  //Transparent Background
+  .transparent-background{
+    background-color: #585858;
+    opacity: 0.7;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+
+  //Hamburger Content
+  .hamburger-content ul{
+    position: relative;
+    // top: 20vh;
+    text-align: center;
+    list-style: none;
+    color:$accent-color;
+
+    background-color: $primary-color;
+    height: 100vh;
+  }
+
+  .hamburger-content li{
+    padding: 2em 0;
+  }

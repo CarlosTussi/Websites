@@ -7,15 +7,16 @@ body {
 }
 
 h1{
-  font-size: min(8vw, 7rem);
-  margin-bottom: 0;
+  // font-size: min(8vw, 7rem);
+  font-size: 10vw;
+  margin: 0;
   line-height: 1;
   
 }
 
-p{
-  font-size: min(3vw, 7rem);
-}
+// p{
+//   font-size: min(3vw, 7rem);
+// }
 
 h2{
   margin-top: 0;;
@@ -23,4 +24,8 @@ h2{
 
 h3{
   font-size: 2em;
+}
+
+ul{
+  list-style: none;
 }

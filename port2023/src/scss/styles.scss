@@ -27,12 +27,16 @@
 @import
   'components/button',
   'components/workcard',
-  'components/websites';
+  'components/websites',
+  'components/ellipses',
+  'components/hamburgermenu';
 
 // 6. Page-specific styles
 @import
   'pages/home',
-  'pages/work';
+  'pages/work',
+  'pages/about',
+  'pages/contact';
 
 // 7. Themes
 @import

@@ -1,0 +1,76 @@
+.container{
+    position: absolute;
+    top: 10vh;
+    left: 0vw;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    overflow: hidden;
+    max-width: none !important; //To remove default max-width
+
+    //animation TO-DO
+    animation: y-axis 3s infinite ease-in-out;
+
+    @include breakpoint_up("medium"){
+        // overflow: visible;
+    }
+}
+
+$ellipse-width: 200px;
+$ellipse-height: 200px;
+
+%ellipses{
+    position: absolute;
+    width: $ellipse-width;
+    height: $ellipse-height;
+    border-radius: 50%;
+}
+
+.container .ellipse{
+    @extend %ellipses;
+
+    background-color: $accent-color;
+    animation: x-axis 20s infinite linear;
+}
+
+
+.container .ellipse2{
+    @extend %ellipses;
+
+    left: -$ellipse-width/2;
+
+    background-color: $brand-color;
+    animation: x-axis-inverse 20s infinite linear;
+}
+
+
+@keyframes y-axis {
+    50%{    
+        transform: translateY(40vh);
+    }
+}
+
+@keyframes x-axis{
+    0%{
+        transform: translateX(-$ellipse-width/2);
+    }
+    50%{
+        transform: translateX(100vw);
+    }
+    100%{
+        transform: translateX(-$ellipse-width/2);
+    }
+}
+
+@keyframes x-axis-inverse{
+    0%{
+        transform: translateX(100vw);
+    }
+    50%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(100vw);
+    }
+}
+

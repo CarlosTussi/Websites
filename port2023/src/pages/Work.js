@@ -3,10 +3,10 @@ import Websites from "../components/Websites";
 function Work()
 {
     return(
-        <div className="work">
+        <section className="work" id="my-work">
             <h3>Websites</h3>
             <Websites />        
-        </div>
+        </section>
     )
 }
 

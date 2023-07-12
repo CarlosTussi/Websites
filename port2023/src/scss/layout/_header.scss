@@ -1,9 +1,70 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
-header{
+%header-style{
+    display: flex;
+    flex-direction: row;
+
     height: 6vh;
     width: 100vw;
 
     background-color: $accent-color;
+    align-items: center;
+}
+
+.header-desktop{
+    display: none;
+
+    color: $accent-color;
+    @include breakpoint-up("medium"){
+        display: flex;
+        flex-direction: row;
+
+        justify-content: space-between;
+        margin: 1em 1em 3em 1em;
+    }
+}
+
+.header-logo-desktop{
+    margin-left: 0.5em;  
+    color: $accent-color;
+    stroke: $accent-color;
+    display: inline;
+}
+
+
+.desktop-nav ul{
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding:0;
+}
+
+.desktop-nav li{
+    padding: 1.5em 0 0 7em;
+    transition: color 0.3s ease; /* Add transition property */
+}
+
+.desktop-nav li:hover{
+    color: $brand-color;
+    cursor: pointer;
+}
+
+.header-logo-mobile img{    
+
+    width: 60%;
+    height: auto;
+    margin-left: 0.5em;
+}
+
+.header-mobile{
+    @extend %header-style;
+    position: fixed;
+
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in-out;
+
+    @include breakpoint_up("medium"){
+        display: none;
+    }
 }
