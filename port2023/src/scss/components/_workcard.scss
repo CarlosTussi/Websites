@@ -1,15 +1,74 @@
 .work-card{
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    
+    grid-template-areas: "img"
+                          "content";
 
-    margin-bottom: 5em;
+    margin: 0 1em 5em 1em;  
+    place-items: center;    
+
+    @include breakpoint-up("large"){
+        grid-template-areas: "img content";        
+        place-items: normal;
+    }
 
 }
 
-.card-placeholder{
+.work-card h5{    
+    grid-area: title;
+
+}
+
+.card-image{
     height: 350px;
     width: 350px;
-    background-color: pink;
+    background-color: #C0C0C0;
 
     border-radius: 2em;
+
+    transition: transform 0.3s;
+
+    grid-area: img;
+
+    @include breakpoint-up("large"){
+        flex-shrink: 0;
+    }
+
+}
+
+.card-image:hover{
+    background-color: $accent-color;
+    transform: scale(1.1);
+
+    cursor: pointer;
+}
+
+.card-content{
+    grid-area: content;
+
+    @include breakpoint-up("large")
+    {
+        display: flex;
+        flex-direction: column;
+
+        margin: 0 5em;      
+
+        justify-content: space-around;
+
+    }
+}
+
+.card-content p{
+
+}
+
+
+.card-content h5{
+    @include breakpoint-up("large"){
+        margin: 0;
+    }
+}
+
+.card-content a{
+    flex-shrink: 0;
 }

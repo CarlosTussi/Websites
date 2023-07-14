@@ -14,10 +14,6 @@ h1{
   
 }
 
-// p{
-//   font-size: min(3vw, 7rem);
-// }
-
 h2{
   margin-top: 0;;
 }
@@ -28,4 +24,28 @@ h3{
 
 ul{
   list-style: none;
+}
+
+a{
+  color: $accent-color; 
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a::before{
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: $accent-color;
+  transition: width 0.4s ease-in-out;
+
+}
+
+a:hover::before{
+  width: 100%;  
+  left: 0;
 }

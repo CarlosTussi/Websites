@@ -1,14 +1,19 @@
+import { Slide } from 'react-awesome-reveal';
+import { Mail, Send } from 'react-feather';
+
 function Contact()
 {
     return(
         <section className="contact-page" id="contact">
             <h3>Contact</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur 
-                adipisicing elit. Aspernatur quod hic quis 
-                vero, nisi nemo nulla totam accusantium 
-                nostrum ea quas culpa dolore laboriosam 
-                deserunt veritatis officiis veniam iure 
-                adipisci sapiente corrupti?</p>
+            <Slide duration="1500">
+                <div className="contact-card">
+                    <div><Mail strokeWidth="1px" size="2em"/></div>
+                    <a target="_blank" href="mailto:contact@carlostussi.com" rel="noreferrer">contact@carlostussi.com</a>
+                </div>
+            </Slide>
+            
+            
         </section>
     )
 }

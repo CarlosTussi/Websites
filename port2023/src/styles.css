@@ -364,6 +364,29 @@ ul {
   list-style: none;
 }
 
+a {
+  color: #FF2D55;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #FF2D55;
+  transition: width 0.4s ease-in-out;
+}
+
+a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
 /**
  * Clear inner floats
  */
@@ -419,7 +442,7 @@ ul {
 .header-mobile {
   display: flex;
   flex-direction: row;
-  height: 6vh;
+  height: 2.5em;
   width: 100vw;
   background-color: #FF2D55;
   align-items: center;
@@ -429,7 +452,7 @@ ul {
   display: none;
   color: #FF2D55;
 }
-@media (min-width: 43.75rem) {
+@media (min-width: 56.25rem) {
   .header-desktop {
     display: flex;
     flex-direction: row;
@@ -465,15 +488,16 @@ ul {
 .header-logo-mobile img {
   width: 60%;
   height: auto;
-  margin-left: 0.5em;
+  margin: 0.5em 0 0 0.5em;
 }
 
 .header-mobile {
   position: fixed;
+  z-index: 10;
   transition-duration: 0.3s;
   transition-timing-function: ease-in-out;
 }
-@media (min-width: 43.75rem) {
+@media (min-width: 56.25rem) {
   .header-mobile {
     display: none;
   }
@@ -529,16 +553,62 @@ button:hover {
 }
 
 .work-card {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 5em;
+  display: grid;
+  grid-template-areas: "img" "content";
+  margin: 0 1em 5em 1em;
+  place-items: center;
+}
+@media (min-width: 56.25rem) {
+  .work-card {
+    grid-template-areas: "img content";
+    place-items: normal;
+  }
 }
 
-.card-placeholder {
+.work-card h5 {
+  grid-area: title;
+}
+
+.card-image {
   height: 350px;
   width: 350px;
-  background-color: pink;
+  background-color: #C0C0C0;
   border-radius: 2em;
+  transition: transform 0.3s;
+  grid-area: img;
+}
+@media (min-width: 56.25rem) {
+  .card-image {
+    flex-shrink: 0;
+  }
+}
+
+.card-image:hover {
+  background-color: #FF2D55;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.card-content {
+  grid-area: content;
+}
+@media (min-width: 56.25rem) {
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 5em;
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .card-content h5 {
+    margin: 0;
+  }
+}
+
+.card-content a {
+  flex-shrink: 0;
 }
 
 .websites ul {
@@ -558,6 +628,11 @@ button:hover {
 
 .websites li {
   list-style: none;
+}
+
+.websites h4 {
+  color: #FF2D55;
+  text-align: center;
 }
 
 .container {
@@ -621,7 +696,7 @@ button:hover {
   grid-template-columns: 1fr;
   justify-content: end;
 }
-@media (min-width: 43.75rem) {
+@media (min-width: 56.25rem) {
   .hamburger-container {
     display: none;
   }
@@ -646,7 +721,7 @@ button:hover {
 
 .hamburger-icon {
   position: fixed;
-  top: 0.4em;
+  top: 0.8em;
   right: 0;
   z-index: 30;
   display: flex;
@@ -692,10 +767,12 @@ button:hover {
   color: #FF2D55;
   background-color: #FDFDFD;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .hamburger-content li {
-  padding: 2em 0;
+  padding: 3em 0;
 }
 
 .home {
@@ -755,7 +832,30 @@ button:hover {
 
 .contact-page {
   background-color: #FDFDFD;
+  display: flex;
+  flex-direction: column;
   text-align: center;
+}
+
+.contact-page h3 {
+  margin: 1em 0 0 0;
+}
+
+.contact-card {
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  width: 80%;
+  margin: 5em auto;
+  padding: 0 0 2em 0;
+}
+@media (min-width: 56.25rem) {
+  .contact-card {
+    width: 50%;
+  }
+}
+
+.contact-card > :nth-child(1) {
+  margin: 1em 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

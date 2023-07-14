@@ -4,7 +4,7 @@
     grid-template-columns: 1fr;
     justify-content: end;
     
-    @include breakpoint-up("medium"){
+    @include breakpoint-up("large"){
       display:none;
     }
 }
@@ -35,7 +35,7 @@
 //Hamburger Icon
 .hamburger-icon {
     position: fixed;
-    top: 0.4em;
+    top: 0.8em;
     right: 0;
     z-index: 30;
     display: flex;
@@ -75,7 +75,7 @@
     height: 100vh;
     position: fixed;
     top: 0;
-    right: 0;
+    right: 0; 
     z-index: 1;
   }
 
@@ -89,8 +89,13 @@
 
     background-color: $primary-color;
     height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    // justify-content: space-between;
   }
 
   .hamburger-content li{
-    padding: 2em 0;
+    padding: 3em 0;
   }

@@ -8,6 +8,7 @@ import Ellipses from './components/Ellipses';
 
 import HamburgerMenuProvider from './providers/HamburgerMenuProvider';
 import Contact from './pages/Contact';
+import { Fade, Slide } from 'react-awesome-reveal';
 
 
 function App() {
@@ -17,9 +18,13 @@ function App() {
         <Header />
         <Ellipses />
         <Home />
-        <Work />
-        <About />
-        <Contact />
+        <Fade duration="1000">
+          <Work />
+        </Fade>
+        <Fade duration="1000">
+          <About />
+        </Fade>      
+          <Contact />
         <Footer />
       </HamburgerMenuProvider>
     </div>
