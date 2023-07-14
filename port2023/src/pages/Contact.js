@@ -1,5 +1,5 @@
 import { Slide } from 'react-awesome-reveal';
-import { Mail, Send } from 'react-feather';
+import { Mail } from 'react-feather';
 
 function Contact()
 {
