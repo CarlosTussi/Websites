@@ -3,6 +3,11 @@ form{
     flex-direction: column;
     background-color: $primary-color;
 
+    @include breakpoint-up("large")
+    {
+        background-color: transparent;
+    }
+
 }
 
 input{

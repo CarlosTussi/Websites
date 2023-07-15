@@ -314,6 +314,11 @@ html {
   box-sizing: border-box;
   background-color: #6B3FA0;
 }
+@media (min-width: 56.25rem) {
+  html {
+    background-color: #423254;
+  }
+}
 
 /**
  * Make all elements from the DOM inherit from the parent box-sizing
@@ -350,6 +355,11 @@ h1 {
 h2 {
   color: #227068;
   font-size: 0.8em;
+}
+@media (min-width: 56.25rem) {
+  h2 {
+    color: #35ADA1;
+  }
 }
 
 p {
@@ -438,6 +448,11 @@ form {
   flex-direction: column;
   background-color: #6B3FA0;
 }
+@media (min-width: 56.25rem) {
+  form {
+    background-color: transparent;
+  }
+}
 
 input {
   width: 15em;
@@ -483,6 +498,49 @@ form p {
   display: inline;
 }
 
+@media (min-width: 56.25rem) {
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .desktop-login-page {
+    display: grid;
+    grid-template-areas: "login logo";
+    gap: 5em;
+    background-color: #6B3FA0;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin: auto 10em;
+    height: 25em;
+    align-content: center;
+  }
+}
+
+.desktop-leftside-container {
+  margin-left: 1em;
+}
+
+.login-header-desktop {
+  display: none;
+}
+@media (min-width: 56.25rem) {
+  .login-header-desktop {
+    display: block;
+  }
+}
+
+@media (min-width: 56.25rem) {
+  .login-header-mobile {
+    display: none;
+  }
+}
+
 .login-header {
   border-radius: 0 0 50px 0;
   background-color: #423254;
@@ -490,13 +548,37 @@ form p {
   text-align: center;
   padding: 1em 0 2em 0;
 }
+@media (min-width: 56.25rem) {
+  .login-header {
+    grid-area: logo;
+    box-shadow: none;
+    border-radius: 0;
+    background-color: transparent;
+    margin: auto 0;
+    justify-self: start;
+  }
+}
+
+.login-header img {
+  max-width: 10%;
+}
+@media (min-width: 56.25rem) {
+  .login-header img {
+    max-width: 100%;
+  }
+}
+
+.desktop-login-page > :nth-child(2) {
+  grid-area: login;
+  text-align: center;
+  justify-self: end;
+}
 
 .login-header p {
   margin: 0;
 }
 
 .login-footer-container {
-  height: 100%;
   border-radius: 50px 0 0 0;
   background-color: #423254;
   box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
@@ -505,9 +587,20 @@ form p {
   text-align: center;
   align-items: center;
 }
+@media (min-width: 56.25rem) {
+  .login-footer-container {
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
 
 .footer-content {
   margin: 2.5em 0;
+}
+@media (min-width: 56.25rem) {
+  .footer-content {
+    margin: 0;
+  }
 }
 
 .footer-social-icon > :nth-child(1) {

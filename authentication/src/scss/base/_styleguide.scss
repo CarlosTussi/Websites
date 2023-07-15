@@ -8,6 +8,11 @@
 html {
   box-sizing: border-box;
   background-color: $primary-color;
+
+  @include breakpoint-up("large")
+  {
+    background-color: $primary-color-dark;
+  }
 }
 
 /**
@@ -45,6 +50,10 @@ h1{
 h2{
   color: $accent-color-dark;
   font-size: 0.8em;  
+
+  @include breakpoint-up("large"){
+    color: $accent-color-medium;
+  }
 }
 
 p{
