@@ -312,6 +312,7 @@ template {
  */
 html {
   box-sizing: border-box;
+  background-color: #6B3FA0;
 }
 
 /**
@@ -330,8 +331,30 @@ html {
  * Basic styles for links
  */
 a {
-  color: rgb(229, 0, 80);
+  color: #40E0D0;
   text-decoration: none;
+  font-size: 0.7em;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #40E0D0;
+  cursor: pointer;
+}
+
+h1 {
+  color: #40E0D0;
+  font-size: 1.5em;
+}
+
+h2 {
+  color: #227068;
+  font-size: 0.8em;
+}
+
+p {
+  color: #F9F9F9;
+  font-size: 0.7em;
 }
 
 /**
@@ -392,6 +415,112 @@ body {
   padding: 0;
   position: absolute;
   width: 1px;
+}
+
+button {
+  color: rgb(34, 34, 34);
+  background-color: #40E0D0;
+  border-radius: 20px;
+  border: none;
+  width: 10em;
+  height: 2em;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  color: #40E0D0;
+  background-color: #423254;
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  background-color: #6B3FA0;
+}
+
+input {
+  width: 15em;
+  height: 1.8em;
+  margin: 0.2em 0;
+  opacity: 0.5;
+}
+
+input::placeholder {
+  padding: 0.5em;
+  font-size: 0.7em;
+  color: #423254;
+}
+
+form a {
+  color: #35ADA1;
+}
+
+form button {
+  align-self: center;
+}
+
+form > :nth-child(3) {
+  align-self: center;
+  margin: 1em 0;
+}
+
+.mail-password-forgot {
+  display: flex;
+  flex-direction: column;
+  margin: 2em auto;
+}
+
+.mail-password-forgot a {
+  align-self: flex-end;
+}
+
+form button {
+  width: 15em;
+}
+
+form p {
+  display: inline;
+}
+
+.login-header {
+  border-radius: 0 0 50px 0;
+  background-color: #423254;
+  box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  padding: 1em 0 2em 0;
+}
+
+.login-header p {
+  margin: 0;
+}
+
+.login-footer-container {
+  height: 100%;
+  border-radius: 50px 0 0 0;
+  background-color: #423254;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.footer-content {
+  margin: 2.5em 0;
+}
+
+.footer-social-icon > :nth-child(1) {
+  margin-right: 2em;
+}
+
+.footer-copyright {
+  margin: 2em 0 0 0;
+}
+
+.footer-copyright p {
+  color: #227068;
+  line-height: 0.3em;
 }
 
 /*# sourceMappingURL=styles.css.map */

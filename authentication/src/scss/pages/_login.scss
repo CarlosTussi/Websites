@@ -1,0 +1,43 @@
+.login-header{
+    border-radius: 0 0 50px 0;
+    background-color: $primary-color-dark;
+    box-shadow: inset 0px -10px 10px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    padding: 1em 0 2em 0;
+}
+
+.login-header p{
+    margin: 0;
+}
+
+.login-footer-container{
+    height: 100%;
+    border-radius: 50px 0 0 0;
+    background-color: $primary-color-dark;
+    box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.25);
+
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    align-items: center;
+}
+
+
+.footer-content{
+    margin: 2.5em 0;
+}
+
+.footer-social-icon>:nth-child(1){
+    margin-right: 2em;
+}
+
+.footer-copyright{
+    margin: 2em 0 0 0;
+}
+
+.footer-copyright p{
+    color: $accent-color-dark;
+    line-height: 0.3em;;
+}

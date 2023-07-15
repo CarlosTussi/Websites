@@ -7,6 +7,7 @@
  */
 html {
   box-sizing: border-box;
+  background-color: $primary-color;
 }
 
 /**
@@ -25,6 +26,28 @@ html {
  * Basic styles for links
  */
 a {
-  color: $brand-color;
+  color: $accent-color;
   text-decoration: none;
+  font-size: 0.7em;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover{
+  color: $accent-color;
+  cursor: pointer;
+}
+
+h1{
+  color: $accent-color;
+  font-size: 1.5em;
+}
+
+h2{
+  color: $accent-color-dark;
+  font-size: 0.8em;  
+}
+
+p{
+  color: $text-color-light;
+  font-size: 0.7em;
 }
