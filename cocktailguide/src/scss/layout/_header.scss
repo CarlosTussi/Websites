@@ -7,9 +7,12 @@ header{
 
     color: $accent-color;        
     
-    margin-left: 0.5em;
+    margin: 0 0.5em 2em 0.5em;
+
+    justify-content: space-between;
+
 }
 
-header p{
-    margin:0;    
+.logo{
+    margin-top: 0.5em;    
 }

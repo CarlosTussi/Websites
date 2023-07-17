@@ -4,6 +4,9 @@
     grid-template-columns: 1fr;
     justify-content: end;
     
+    @include breakpoint-up("medium"){
+      display:none;
+    }
 }
 
 //Collapsible Hamburger Menu
@@ -88,4 +91,10 @@
 
   .hamburger-content li{
     padding: 2em 0;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .hamburger-container .menu-link:hover{
+    cursor: pointer;
+    color: $secondary-color;
   }

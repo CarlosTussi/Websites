@@ -3,7 +3,7 @@
 // -----------------------------------------------------------------------------
 .home{
     display: grid;
-    grid-template-columns: repeat(auto, fr);    
+    grid-template-rows: repeat(auto, fr);    
 
     justify-items: center;
 }
@@ -15,10 +15,18 @@
 
 .home span{
     display: block;
+
+    @include breakpoint-up("medium"){
+        padding-right: 0.2em;
+    }
 }
 
 .home h1{
     display:flex;
     flex-direction: column;
     text-align: center;
+
+    @include breakpoint-up("medium"){
+        flex-direction: row;        
+    }
 }
