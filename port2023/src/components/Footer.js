@@ -7,8 +7,8 @@ function Footer()
         <footer>
             <img src={src_logo_light} alt="Carlos Tussi logo" />
             <div>
-            <GitHub className='footer-icon'  strokeWidth="1px" size="2em"/>
-            <Linkedin className='footer-icon' strokeWidth="1px" size="2em"/>
+            <GitHub tabIndex="0" className='footer-icon'  strokeWidth="1px" size="2em"/>
+            <Linkedin tabIndex="0" className='footer-icon' strokeWidth="1px" size="2em"/>
             </div>
             
             <small>2023 - All Rights Reserved</small>

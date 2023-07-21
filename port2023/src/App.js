@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import { Fade, Slide } from 'react-awesome-reveal';
 
 
+
 function App() {
   return (
     <div>

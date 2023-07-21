@@ -14,9 +14,9 @@ function DesktopMenu()
     return(
         <div className="desktop-nav">
             <ul>
-                <li onClick={()=> scroll("my-work")}>Work</li>
-                <li onClick={()=> scroll("about")}>About</li>
-                <li onClick={()=> scroll("contact")}>Contact</li>
+                <li tabIndex="0" onClick={()=> scroll("my-work")}>Work</li>
+                <li tabIndex="0" onClick={()=> scroll("about")}>About</li>
+                <li tabIndex="0" onClick={()=> scroll("contact")}>Contact</li>
             </ul>
         </div>
     )
