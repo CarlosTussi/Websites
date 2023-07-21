@@ -1,0 +1,25 @@
+.progressbar-container{
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    margin: 1em 1em 0 2em;
+
+}
+
+.line{
+    display: none;
+    position: absolute;
+    z-index: -1;    
+}
+
+.line::before{
+    content: "";
+    position: absolute;
+    top: 1em;
+    left: 0;
+    width: 100vw;
+    height: 1px;
+    background-color: gray;
+    z-index: -1;
+}
