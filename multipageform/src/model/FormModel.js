@@ -23,6 +23,8 @@ export const ID_TYPES = [
     {value: 'student id', label: "Student ID"},
 ]
 
+export const TIME_SLOTS = ["08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "13:00", "13:30", "14:00"];
+
 export const FormModel = {
     service: DEFAULT_OPTION,
     date_time: {

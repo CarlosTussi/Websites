@@ -45,3 +45,11 @@
     background-color: gray;
     cursor:auto;
 }
+
+.edit-button{
+    border: none;
+    background-color: transparent;
+    text-decoration: underline;
+    color: $text-color;
+    cursor: pointer;
+}

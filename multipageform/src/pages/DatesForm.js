@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 // import 'react-calendar/dist/Calendar.css';
 import Calendar from 'react-calendar';
-import { PAGE } from "../model/FormModel";
-
-const TIME_SLOTS = ["08:30", "09:00", "09:30", "10:00", "10:30", "11:00", "11:30", "13:00", "13:30"];
+import { PAGE, TIME_SLOTS } from "../model/FormModel";
 
 function DatesForm(props)
 {

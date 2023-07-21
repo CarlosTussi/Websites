@@ -155,7 +155,7 @@ function PersonalForm(props){
                         >
                         <option defaultValue=""></option>
                         {ID_TYPES.map((type) => (  
-                            <option key={type.value} value={type.value}>
+                            <option key={type.value} value={type.label}>
                                 {type.label}
                             </option>
                         ))}   

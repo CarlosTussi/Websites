@@ -1,0 +1,50 @@
+.confirmation-container{
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.reference-number-container{
+    text-align: center;
+}
+
+.reference-number-container p{
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.reference-number-container h5{
+    font-size: 1.3em;
+    margin-bottom: 0;
+}
+
+.reference-number-container p{
+    color: $accent-color;
+}
+
+.confirmation-details-container{
+    display: flex;
+    flex-direction: column;
+
+    background-color: rgb(199, 199, 199);
+    border-radius: 1em;
+
+    align-items: center;
+    width: 80%;
+}
+
+.service-time-confirmation-container{
+    text-align: center;
+    color: red;
+}
+
+.service-time-confirmation-container > :nth-child(1){
+    font-weight: bold;
+}
+
+.personal-confirmation-container p{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}

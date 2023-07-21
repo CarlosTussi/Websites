@@ -4,7 +4,8 @@ import { PAGE } from "../model/FormModel";
 function ProgressBar(props)
 {
     return(
-        <div>     
+            props.currentPage !== PAGE.CONFIRMATION ?
+            <div>     
             <div className="line"></div>       
             <div className="progressbar-container">
                 <ProgressBarCard number="1" 
@@ -23,6 +24,8 @@ function ProgressBar(props)
                                  completed={props.currentPage === PAGE.SUMMARY || props.currentPage === PAGE.CONFIRMATION}/>
             </div>            
         </div>
+        :
+        "" 
     )
 }
 

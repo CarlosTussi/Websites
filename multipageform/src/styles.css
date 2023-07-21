@@ -427,6 +427,14 @@ body {
   cursor: auto;
 }
 
+.edit-button {
+  border: none;
+  background-color: transparent;
+  text-decoration: underline;
+  color: #333333;
+  cursor: pointer;
+}
+
 .back-next-buttons-container {
   display: flex;
   flex-direction: row;
@@ -789,6 +797,86 @@ abbr[title] {
   display: flex;
   flex-direction: column;
   width: 65%;
+}
+
+.summary-container {
+  margin: 0 2em;
+}
+
+.section-summary-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.section-summary-container > :nth-child(2) {
+  margin: auto 0;
+  justify-self: end;
+}
+
+.content-summary-container {
+  grid-column: 1/span 3;
+  border-radius: 1em;
+  background-color: rgb(214, 214, 214);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary-data {
+  color: red;
+}
+
+.personal-info-summary-container p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.reference-number-container {
+  text-align: center;
+}
+
+.reference-number-container p {
+  font-weight: bold;
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.reference-number-container h5 {
+  font-size: 1.3em;
+  margin-bottom: 0;
+}
+
+.reference-number-container p {
+  color: #3498DB;
+}
+
+.confirmation-details-container {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(199, 199, 199);
+  border-radius: 1em;
+  align-items: center;
+  width: 80%;
+}
+
+.service-time-confirmation-container {
+  text-align: center;
+  color: red;
+}
+
+.service-time-confirmation-container > :nth-child(1) {
+  font-weight: bold;
+}
+
+.personal-confirmation-container p {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 /*# sourceMappingURL=styles.css.map */
