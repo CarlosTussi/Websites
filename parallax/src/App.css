@@ -1,0 +1,106 @@
+*{
+  border:o;
+  margin:0;
+}
+.hero{
+  background-color: purple;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* HERO DEFINITION */
+
+.parallax-title,
+.parallax-logo,
+.parallax-button{
+  display: grid;
+  justify-content: center;
+}
+
+button{
+  width:10em;
+  height: 4em;
+  border-radius: 1em;
+  border: none;  
+}
+
+
+h1{
+  color: white;
+  font-size: 10vw;
+}
+
+p{
+  color: white;
+  font-size: 2em;
+}
+
+
+/* HEADER DEFINITION */
+ul{
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+
+  justify-content: space-between;
+  background-color: purple;
+  padding: 1em 2em;
+  border: 1px solid white;
+}
+
+li{
+  color: white;
+  font-size: 1.5em;
+}
+
+/* DIFFERENT BACKGROUNDS */
+.first-different-background{
+  background-color: rgb(61, 19, 99);
+  height: 100vh;
+  width: 100vw;
+}
+
+.second-different-background{
+  background-color: rgb(1, 74, 89);
+  height: 100vh;
+  width: 100vw;
+}
+
+.third-different-background{
+  background-color: blueviolet;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* PRODUCTS DEFINITION*/
+.products{
+  margin: 0 10em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+span{
+  color: white;
+  border: 1px dashed white;
+}
+
+h2{
+  color: white;
+  text-align: center;
+}
+
+/*  FOOTER  */
+footer{
+  position:absolute;
+  bottom: 0;
+  background-color: blueviolet;
+  border: 1px dotted white;
+  color: white;
+  height: 10em;
+  width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
