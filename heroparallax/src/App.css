@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.empty-background{
+    background-color: #15091C;
+    height: 100vh;
+    width: 100vw;
+}
+
+home:hover{
+    cursor: pointer;
+}
+
+.desktop-nav ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color:antiquewhite;
+    justify-content: flex-end;
+    margin: 1em 2em 0 0;
+}
+
+.desktop-nav li{
+    margin-left: 3em;
+    font-size: 1.5em;   
+    padding: 0.5em 2em;
+    border-radius: 2em;
+    border: transparent;
+    transition: color 0.1s ease-in-out, background-color 0.1s ease-in-out;
+  
+}
+
+.desktop-nav li:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+    border-radius: 2em;
+    color: #15091C;
+}
+
+button{
+    border: none;
+    border-radius: 1em;
+    width: 9em;
+    height: 3em;
+    background-color: aliceblue;
+    color: #15091C;
+    font-size: 1.5em;
+    transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #15091C;
+    border: 1px solid aliceblue;
+    color:aliceblue
+}
+
+h1{
+    text-align: center;
+    color: aliceblue;
+    margin-top: 2em;
+}
+
+
+/* PARALLAX STYLING */
