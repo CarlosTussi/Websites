@@ -7,11 +7,18 @@ import src_left2 from '../assets/left2.png';
 import src_left3 from '../assets/left3.png';
 import src_start from '../assets/star.png';
 import DesktopNav from "../components/DesktopNav";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+import { useScroll, animated } from "react-spring";
+import WorkCard from "../components/WorkCard";
+import Plants2 from "./Plants2";
+
+const PAGES = 4;
 
 function Home(){
 
     const parallaxRef = useRef();
+    const [currentPageScrollPercent, setCurrentPageScrollPercent] = useState(0);
+    const [currentPage, setCurrentPage] = useState(0);
 
     //Callback function to handle click
     const handleClick = (whereTo) => {
@@ -34,10 +41,44 @@ function Home(){
                 break;
             }
     }
+
+    //Current scroll listener
+    useEffect(()=>{
+      const container = parallaxRef.current.container.current;
+
+      container.onscroll = (e) => {          
+        const viewPortHeight = parallaxRef.current.space //Size of viewport        
+        const scrollablePages = PAGES - 1 //Number of pages we can scroll
+        const totalScrollHeight = viewPortHeight * scrollablePages  //How much can we scroll
+
+        const currentScroll = e.target.scrollTop    //Current scroll number
+        const totalPercentWebsiteScrolled = currentScroll / totalScrollHeight //How many % scrolled from the top
+        const currentPage = Math.floor(totalPercentWebsiteScrolled * scrollablePages) //Detect which page we are at the moment
+        const currentPageScrollTop = currentScroll - (viewPortHeight * (currentPage)) //Current scroll value from the current page.
+        const currentPagePercent = currentPageScrollTop / viewPortHeight //How many % scrolled from the current page
+
+        setCurrentPageScrollPercent(currentPagePercent);
+        setCurrentPage(currentPage);
+        
+          
+      }
+      return () => {
+          container.onscroll = null;
+      }
+  },[])
+
+
+  const getScale = (limitPage)=>{
+    if(currentPage < limitPage)
+      return 1 + Math.min(1 * currentPageScrollPercent, 1);
+    else
+      return 2;
+  }
+  
     
     return(
         <div className="home">
-            <Parallax pages={4} ref={parallaxRef}>
+            <Parallax pages={PAGES} ref={parallaxRef}>
                 
                 {/* ************************************** */}
                 {/* ******************PAGE 1 ***************/}      
@@ -58,14 +99,7 @@ function Home(){
                   speed={0.5}                                    
                   >
                     <img src={src_start} style={{marginLeft:"50%", minWidth:"12%", transform: "translateX(-50%)"}} alt="Yellow star"/>
-                </ParallaxLayer>
-                {/* Site Title */}
-                <ParallaxLayer
-                    offset={0.45}
-                    speed={0.25}
-                >
-                    <h1>Simple Night</h1>
-                </ParallaxLayer>
+                </ParallaxLayer>                
                 {/*  Clouds Right */}
                 {/* Cloud right 1 */}
                 <ParallaxLayer 
@@ -109,17 +143,26 @@ function Home(){
                                 factor={1}>
                     <DesktopNav onClick={handleClick}/>
                  </ParallaxLayer>
-                            {/* Button */}
+                {/* Button */}
                 <ParallaxLayer offset={0.8}
                                speed={0.2}
                                style={{display: "flex", justifyContent: "center"}}>
                     <button onClick={() => handleClick(2)}>Discover</button>
                 </ParallaxLayer>
+                {/* Site Title */}
+                                <ParallaxLayer
+                    offset={0.45}
+                    speed={0.25}                                        
+                >
+                  <animated.div style={{scale: 1+ currentPageScrollPercent, opacity: 1- currentPageScrollPercent}}>
+                      <h1>Simple Night</h1>
+                  </animated.div>
+                </ParallaxLayer>
 
                 {/* ************************************** */}
                 {/* ******************PAGE 2 ***************/}      
                 {/* ************************************** */}
-                  {/* Empty purple background */}
+                  {/*  Background Image */}
                   <ParallaxLayer
                 offset={1}
                 speed={0}   
@@ -132,6 +175,9 @@ function Home(){
                 <ParallaxLayer offset={1}>
                     <h1>Work</h1>
                 </ParallaxLayer>
+                <ParallaxLayer offset={1.3}>
+                  <WorkCard />
+                </ParallaxLayer>
 
 
                 {/* ************************************** */}
@@ -143,7 +189,9 @@ function Home(){
                 </ParallaxLayer>
                 {/* About Section */}
                 <ParallaxLayer offset={2}>
+                  <animated.div style={{ fontSize: getScale(2)+"em"}}>
                     <h1>About</h1>
+                  </animated.div>
                 </ParallaxLayer>
 
 
@@ -155,7 +203,7 @@ function Home(){
                     <div className="empty-background"></div>
                 </ParallaxLayer>
                 {/* Contact Section */}
-                <ParallaxLayer offset={3}>
+                <ParallaxLayer offset={3}>                    
                     <h1>Contact</h1>
                 </ParallaxLayer>
             </Parallax>

@@ -1,0 +1,49 @@
+*{    
+}
+.plants2{
+    /* margin: 2em; */
+}
+
+.plants2 img{
+    width: 100%;    
+    height: 85%;
+    object-fit:cover;  
+    /* object-position: 5% 85%;   */
+
+    display:  block;
+}
+
+.plants2 ul{
+    position: absolute;
+    top: 10px;
+    z-index: 10;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+
+    list-style: none;    
+    background-color: transparent;
+    color:black;
+}
+
+.plants2 li{
+    padding: 1em 2em;
+    margin: 0 1em;
+}
+
+.video-container{
+    height: 90vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+}
+
+.video-container video{
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
+  object-position: 5% 100%;
+  display: block;
+}
