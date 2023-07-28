@@ -29,7 +29,7 @@ function Fashion(){
         bgImageStyle={{width: "100%",
                        height: "100%",
                         objectFit: "cover",
-                        objectPosition: "5% 85%",
+                        objectPosition: "15% 85%",
     }}  
         >     
          <div
@@ -61,7 +61,7 @@ function Fashion(){
         bgImageStyle={{width: "100%",
                        height: "100%",
                         objectFit: "cover",
-                        objectPosition: "5% 45%",
+                        objectPosition: "50% 45%",
     }}  
         >
             <div style={{
@@ -123,7 +123,7 @@ function Fashion(){
         bgImageStyle={{width: "100%",
                        height: "100%",
                         objectFit: "cover",
-                        objectPosition: "5% 35%",
+                        objectPosition: "50% 35%",
     }}  
         >
             <div style={{

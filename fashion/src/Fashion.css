@@ -115,4 +115,9 @@ footer h4{
     padding:0 0 1em 0;
 }
 
+.sublist-items-container li:hover{
+    color: gray;
+    cursor: pointer;
+}
+
 
