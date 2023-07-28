@@ -8,6 +8,7 @@ import src_men_shoes from './assets/shoes-men.jpg'
 import Header from './components/Header';
 import Branding from "./components/Branding";
 import { useEffect, useRef } from "react";
+import Footer from "./components/Footer";
 
 
 function Fashion(){
@@ -144,6 +145,7 @@ function Fashion(){
 
                 </div> 
         </Parallax>
+        <Footer />
         
     </div>
     )
