@@ -67,8 +67,28 @@ button:hover{
     scale: 1.1;
 }
 
+.contact{
+    display: flex;
+    flex-direction: column;
+    flex: content;    
+    justify-content: space-around;
+    align-content: space-between;
+    height: 70vh;
+    width: 100vw;
+    color: white;    
+}
+
+.contact h1,
+.contact h3{
+    color: black;
+    display: block;        
+}
+
+
 footer{
-    margin-bottom: 1em;
+    padding-bottom: 1em;
+    color:white;
+    background-color: black;
 }
 
 footer ul{
@@ -76,6 +96,7 @@ footer ul{
     flex-direction: row;
     justify-content: space-evenly;
     padding: 0;    
+    margin: 0;
 }
 
 footer h4{

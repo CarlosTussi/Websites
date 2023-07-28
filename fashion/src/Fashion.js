@@ -9,18 +9,20 @@ import Header from './components/Header';
 import Branding from "./components/Branding";
 import { useEffect, useRef } from "react";
 import Footer from "./components/Footer";
+import Contact from "./components/Contact";
 
 
 function Fashion(){
 
     const bagsRef = useRef();
     const shoesRef = useRef(); 
+    const contactRef = useRef();
 
 
 
     return(
         <div className='fashion'>                        
-            <Header bagsRef={bagsRef} shoesRef={shoesRef}/>
+            <Header bagsRef={bagsRef} shoesRef={shoesRef} contactRef={contactRef}/>
         <Parallax
         strength={200}
         bgImage={src_women_bag}
@@ -145,6 +147,9 @@ function Fashion(){
 
                 </div> 
         </Parallax>
+        <div ref={contactRef}>
+            <Contact/>
+        </div>
         <Footer />
         
     </div>

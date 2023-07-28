@@ -10,7 +10,7 @@ function Header(props)
                 <li onClick={()=> props.bagsRef.current.scrollIntoView({behavior:"smooth"})}>BAGS</li>
                 <li onClick={()=> props.shoesRef.current.scrollIntoView({behavior:"smooth"})}>SHOES</li>
                 <li>ABOUT</li>
-                <li>CONTACT</li>            
+                <li onClick={()=> props.contactRef.current.scrollIntoView({behavior:"smooth"})}>CONTACT</li>
         </ul>
         </div>
        
