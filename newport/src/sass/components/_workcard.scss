@@ -1,0 +1,43 @@
+.work-card-container{
+    display: grid;
+    grid-template-areas: "img img"
+                         "title location";
+    margin: 1em;
+
+    @include breakpoint-up("medium"){
+        position: relative;
+
+        left: 80%;
+        transform: translateX(-80%);
+        width: 30%;
+    }
+}
+
+.work-card-info{
+    position: relative;    
+    height: 100%;    
+    z-index: 1;
+    background-color: rgba(128, 128, 128, 0.5);
+  
+}
+
+.work-img{        
+    height: 30vh;
+    width: 100%;
+    background-color: tomato;
+
+    grid-area: img;    
+}
+
+.work-img:hover{
+    cursor: pointer;
+}
+
+.work-card-container>:nth-child(2){
+    grid-area: title;
+}
+
+.work-card-container>:nth-child(3){
+    grid-area: location;    
+    justify-self: end;
+}

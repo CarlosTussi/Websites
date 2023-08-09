@@ -1,0 +1,45 @@
+.home-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    height: 100vh;        
+    overflow: hidden;
+}
+.home-title{
+    display: flex;
+    flex-direction: column;
+    text-align: right;    
+    margin-top: auto;
+}
+
+.mouse-icon{
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    align-items: center;
+    padding-bottom: 1em;
+}
+.mouse-icon img{
+    width: 1em;
+    padding: 0.5em 0;    
+}
+
+.icon-arrow{
+    animation: up-down ease-in-out reverse 1s infinite;
+}
+
+@keyframes up-down {
+    0%{
+      transform: translateY(0);  
+    }
+    50%{
+      transform: translateY(-10px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+}
+
+h1 > *{
+    display: inline-block;
+}
