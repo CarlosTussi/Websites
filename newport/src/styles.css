@@ -361,6 +361,7 @@ li {
 body {
   color: #F9F9F9;
   font: normal 125%/1.4 "Open Sans", "Helvetica Neue Light", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 /**
@@ -423,7 +424,7 @@ nav {
 nav ul {
   display: flex;
   flex-direction: column;
-  color: #F9F9F9;
+  color: #585858;
   margin: 3esm auto 5em auto;
   justify-content: space-around;
 }
@@ -435,20 +436,36 @@ nav ul {
 
 nav li {
   font-size: 3em;
+  position: relative;
 }
 @media (min-width: 43.75rem) {
   nav li {
-    font-size: 5em;
+    font-size: clamp(2em, 7vw, 5em);
   }
 }
 
 nav li:hover {
   cursor: pointer;
-  opacity: 0.5;
+}
+
+nav li::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #585858;
+  transition: width 0.4s ease-in-out;
+}
+
+nav li:hover::before {
+  width: 100%;
+  left: 0;
 }
 
 nav .highlighted {
-  color: tomato;
+  color: #F9F9F9;
 }
 
 .desktop-nav {

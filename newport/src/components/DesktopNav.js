@@ -15,7 +15,7 @@ function DesktopNav()
         {
             target.scrollIntoView({
                 behavior: "smooth",
-                block: "start"
+                block: "start",                
             });                        
                     
         }

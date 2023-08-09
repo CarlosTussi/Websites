@@ -2,9 +2,11 @@ import { useDesktopNavContext } from "../providers/DesktopNavProvider";
 import { ABOUT_PAGE_ID, CONTACT_PAGE_ID, WORK_PAGE_ID } from "../utils/Global";
 
 function Nav(props)
-{
+{   
+
     const handleClick = (anchor) =>{
         props.handleClick(anchor);
+
     }
 
     const { currentSection } = useDesktopNavContext();
