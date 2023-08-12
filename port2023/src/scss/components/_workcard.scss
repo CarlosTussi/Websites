@@ -4,11 +4,11 @@
     grid-template-areas: "img"
                           "content";
 
-    margin: 0 1em 5em 1em;  
+    margin: 0em 1em 5em 1em;  
     place-items: center;    
 
-    @include breakpoint-up("large"){
-        grid-template-areas: "img content";        
+    @include breakpoint-up("medium"){
+        grid-template-areas: "content img";        
         place-items: normal;
     }
 
@@ -16,31 +16,26 @@
 
 .work-card h5{    
     grid-area: title;
+    font-size: 1em;
+    text-align: center;
 
 }
 
-.card-image{
-    height: 350px;
-    width: 350px;
-    background-color: #C0C0C0;
+.img-container{
+    grid-area: img;    
 
-    border-radius: 2em;
-
-    transition: transform 0.3s;
-
-    grid-area: img;
-
-    @include breakpoint-up("large"){
-        flex-shrink: 0;
+    @include breakpoint-up("medium"){
+        height: 250px;
+        width: 400px;
     }
-
+  
 }
+.img-container img{
+    max-width: 100%;    
 
-.card-image:hover{
-    background-color: $accent-color;
-    transform: scale(1.1);
-
-    cursor: pointer;
+    @include breakpoint-up("medium"){
+                flex-shrink: 0;
+            }
 }
 
 .card-content{
@@ -59,7 +54,9 @@
 }
 
 .card-content p{
-
+    text-align: center;
+    font-size: 1em;
+    font-weight: 300;
 }
 
 
@@ -69,6 +66,8 @@
     }
 }
 
-.card-content a{
-    flex-shrink: 0;
+.card-content .live-link-container{
+    flex-shrink: 0;   
+    text-align: center;
 }
+

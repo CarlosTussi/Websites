@@ -555,38 +555,39 @@ button:hover {
 .work-card {
   display: grid;
   grid-template-areas: "img" "content";
-  margin: 0 1em 5em 1em;
+  margin: 0em 1em 5em 1em;
   place-items: center;
 }
-@media (min-width: 56.25rem) {
+@media (min-width: 43.75rem) {
   .work-card {
-    grid-template-areas: "img content";
+    grid-template-areas: "content img";
     place-items: normal;
   }
 }
 
 .work-card h5 {
   grid-area: title;
+  font-size: 1em;
+  text-align: center;
 }
 
-.card-image {
-  height: 350px;
-  width: 350px;
-  background-color: #C0C0C0;
-  border-radius: 2em;
-  transition: transform 0.3s;
+.img-container {
   grid-area: img;
 }
-@media (min-width: 56.25rem) {
-  .card-image {
-    flex-shrink: 0;
+@media (min-width: 43.75rem) {
+  .img-container {
+    height: 250px;
+    width: 400px;
   }
 }
 
-.card-image:hover {
-  background-color: #FF2D55;
-  transform: scale(1.1);
-  cursor: pointer;
+.img-container img {
+  max-width: 100%;
+}
+@media (min-width: 43.75rem) {
+  .img-container img {
+    flex-shrink: 0;
+  }
 }
 
 .card-content {
@@ -601,14 +602,21 @@ button:hover {
   }
 }
 
+.card-content p {
+  text-align: center;
+  font-size: 1em;
+  font-weight: 300;
+}
+
 @media (min-width: 56.25rem) {
   .card-content h5 {
     margin: 0;
   }
 }
 
-.card-content a {
+.card-content .live-link-container {
   flex-shrink: 0;
+  text-align: center;
 }
 
 .websites ul {
