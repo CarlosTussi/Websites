@@ -46,5 +46,10 @@ nav li:hover::before{
   }
 
 nav .highlighted{
-    color: $secondary-color;
+
+    @include breakpoint-up("medium"){
+        color: $secondary-color;
+        transition: color 0.3s ease-in-out;
+    }
+    
 }

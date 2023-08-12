@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ExternalLink } from "react-feather";
 
 function WorkCard(props)
 {
@@ -11,8 +12,8 @@ function WorkCard(props)
             <div className="work-img" onClick={toggleIsOpen}>
                 {/* <img src={props.img} alt={props.alt} /> */}
                 {isOpen? <div className="work-card-info"> 
-                                {props.description}
-                                <a href="a">Check it Live</a>
+                                <p>{props.description}</p>
+                                <a href="a">See it Live <ExternalLink size="0.9em" width="1em"/></a>
                         </div> : ""}
             </div>
             <p>{props.title}</p>
