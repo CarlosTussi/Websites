@@ -3,15 +3,11 @@ function About()
     return(
         <section className="about-page" id="about">
             <h3>About</h3>
-            <p>  Lorem ipsum dolor sit amet, consectetur 
-                adipisicing elit. Aspernatur quod hic quis 
-                vero, nisi nemo nulla totam accusantium 
-                nostrum ea quas culpa dolore laboriosam 
-                deserunt veritatis officiis veniam iure 
-                adipisci sapiente corrupti? Nam ut 
-                molestias, corporis veritatis dolore
-                 qui omnis porro, assumenda molestiae 
-                 sapiente error in quisquam. </p>
+            <p>  Welcome!
+                I'm a tech-loving creative with a global perspective. 
+                Computer science grad turned web designer, 
+                I blend cultures and code, infusing <span className="about-highlight">HTML/CSS/React</span> 
+                with insights from <span className="about-highlight">70+ countries</span> . Let's craft something cool!" </p>
         </section>
     )
 }

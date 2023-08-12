@@ -825,9 +825,18 @@ button:hover {
 }
 
 .about-page p {
-  padding: 2em 2em;
+  padding: 2em 2em 4em 2em;
   margin: 0;
   color: #343434;
+}
+@media (min-width: 43.75rem) {
+  .about-page p {
+    padding: 2em 5em 4em 5em;
+  }
+}
+
+.about-highlight {
+  color: #FDFDFD;
 }
 
 .contact-page {
