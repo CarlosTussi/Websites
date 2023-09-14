@@ -5,7 +5,7 @@ import { getFirestore } from "@firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  //NOT FOR GITHUB
+  //CONFIDENTIAL (NOT FOR GITHUB)
 };
 
 // Initialize Firebase

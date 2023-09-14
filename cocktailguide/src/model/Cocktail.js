@@ -40,7 +40,7 @@ export const negroni_sbagliato = {
         quantity: -1,
         measure: "",        
     }],
-    garnish: "Orange twist",
+    garnish: "orange twist",
     image: null,
     preparation: [
         "Fill a rocks glass with ice cubes.",
@@ -87,40 +87,4 @@ export  const espresso_martini = {
         "Strain the cocktail into a chilled martini glas",
         "Optionally, garnish with a few coffee beans on top.",
     ]
-}
-
-
-export const gin_tonic = {
-    name: "Gin and Tonic",
-    ingredients:[
-        {
-            name: "Gin",
-            quantity: "2",
-            measure: "ounces",
-        },
-        {
-            name: "Tonic Water",
-            quantity: "4-6",
-            measure: "ounces",
-        },
-        {
-            name: "Fresh lime/lemon wedges",
-            quantity: "2",
-            measure: "pieces",
-        },
-        {
-            name: "Ice Cubes",
-            quantity: "-1",
-            measure: "",
-        }],
-        garnish: "Additional lemon/lime wedge",
-        image: null,
-        preparation:[
-            "Fill a glass with ice cubes.",
-            "Pour the gin over the ice.",
-            "Squeeze a wedge of lime or lemon into the glass and drop it in.",
-            "Top up the glass with tonic water.",
-            "Give it a gentle stir to mix the ingredients.",
-            "Garnish with an additional lime or lemon wedge, if desired.",            
-        ]
 }

@@ -32,31 +32,21 @@ function  Home()
 
 
 useEffect(() => {
-  console.log("Searchbar resukt=> ", searchbarResult);
-  //If first render
   if(initialRender){
     setInitialRender(false);
-    console.log("Initial render");    
+    console.log("Initial render");
+    return;
   }
-  //If the searchbox content gets erased (reset default home)  
-  else if(Object.keys(searchbarResult).length === 0){
-    setShowSearch(false);
-    setShowSelectedCocktail(false)    
-    setSelectedCocktail("");
-  }
-  //Flag to exibit results from database
-  else{
   setShowSearch(true);
   setShowSelectedCocktail(false);
-  setSelectedCocktail("");
-  }
 
+  setSelectedCocktail("");
 },[searchbarResult]);
 
 useEffect(() => {
   if(selectedCocktail)
   {
-    setShowSelectedCocktail(true);    
+    setShowSelectedCocktail(true);
     setShowSearch(false);
   }
 },[selectedCocktail]);
@@ -67,17 +57,13 @@ const findObjectByName = (array, name) => {
 
     return(
         <div className="home">           
-          {(!showSelectedCocktail && !showSearch) && <h1><span>The</span> Cocktail Guide</h1>}          
-          <Searchbar updateSearchbarResult={setSearchbarResult} 
-                     inputValue={selectedCocktail}/> 
-          {showSearch && <CocktailsList 
-                          setSelectedCocktail={setSelectedCocktail} 
-                          list={searchbarResult}/>}
-          {showSelectedCocktail && <CocktailCard 
-                                    cocktail={findObjectByName(cocktailsData, selectedCocktail)} />}
+          {(!showSelectedCocktail && !showSearch) && <h1><span>The</span> Cocktail Guide</h1>}
+          <Searchbar updateSearchbarResult ={setSearchbarResult}/> 
+          {showSearch && <CocktailsList setSelectedCocktail={setSelectedCocktail} list={searchbarResult}/>}
+          {showSelectedCocktail && <CocktailCard cocktail={findObjectByName(cocktailsData, selectedCocktail)} />}
           
         </div>
-    ) 
+    )
 }
 
 export default Home;

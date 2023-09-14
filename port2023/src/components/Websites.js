@@ -12,6 +12,7 @@ import { Fade } from "react-awesome-reveal";
 
 import fashion_src from '../assets/fashion.jpg'
 import auth_src from '../assets/auth.jpg'
+import cocktail_src from '../assets/cocktail.png'
 
 function Websites()
 {
@@ -19,8 +20,14 @@ function Websites()
     return(
         <div className="websites">
             <Fade duration="1000">
+            <WorkCard imgsrc={cocktail_src} 
+                          name="Cocktail Guide"
+                          description="Exquisitely designed landing page for a cocktail recipe website. This captivating digital gateway entices users with its harmonious fusion of visual allure and practicality, setting the stage for a delightful journey through mixology delights."
+                          link="https://cocktailguide-c9736.web.app/"
+                          alt="Shows a homepage with a seaerchbar and the tile Cocktail Guide."
+                          />
                 <WorkCard imgsrc={fashion_src} 
-                          name="Fashion Landing Page"
+                          name="Product Landing Page"
                           description="Meticulously crafted fashion design website's landing page. The landing page serves as the digital red carpet, enticing visitors with a seamless blend of aesthetics and functionality."
                           link="https://fashion-a9e4f.web.app"
                           alt="Home screen of a fashion webpage showing a navigation menu and two pursers as a fashion item"

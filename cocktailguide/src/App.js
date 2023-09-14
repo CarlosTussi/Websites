@@ -1,40 +1,36 @@
 import Home from './pages/Home';
 import HamburgerMenuProvider from './providers/HamburgerMenuProvider';
 import './styles.css';
-
-
-import CocktailsDataProvider from './providers/CocktailsDataProvider';
-
-import {negroni_sbagliato, espresso_martini, gin_tonic} from './model/Cocktail';
+import {negroni_sbagliato, espresso_martini} from './model/Cocktail';
 
 import {collection, addDoc } from "@firebase/firestore"
 import  {db, collection_name}  from './services/firebase.config'
 import { useEffect } from 'react';
+import CocktailsDataProvider from './providers/CocktailsDataProvider';
 
-import Header from './components/Header';
+import HeaderMobile from "./components/HeaderMobile";
 
 /* ONLY TO POPULATE THE DATABASE IF NEEDED LATER ON*/
 // function load_database (){
 
 //   const dataCollection = collection(db, collection_name);
 //   addDoc(dataCollection, negroni_sbagliato)
-//   .then(addDoc(dataCollection, espresso_martini))
-//   .then(addDoc(dataCollection, gin_tonic));
+//   .then(addDoc(dataCollection, espresso_martini));
 // }
 
 
 function App() {
 
-  // useEffect(() => {
-  //   load_database();
-  // }, [])
+//   useEffect(() => {
+//     load_database();
+//   }, [])
 
 
   return (
  <body>
   <CocktailsDataProvider>
     <HamburgerMenuProvider>   
-        <Header />
+        <HeaderMobile/>
         <Home />
     </HamburgerMenuProvider>
   </CocktailsDataProvider>

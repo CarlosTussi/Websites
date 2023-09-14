@@ -2,7 +2,8 @@ import HamburgerMenu from "./HamburgerMenu";
 
 function HeaderMobile(){
     return(
-        <header>            
+        <header>
+            <p>[Logo]</p>
             <HamburgerMenu />
         </header>
     )

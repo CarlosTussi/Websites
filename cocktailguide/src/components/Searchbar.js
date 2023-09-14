@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { useCocktailsDataContext } from "../providers/CocktailsDataProvider";
-import { Search, X } from "react-feather";
 
 function Searchbar(props)
 {    
     const [cocktailName, setCocktailName] = useState("");
 
-    const {cocktailsData } = useCocktailsDataContext();
+    const {cocktailsData, setCocktailsData} = useCocktailsDataContext();
 
 
     const handleSubmit = (e) => {
@@ -32,14 +31,10 @@ function Searchbar(props)
         
     }
 
-    const handleErase = ()=>{
-        setCocktailName("");
-        props.updateSearchbarResult({});
-    }
 
     return(
         <div className="search-bar">
-            <Search className="search-icon" size="1.5em"/>
+            <span>Logo</span>
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text"
@@ -47,10 +42,9 @@ function Searchbar(props)
                 name="name"
                 placeholder="Search your drink..."
                 onChange={handleChange}
-                value={props.inputValue? props.inputValue : cocktailName}  
+                value={cocktailName}  
                 />
             </form>
-            <X className="x-icon" onClick={handleErase} size="1.5em"/>
         </div>
     )
 }

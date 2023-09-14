@@ -1,12 +1,4 @@
 .cocktails-list ul{
     list-style: none;
     text-align: center;
-
-    @include breakpoint-up("medium"){
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-
-        gap: 5em;
-        margin: 4em 0;
-    }
 }
