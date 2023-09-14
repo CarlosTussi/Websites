@@ -1,5 +1,7 @@
 import { useEffect, useRef, } from 'react';
 import {useHamburgerMenuContext} from '../providers/HamburgerMenuProvider'
+import { Award } from 'react-feather';
+import { Link } from 'react-router-dom';
 
 function HamburgerMenu()
 {
@@ -8,19 +10,6 @@ function HamburgerMenu()
 
     const toggleMenu = () => {
       setIsOpen(!isOpen);
-    };
-
-    const scroll = (anchor) =>{
-        const target = document.getElementById(anchor);
-        if(target)
-        {
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });                        
-                    
-            toggleMenu();
-        }
     };
 
     useEffect(()=>{
@@ -43,10 +32,10 @@ function HamburgerMenu()
                  className={`collapsible-hamburger-menu hamburger-content ${isOpen ? 'open' : ''}`}
                  >
                 <ul>
-                    <li onClick ={() => scroll("cocktails")}>COCKTAILS</li>
-                    <li onClick ={() => scroll("about")}>ABOUT</li>
-                    <li onClick ={() => scroll("contact")}>CONTACT</li>
-                    <li>[LOGO]</li>
+                    <Link to="/"><li className='menu-link' onClick ={() => setIsOpen(false)}>COCKTAILS</li></Link>
+                    <Link to="/about"><li className='menu-link' onClick ={() => setIsOpen(false)}>ABOUT</li></Link>
+                    <Link to="/contact"><li className='menu-link' onClick ={() => setIsOpen(false)}>CONTACT</li></Link>
+                    <li><Award className="logo" size="1.5em"/></li>
                 </ul>
 
             </div>                            

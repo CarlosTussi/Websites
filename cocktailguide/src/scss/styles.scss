@@ -29,11 +29,14 @@
   'components/hamburgermenu',
   'components/searchbar',
   'components/cocktailslist',
-  'components/cocktailcard';
+  'components/cocktailcard',
+  'components/desktopmenu';
 
 // 6. Page-specific styles
 @import
-  'pages/home';
+  'pages/home',
+  'pages/about',
+  'pages/contact'; 
 
 // 7. Themes
 @import

@@ -1,0 +1,32 @@
+.desktop-menu{
+    display: none;
+
+    @include breakpoint-up("medium"){
+        display: flex;
+        flex-direction: row;
+    }
+    
+}
+
+.desktop-menu ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    padding:0;
+}
+
+.desktop-menu li{
+    padding: 0 1.5em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.desktop-menu ul>*{
+    text-decoration: none;
+    color: $accent-color;
+}
+
+.desktop-menu li:hover{
+    color: $secondary-color;
+}

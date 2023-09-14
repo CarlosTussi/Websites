@@ -341,7 +341,7 @@ h1, h2 {
   font-size: 2.5em;
 }
 
-h3 {
+h3, li {
   font-family: "Inder", sans-serif;
 }
 
@@ -401,17 +401,23 @@ header {
   display: flex;
   flex-direction: row;
   color: #C7A252;
-  margin-left: 0.5em;
+  margin: 0 0.5em 2em 0.5em;
+  justify-content: space-between;
 }
 
-header p {
-  margin: 0;
+.logo {
+  margin-top: 0.5em;
 }
 
 .hamburger-container {
   display: grid;
   grid-template-columns: 1fr;
   justify-content: end;
+}
+@media (min-width: 43.75rem) {
+  .hamburger-container {
+    display: none;
+  }
 }
 
 .collapsible-hamburger-menu {
@@ -481,6 +487,17 @@ header p {
 
 .hamburger-content li {
   padding: 2em 0;
+  transition: color 0.3s ease-in-out;
+}
+
+.hamburger-container .menu-link:hover {
+  cursor: pointer;
+  color: #F9F5E3;
+}
+
+.hamburger-container ul > * {
+  text-decoration: none;
+  color: #C7A252;
 }
 
 .search-bar {
@@ -499,6 +516,14 @@ header p {
   display: flex;
   flex: 1;
   margin-left: 0.5em;
+}
+
+.search-icon {
+  margin-left: 0.5em;
+}
+
+.x-icon {
+  margin-right: 0.5em;
 }
 
 .search-bar input {
@@ -522,13 +547,26 @@ header p {
   list-style: none;
   text-align: center;
 }
+@media (min-width: 43.75rem) {
+  .cocktails-list ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5em;
+    margin: 4em 0;
+  }
+}
 
 .cocktail-card {
   display: flex;
   flex-direction: column;
   background-color: #F9F5E3;
-  margin: 2em;
-  border-radius: 2em;
+  margin: 2em 0;
+}
+@media (min-width: 43.75rem) {
+  .cocktail-card {
+    border-radius: 2em;
+    margin: 2em;
+  }
 }
 
 .cocktail-card h2 {
@@ -549,9 +587,41 @@ header p {
   margin: 0;
 }
 
+.desktop-menu {
+  display: none;
+}
+@media (min-width: 43.75rem) {
+  .desktop-menu {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.desktop-menu ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+}
+
+.desktop-menu li {
+  padding: 0 1.5em;
+  cursor: pointer;
+  transition: color 0.3s ease-in-out;
+}
+
+.desktop-menu ul > * {
+  text-decoration: none;
+  color: #C7A252;
+}
+
+.desktop-menu li:hover {
+  color: #F9F5E3;
+}
+
 .home {
   display: grid;
-  grid-template-columns: repeat(auto, fr);
+  grid-template-rows: repeat(auto, fr);
   justify-items: center;
 }
 
@@ -563,10 +633,28 @@ header p {
 .home span {
   display: block;
 }
+@media (min-width: 43.75rem) {
+  .home span {
+    padding-right: 0.2em;
+  }
+}
 
 .home h1 {
   display: flex;
   flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 43.75rem) {
+  .home h1 {
+    flex-direction: row;
+  }
+}
+
+.about-page {
+  text-align: center;
+}
+
+.contact-page {
   text-align: center;
 }
 

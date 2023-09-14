@@ -3,9 +3,13 @@
     flex-direction: column;
 
     background-color: $secondary-color;    
-    margin: 2em;
+    margin: 2em 0;
 
-    border-radius: 2em;
+    @include breakpoint-up("medium"){
+        border-radius: 2em;
+        margin: 2em;    
+    }
+
 }
 
 .cocktail-card h2{

@@ -5,7 +5,12 @@ import { getFirestore } from "@firebase/firestore"
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  //CONFIDENTIAL (NOT FOR GITHUB)
+  apiKey: "AIzaSyDS_3XTEq6FstdR7wS316fyl3pspbkFXjs",
+  authDomain: "cocktailguide-c9736.firebaseapp.com",
+  projectId: "cocktailguide-c9736",
+  storageBucket: "cocktailguide-c9736.appspot.com",
+  messagingSenderId: "89279667763",
+  appId: "1:89279667763:web:da933a7efed5f6f7344d46"
 };
 
 // Initialize Firebase
