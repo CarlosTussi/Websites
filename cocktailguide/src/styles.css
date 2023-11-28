@@ -405,6 +405,11 @@ header {
   justify-content: space-between;
 }
 
+header .logo {
+  text-decoration: none;
+  color: #C7A252;
+}
+
 .logo {
   margin-top: 0.5em;
 }

@@ -13,6 +13,11 @@ header{
 
 }
 
+header .logo{
+    text-decoration: none;
+    color: $accent-color;
+}
+
 .logo{
     margin-top: 0.5em;    
 }
