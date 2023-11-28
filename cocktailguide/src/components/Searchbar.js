@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useCocktailsDataContext } from "../providers/CocktailsDataProvider";
 import { Search, X } from "react-feather";
 
@@ -23,9 +23,10 @@ function Searchbar(props)
         else{           
             const userInput = e.target.value.toLowerCase();
     
-    
+            
             const result = cocktailsData.filter(entry => entry.name.toLowerCase().includes(userInput));
-    
+            console.log("RESULTz => ", cocktailsData);
+
            props.updateSearchbarResult(result);
         }
         
@@ -36,6 +37,7 @@ function Searchbar(props)
         setCocktailName("");
         props.updateSearchbarResult({});
     }
+
 
     return(
         <div className="search-bar">

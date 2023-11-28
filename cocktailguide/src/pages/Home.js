@@ -20,6 +20,7 @@ function  Home()
 
   const [initialRender, setInitialRender] = useState(true);
   useEffect(()=>{
+    setCocktailsData([]);
 
     //Retrieves all the cocktail info and save in client side structure
     getDocs(dataCollection)
