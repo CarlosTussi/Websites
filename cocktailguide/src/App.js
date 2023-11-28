@@ -28,7 +28,7 @@ import Contact from './pages/Contact';
 function App() {
 
   // useEffect(() => {
-  //   load_database();
+  //   load_database(); 
   // }, [])
 
 

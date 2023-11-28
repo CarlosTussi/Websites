@@ -22,7 +22,8 @@ function CocktailsList (props)
             &&
             cocktails.map((item, index) => (
                 <li key={index} onClick={() => selectedCocktail(item.name)}>
-                    <Image color='#C7A252' size='3em'/>
+                    {/* <Image color='#C7A252' size='3em'/> */}
+                    <img src={item.image} alt={item.image_alt}/>
                     <p>{item.name}</p>                    
                 </li>
             ))

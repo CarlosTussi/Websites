@@ -1,3 +1,8 @@
+import src_img_negroni_sbagliato from '../assets/sbagliato.jpg';
+import src_img_espresso_martini from '../assets/espresso.jpg';
+import src_img_negroni_gin_and_tonic from '../assets/gintonic.jpg';
+
+
 export const Cocktail = {
     name: "",               // Name of the cocktail (string)
     ingredients: [{        // List of ingredients (array of objects)
@@ -7,6 +12,7 @@ export const Cocktail = {
     }],
     garnish: "",            // Garnish for the cocktail (string)
     image: null,            // Image of the cocktail (can be null or any data type)
+    image_alt: "",          //Alt descriptive text of the image
     preparation: [""]       // List of preparation steps (array of strings)
   };
 
@@ -41,7 +47,8 @@ export const negroni_sbagliato = {
         measure: "",        
     }],
     garnish: "Orange twist",
-    image: null,
+    image: src_img_negroni_sbagliato,
+    image_alt: "Glass with orange drink inside with ice and garnished with lemon.",
     preparation: [
         "Fill a rocks glass with ice cubes.",
         "Add Campari and sweet vermouth to the glass.",
@@ -79,7 +86,8 @@ export  const espresso_martini = {
         measure: "",        
     }],
     garnish: "Coffee beans",
-    image: null,
+    image: src_img_espresso_martini,
+    img_alt: "Funil shaped glass with espresso martini drink inside. Garnished with coffee beans.",
     preparation: [
         "Fill a cocktail shaker with ice cubes.",
         "Add vodka, coffee liqueur, simple syrup, and freshly brewed espresso to the shaker.",
@@ -114,7 +122,8 @@ export const gin_tonic = {
             measure: "",
         }],
         garnish: "Additional lemon/lime wedge",
-        image: null,
+        image: src_img_negroni_gin_and_tonic,
+        img_alt: "Glass with gin and tonic drink inside. Garnished with lemon.",
         preparation:[
             "Fill a glass with ice cubes.",
             "Pour the gin over the ice.",
