@@ -8,8 +8,13 @@ function CocktailCard(props){
             <h3>INGREDIENTS</h3>
             <ul>
                 {cocktail.ingredients.map((item, index) => (
+                    item.quantity > 0 ?
                     <li key={index}>
                         <p>{item.quantity} {item.measure} {item.name}</p>
+                    </li>
+                     : 
+                    <li key={index}>
+                        <p>{item.measure} {item.name}</p>
                     </li>
                 ))}
             </ul>
