@@ -11,7 +11,7 @@
         grid-template-areas: "content img";        
         place-items: normal;
     }
-
+    
 }
 
 .work-card h5{    
@@ -32,6 +32,9 @@
 }
 .img-container img{
     max-width: 100%;    
+    border-radius: 16px;
+    border: 0.1px black solid;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 
     @include breakpoint-up("medium"){
                 flex-shrink: 0;
@@ -57,6 +60,7 @@
     text-align: center;
     font-size: 1em;
     font-weight: 300;
+
 }
 
 
@@ -71,3 +75,23 @@
     text-align: center;
 }
 
+.img-link:hover{
+    opacity: 0.5;
+}
+
+.see-live-link::before{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $accent-color;
+    transition: width 0.4s ease-in-out;
+  
+  }
+  
+  .see-live-link:hover::before{
+    width: 100%;  
+    left: 0;
+  }

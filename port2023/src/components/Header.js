@@ -43,8 +43,8 @@ function Header()
             <HamburgerMenu />
         </div>
         <div className="header-desktop">
-        <div className="header-logo-desktop">
-        <img src={src_logo} alt="Carlos Tussi logo"></img>
+            <div className="header-logo-desktop">
+                <img src={src_logo} alt="Carlos Tussi logo"></img>
             </div>            
             <DesktopMenu />
         </div>

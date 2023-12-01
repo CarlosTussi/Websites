@@ -13,6 +13,7 @@
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "react-scripts": "5.0.1",
+    "react-scroll-parallax": "^3.4.2",
     "swiper": "^10.0.4",
     "web-vitals": "^2.1.4"
   },
@@ -39,5 +40,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@beyonk/gdpr-cookie-consent-banner": "^12.1.0"
   }
 }

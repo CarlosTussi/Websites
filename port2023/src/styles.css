@@ -371,22 +371,6 @@ a {
   cursor: pointer;
 }
 
-a::before {
-  content: "";
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #FF2D55;
-  transition: width 0.4s ease-in-out;
-}
-
-a:hover::before {
-  width: 100%;
-  left: 0;
-}
-
 /**
  * Clear inner floats
  */
@@ -457,7 +441,7 @@ a:hover::before {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 1em 1em 3em 1em;
+    margin: 1em 1em 0em 1em;
   }
 }
 
@@ -542,7 +526,7 @@ button {
   border: none;
   border-radius: 0.5em;
   padding: 1em 4em;
-  margin: auto 0 7em 0;
+  margin: auto 0 5em 0;
   cursor: pointer;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -583,6 +567,9 @@ button:hover {
 
 .img-container img {
   max-width: 100%;
+  border-radius: 16px;
+  border: 0.1px black solid;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 43.75rem) {
   .img-container img {
@@ -617,6 +604,26 @@ button:hover {
 .card-content .live-link-container {
   flex-shrink: 0;
   text-align: center;
+}
+
+.img-link:hover {
+  opacity: 0.5;
+}
+
+.see-live-link::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #FF2D55;
+  transition: width 0.4s ease-in-out;
+}
+
+.see-live-link:hover::before {
+  width: 100%;
+  left: 0;
 }
 
 .websites ul {
@@ -787,6 +794,7 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  align-content: space-around;
   height: 100vh;
   width: 100vw;
   margin-bottom: 6em;
@@ -811,6 +819,31 @@ button:hover {
   margin-top: auto;
 }
 
+.arrow-icon {
+  margin: auto 0 auto 0;
+  animation: bounce 1.3s infinite ease-in-out;
+  cursor: pointer;
+}
+@media (min-width: 56.25rem) {
+  .arrow-icon {
+    margin: 2em 0 auto 0;
+  }
+}
+
+.arrow-icon img {
+  width: 2em;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .work {
   display: flex;
   flex-direction: column;
@@ -819,6 +852,10 @@ button:hover {
 .work h3 {
   text-align: center;
   margin: 0 0 3em 0;
+}
+
+.see-all-button {
+  margin: 0 auto;
 }
 
 .about-page {

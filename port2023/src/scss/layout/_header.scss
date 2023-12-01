@@ -13,7 +13,7 @@
 }
 
 .header-desktop{
-    display: none;
+    display: none;    
 
     color: $accent-color;
     @include breakpoint-up("large"){
@@ -21,9 +21,11 @@
         flex-direction: row;
 
         justify-content: space-between;
-        margin: 1em 1em 3em 1em;
-    }
+        margin: 1em 1em 0em 1em;
+
+    }   
 }
+
 
 .header-logo-desktop{
     margin-left: 0.5em;  

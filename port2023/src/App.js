@@ -12,16 +12,17 @@ import { Fade, Slide } from 'react-awesome-reveal';
 
 
 
+
 function App() {
   return (
-    <div>
+    <div>      
       <HamburgerMenuProvider>
         <Header />
-        <Ellipses />
+        {/* <Ellipses /> */}
         <Home />
-        <Fade duration="1000">
+        {/* <Fade duration="1000"> */}
           <Work />
-        </Fade>
+        {/* </Fade> */}
         <Fade duration="1000">
           <About />
         </Fade>      
