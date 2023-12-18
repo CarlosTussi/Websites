@@ -886,6 +886,10 @@ button:hover {
   margin: 0 auto;
 }
 
+.see-all-button button {
+  cursor: default;
+}
+
 .about-page {
   background-color: #FF2D55;
   text-align: center;

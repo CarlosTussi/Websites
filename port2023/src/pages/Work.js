@@ -7,7 +7,7 @@ function Work()
             <h3>My Work</h3>
             <Websites />       
             <div className="see-all-button"> 
-                <button>Show All</button>
+                <button>More coming soon</button>
             </div>
         </section>
     )
