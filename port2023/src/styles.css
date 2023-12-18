@@ -819,9 +819,26 @@ button:hover {
   margin-top: auto;
 }
 
+.arrow-icon p {
+  text-align: center;
+  color: #40E0D0;
+  padding: 0;
+  margin: 0;
+  animation: change-color 1.3s infinite ease-in-out;
+}
+
+.scroll-arrow {
+  padding: 0;
+  margin: 0;
+}
+
+.scroll-arrow.bottom {
+  position: relative;
+  top: -15px;
+}
+
 .arrow-icon {
-  margin: auto 0 auto 0;
-  animation: bounce 1.3s infinite ease-in-out;
+  margin: auto 0 0 0;
   cursor: pointer;
 }
 @media (min-width: 56.25rem) {
@@ -832,6 +849,17 @@ button:hover {
 
 .arrow-icon img {
   width: 2em;
+}
+@keyframes change-color {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }
 @keyframes bounce {
   0% {

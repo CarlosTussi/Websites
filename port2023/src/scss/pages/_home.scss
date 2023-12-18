@@ -34,12 +34,31 @@
     margin-top: auto;    
 }
 
+.arrow-icon p{
+    text-align: center;
+    color: $brand-color;
+    padding: 0;
+    margin: 0;
+
+    animation: change-color 1.3s infinite ease-in-out;
+}
+
+.scroll-arrow{    
+    padding: 0;
+    margin: 0;
+}
+
+.scroll-arrow.bottom{
+    position: relative;
+    top: -15px;
+}
+
 .arrow-icon{
     @include breakpoint-up("large"){
         margin: 2em 0 auto 0;
     }
-    margin: auto 0 auto 0;
-    animation: bounce 1.3s infinite ease-in-out;
+    margin: auto 0 0 0;
+    // animation: bounce 1.3s infinite ease-in-out;    
     cursor: pointer;
 }
 
@@ -48,8 +67,19 @@
     @include breakpoint-up("large"){
 
     }
-   
 
+}
+
+@keyframes change-color {
+    0%{
+       opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
 }
 
 @keyframes bounce {

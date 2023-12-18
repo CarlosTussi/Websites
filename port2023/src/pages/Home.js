@@ -34,8 +34,11 @@ function Home(){
                     scale={[1,2]}
                     opacity={[1, 0.4]}
                 >
-                    {/* <ArrowDown  strokeWidth="1.5px" size="5em" color="#FF2D55" onClick={handleClick}/> */}
-                    <img src={src_mouse_icon} alt="Icon of a mouse with and arrow bellow"></img>
+                    <p>Scroll</p>                    
+                    <p className="scroll-arrow top">V</p>
+                    <p className="scroll-arrow bottom">v</p>
+                    {/* <ArrowDown  strokeWidth="1.0px" size="3em" color="#FF2D55" onClick={handleClick}/> */}
+                    {/* <img src={src_mouse_icon} alt="Icon of a mouse with and arrow bellow"></img> */}
                 </Parallax>
             </div>
         </div>
